@@ -1,0 +1,15 @@
+Detecting C [-std=c11] compiler features failed to compile with the following output:
+Change Dir: /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_17927/fast"
+/usr/bin/make -f CMakeFiles/cmTC_17927.dir/build.make CMakeFiles/cmTC_17927.dir/build
+make[1]: Entering directory '/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_17927.dir/feature_tests.c.o
+/bin/c99-gcc   -std=c11 -o CMakeFiles/cmTC_17927.dir/feature_tests.c.o   -c /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles/feature_tests.c
+c99-gcc called with non ISO C99 option -std=c11
+make[1]: *** [CMakeFiles/cmTC_17927.dir/build.make:66: CMakeFiles/cmTC_17927.dir/feature_tests.c.o] Error 1
+make[1]: Leaving directory '/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_17927/fast] Error 2
+
+
+

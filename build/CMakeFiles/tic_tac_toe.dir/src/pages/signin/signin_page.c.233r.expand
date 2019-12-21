@@ -1,0 +1,91 @@
+
+;; Function show_signin_page (show_signin_page, funcdef_no=2087, decl_uid=59740, cgraph_uid=2088, symbol_order=2088)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:SI 5 di)
+        (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/signin/signin_page.c":5:26 -1
+     (nil))
+(call_insn 6 5 7 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("gtk_window_new") [flags 0x41]  <function_decl 0x7fcd31586600 gtk_window_new>) [0 gtk_window_new S1 A8])
+            (const_int 0 [0]))) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/signin/signin_page.c":5:26 -1
+     (nil)
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(insn 7 6 8 2 (set (reg/f:DI 82 [ _1 ])
+        (reg:DI 0 ax)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/signin/signin_page.c":5:26 -1
+     (nil))
+(insn 8 7 9 2 (set (mem/f/c:DI (symbol_ref:DI ("signin_page_window") [flags 0x2]  <var_decl 0x7fcd30d7bd80 signin_page_window>) [1 signin_page_window+0 S8 A64])
+        (reg/f:DI 82 [ _1 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/signin/signin_page.c":5:24 -1
+     (nil))
+(insn 9 8 10 2 (set (reg/f:DI 83 [ signin_page_window.0_2 ])
+        (mem/f/c:DI (symbol_ref:DI ("signin_page_window") [flags 0x2]  <var_decl 0x7fcd30d7bd80 signin_page_window>) [1 signin_page_window+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/signin/signin_page.c":7:5 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:DI 5 di)
+        (reg/f:DI 83 [ signin_page_window.0_2 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/signin/signin_page.c":7:5 -1
+     (nil))
+(call_insn 11 10 0 2 (call (mem:QI (symbol_ref:DI ("gtk_widget_show_all") [flags 0x41]  <function_decl 0x7fcd314c9a00 gtk_widget_show_all>) [0 gtk_widget_show_all S1 A8])
+        (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/signin/signin_page.c":7:5 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+
+;; Function close_signin_page (close_signin_page, funcdef_no=2088, decl_uid=59741, cgraph_uid=2089, symbol_order=2089)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg/f:DI 82 [ signin_page_window.1_1 ])
+        (mem/f/c:DI (symbol_ref:DI ("signin_page_window") [flags 0x2]  <var_decl 0x7fcd30d7bd80 signin_page_window>) [1 signin_page_window+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/signin/signin_page.c":12:5 -1
+     (nil))
+(insn 6 5 7 2 (set (reg:DI 5 di)
+        (reg/f:DI 82 [ signin_page_window.1_1 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/signin/signin_page.c":12:5 -1
+     (nil))
+(call_insn 7 6 0 2 (call (mem:QI (symbol_ref:DI ("gtk_widget_destroy") [flags 0x41]  <function_decl 0x7fcd314c9400 gtk_widget_destroy>) [0 gtk_widget_destroy S1 A8])
+        (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/signin/signin_page.c":12:5 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
