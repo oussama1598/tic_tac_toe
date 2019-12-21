@@ -123,6 +123,60 @@ tic_tac_toe/fast:
 	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/build
 .PHONY : tic_tac_toe/fast
 
+src/helpers/builder.o: src/helpers/builder.c.o
+
+.PHONY : src/helpers/builder.o
+
+# target to build an object file
+src/helpers/builder.c.o:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/helpers/builder.c.o
+.PHONY : src/helpers/builder.c.o
+
+src/helpers/builder.i: src/helpers/builder.c.i
+
+.PHONY : src/helpers/builder.i
+
+# target to preprocess a source file
+src/helpers/builder.c.i:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/helpers/builder.c.i
+.PHONY : src/helpers/builder.c.i
+
+src/helpers/builder.s: src/helpers/builder.c.s
+
+.PHONY : src/helpers/builder.s
+
+# target to generate assembly for a file
+src/helpers/builder.c.s:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/helpers/builder.c.s
+.PHONY : src/helpers/builder.c.s
+
+src/helpers/tools.o: src/helpers/tools.c.o
+
+.PHONY : src/helpers/tools.o
+
+# target to build an object file
+src/helpers/tools.c.o:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/helpers/tools.c.o
+.PHONY : src/helpers/tools.c.o
+
+src/helpers/tools.i: src/helpers/tools.c.i
+
+.PHONY : src/helpers/tools.i
+
+# target to preprocess a source file
+src/helpers/tools.c.i:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/helpers/tools.c.i
+.PHONY : src/helpers/tools.c.i
+
+src/helpers/tools.s: src/helpers/tools.c.s
+
+.PHONY : src/helpers/tools.s
+
+# target to generate assembly for a file
+src/helpers/tools.c.s:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/helpers/tools.c.s
+.PHONY : src/helpers/tools.c.s
+
 src/main.o: src/main.c.o
 
 .PHONY : src/main.o
@@ -149,6 +203,33 @@ src/main.s: src/main.c.s
 src/main.c.s:
 	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/main.c.s
 .PHONY : src/main.c.s
+
+src/pages/game/game.o: src/pages/game/game.c.o
+
+.PHONY : src/pages/game/game.o
+
+# target to build an object file
+src/pages/game/game.c.o:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/pages/game/game.c.o
+.PHONY : src/pages/game/game.c.o
+
+src/pages/game/game.i: src/pages/game/game.c.i
+
+.PHONY : src/pages/game/game.i
+
+# target to preprocess a source file
+src/pages/game/game.c.i:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/pages/game/game.c.i
+.PHONY : src/pages/game/game.c.i
+
+src/pages/game/game.s: src/pages/game/game.c.s
+
+.PHONY : src/pages/game/game.s
+
+# target to generate assembly for a file
+src/pages/game/game.c.s:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/pages/game/game.c.s
+.PHONY : src/pages/game/game.c.s
 
 src/pages/main/main_page.o: src/pages/main/main_page.c.o
 
@@ -213,9 +294,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... tic_tac_toe"
 	@echo "... edit_cache"
+	@echo "... src/helpers/builder.o"
+	@echo "... src/helpers/builder.i"
+	@echo "... src/helpers/builder.s"
+	@echo "... src/helpers/tools.o"
+	@echo "... src/helpers/tools.i"
+	@echo "... src/helpers/tools.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/pages/game/game.o"
+	@echo "... src/pages/game/game.i"
+	@echo "... src/pages/game/game.s"
 	@echo "... src/pages/main/main_page.o"
 	@echo "... src/pages/main/main_page.i"
 	@echo "... src/pages/main/main_page.s"

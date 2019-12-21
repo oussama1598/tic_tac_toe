@@ -1,10 +1,8 @@
 #include "main_page.h"
 
-void show_main_page(GtkApplication *app)
+void show_main_page()
 {
-    main_page_window = gtk_application_window_new(app);
+    main_page_window = GTK_WIDGET(gtk_builder_get_object(builder, "main_page"));
 
-    gtk_application_add_window(app, main_page_window);
-
-    // gtk_widget_show_all(main_page_window);
+    gtk_widget_show(main_page_window);
 }

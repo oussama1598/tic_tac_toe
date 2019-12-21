@@ -4,7 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c" "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles/tic_tac_toe.dir/src/helpers/builder.c.o"
+  "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/tools.c" "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles/tic_tac_toe.dir/src/helpers/tools.c.o"
   "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/main.c" "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles/tic_tac_toe.dir/src/main.c.o"
+  "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/game/game.c" "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles/tic_tac_toe.dir/src/pages/game/game.c.o"
   "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c" "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles/tic_tac_toe.dir/src/pages/main/main_page.c.o"
   "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/signin/signin_page.c" "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles/tic_tac_toe.dir/src/pages/signin/signin_page.c.o"
   )
@@ -36,6 +39,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   ".././src/headers"
   ".././src/pages/main"
   ".././src/pages/signin"
+  ".././src/pages/game"
   )
 
 # Targets to which this target links.

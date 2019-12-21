@@ -3,7 +3,7 @@
 
 #include "imports.h"
 
-GtkWindow *main_page_window;
+GtkWidget *main_page_window;
 
 void show_main_page();
 #endif

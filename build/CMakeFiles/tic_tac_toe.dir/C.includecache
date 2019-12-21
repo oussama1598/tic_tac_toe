@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+.././src/headers/builder.h
+imports.h
+.././src/headers/imports.h
+
 .././src/headers/imports.h
 stdlib.h
 -
@@ -13,14 +17,40 @@ stdio.h
 -
 gtk/gtk.h
 -
-
-/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c
+builder.h
+.././src/headers/builder.h
+tools.h
+.././src/headers/tools.h
 main_page.h
-/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.h
+.././src/headers/main_page.h
+signin_page.h
+.././src/headers/signin_page.h
+game.h
+.././src/headers/game.h
 
-/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.h
+.././src/headers/tools.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+
+.././src/pages/main/main_page.h
 imports.h
-/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/imports.h
+.././src/pages/main/imports.h
+
+.././src/pages/signin/signin_page.h
+imports.h
+.././src/pages/signin/imports.h
+
+/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/game/game.c
+game.h
+/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/game/game.h
+
+/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/game/game.h
+imports.h
+/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/game/imports.h
 
 /usr/include/atk-1.0/atk/atk-enum-types.h
 atk/atkversion.h

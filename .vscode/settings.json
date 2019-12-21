@@ -1,2 +1,6 @@
 {
+    "files.associations": {
+        "imports.h": "c",
+        "signin_page.h": "c"
+    }
 }

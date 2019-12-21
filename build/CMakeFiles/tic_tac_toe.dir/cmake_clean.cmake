@@ -1,7 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/tic_tac_toe.dir/src/main.c.o"
+  "CMakeFiles/tic_tac_toe.dir/src/helpers/builder.c.o"
+  "CMakeFiles/tic_tac_toe.dir/src/helpers/tools.c.o"
   "CMakeFiles/tic_tac_toe.dir/src/pages/main/main_page.c.o"
   "CMakeFiles/tic_tac_toe.dir/src/pages/signin/signin_page.c.o"
+  "CMakeFiles/tic_tac_toe.dir/src/pages/game/game.c.o"
   "tic_tac_toe.pdb"
   "tic_tac_toe"
 )

@@ -18,11 +18,15 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O0 -Wall -Werror -fdump-rtl-expand")
 include_directories(${SRC_DIR}/${HEADERS_FOLDER})
 include_directories(${SRC_DIR}/pages/main)
 include_directories(${SRC_DIR}/pages/signin)
+include_directories(${SRC_DIR}/pages/game)
 
 set(SRCS
     ${SRC_DIR}/main.c
+    ${SRC_DIR}/helpers/builder.c
+    ${SRC_DIR}/helpers/tools.c
     ${SRC_DIR}/pages/main/main_page.c
     ${SRC_DIR}/pages/signin/signin_page.c
+    ${SRC_DIR}/pages/game/game.c
 )
 
 add_executable(tic_tac_toe ${SRCS})

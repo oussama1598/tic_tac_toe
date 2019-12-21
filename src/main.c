@@ -1,20 +1,17 @@
 #include "imports.h"
-#include "main_page.h"
-#include "signin_page.h"
-
-static void
-activate(GtkApplication *app,
-         gpointer user_data)
-{
-    show_main_page(app);
-}
 
 int main(int argc, char **argv)
 {
-    GtkApplication *app;
+    gtk_init(&argc, &argv);
 
-    app = gtk_application_new("org.gtk.example", G_APPLICATION_FLAGS_NONE);
-    g_signal_connect(app, "activate", G_CALLBACK(activate), NULL);
+    app_init();
+
+    gtk_builder_connect_signals(builder, NULL);
+
+    show_game_page();
+
+    g_object_unref(builder); // frees the pointer builder
+    gtk_main();
 
     return 0;
 }

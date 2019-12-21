@@ -67,3 +67,12 @@
     padding: 20px;
     border: 1px solid white;
 }
+
+.scores_label {
+    padding: 10px;
+    font-size: 1.1em;
+}
+
+.score {
+    margin: 10px;
+}
