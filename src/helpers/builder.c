@@ -8,6 +8,11 @@ void app_init()
 
     templates_length = TEMPLATES_LENGTH;
 
+    // to change will use this syntax instead
+    // add_template(template_path, template_init_function)
+    // this function will add the templat_path to templates
+    // and the function to another list that holds pointers to functions
+
     templates[0] = "pages/main/main.glade";
     templates[1] = "pages/signin/signin.glade";
     templates[2] = "pages/signup/signup.glade";
@@ -45,6 +50,8 @@ void init_windows()
     main_page_init();
     new_game_page_init();
     game_page_init();
+
+    // free the templates list and the functions list as well
 }
 
 // global signals

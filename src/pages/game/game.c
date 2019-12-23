@@ -10,7 +10,7 @@ void game_page_init()
     // init widgets
     game_canvas = GTK_WIDGET(gtk_builder_get_object(builder, "game_canvas"));
     game_restart_button = GTK_WIDGET(gtk_builder_get_object(builder, "game_restart_button"));
-    // game_quit_button = GTK_BUTTON(gtk_builder_get_object(builder, "game_restart_button"));
+    game_quit_button = GTK_WIDGET(gtk_builder_get_object(builder, "game_quit_button"));
 
     gtk_widget_add_events(game_canvas, GDK_BUTTON_PRESS_MASK);
 
@@ -19,13 +19,21 @@ void game_page_init()
     g_signal_connect(game_canvas, "draw", G_CALLBACK(on_draw), NULL);
     g_signal_connect(game_canvas, "button-press-event", G_CALLBACK(on_game_canvas_mouse_pressed), NULL);
     g_signal_connect(game_restart_button, "activate", G_CALLBACK(on_game_restart_button_clicked), NULL);
+    g_signal_connect(game_quit_button, "activate", G_CALLBACK(on_game_quit_button_clicked), NULL);
 }
 
-void show_game_page()
+void show_game_page(int ai_type)
 {
+    against_ai_type = ai_type;
+
     gtk_widget_show(game_page_window);
 
     init_game();
+}
+
+void close_game_page()
+{
+    gtk_widget_hide(game_page_window);
 }
 
 void init_game()
@@ -38,21 +46,94 @@ void init_game()
 
 void clear_game()
 {
+    game_finished = 0;
+    game_line_win = -1;
+    game_column_win = -1;
+
     for (int i = 0; i < 3; i++)
         for (int j = 0; j < 3; j++)
             game_matrix[i][j] = 0;
 }
 
+int game_check_if_win()
+{
+    game_line_win = -1;
+    game_column_win = -1;
+
+    // check lines
+    if (game_matrix[0][0] != 0 && game_matrix[0][0] == game_matrix[0][1] && game_matrix[0][1] == game_matrix[0][2])
+    {
+        // win
+        game_line_win = 0;
+
+        return game_matrix[0][0] == player_sign ? PLAYER_WON : AI_WON;
+    }
+
+    if (game_matrix[1][0] != 0 && game_matrix[1][0] == game_matrix[1][1] && game_matrix[1][1] == game_matrix[1][2])
+    {
+        // win
+        game_line_win = 1;
+
+        return game_matrix[1][0] == player_sign ? PLAYER_WON : AI_WON;
+    }
+
+    if (game_matrix[2][0] != 0 && game_matrix[2][0] == game_matrix[2][1] && game_matrix[2][1] == game_matrix[2][2])
+    {
+        // win
+        game_line_win = 2;
+
+        return game_matrix[2][0] == player_sign ? PLAYER_WON : AI_WON;
+    }
+
+    // check columns
+    if (game_matrix[0][0] != 0 && game_matrix[0][0] == game_matrix[1][0] && game_matrix[1][0] == game_matrix[2][0])
+    {
+        // win
+        game_column_win = 0;
+
+        return game_matrix[0][0] == player_sign ? PLAYER_WON : AI_WON;
+    }
+
+    if (game_matrix[0][1] != 0 && game_matrix[0][1] == game_matrix[1][1] && game_matrix[1][1] == game_matrix[2][1])
+    {
+        // win
+        game_column_win = 1;
+
+        return game_matrix[0][1] == player_sign ? PLAYER_WON : AI_WON;
+    }
+
+    if (game_matrix[0][2] != 0 && game_matrix[0][2] == game_matrix[1][2] && game_matrix[1][2] == game_matrix[2][2])
+    {
+        // win
+        game_column_win = 2;
+
+        return game_matrix[0][2] == player_sign ? PLAYER_WON : AI_WON;
+    }
+
+    if (game_matrix[0][0] != 0 && game_matrix[0][0] == game_matrix[1][1] && game_matrix[1][1] == game_matrix[2][2])
+    {
+        // win
+        game_line_win = 0;
+        game_column_win = 1;
+
+        return game_matrix[0][0] == player_sign ? PLAYER_WON : AI_WON;
+    }
+
+    if (game_matrix[0][2] != 0 && game_matrix[0][2] == game_matrix[1][1] && game_matrix[1][1] == game_matrix[2][0])
+    {
+        // win
+        game_line_win = 1;
+        game_column_win = 0;
+
+        return game_matrix[0][2] == player_sign ? PLAYER_WON : AI_WON;
+    }
+
+    return 0;
+}
+
 void redraw_game_canvas()
 {
     gtk_widget_queue_draw_area(game_canvas, 0, 0, canvas_width, canvas_height);
-}
-
-void on_game_restart_button_clicked(GtkWidget *button, gpointer user_data)
-{
-    clear_game();
-
-    redraw_game_canvas();
 }
 
 void on_game_canvas_mouse_pressed(GtkWidget *widget, GdkEventButton *event, gpointer user_data)
@@ -66,9 +147,35 @@ void on_game_canvas_mouse_pressed(GtkWidget *widget, GdkEventButton *event, gpoi
     int cell_index_x = x / cell_width;
     int cell_index_y = y / cell_height;
 
-    game_matrix[cell_index_y][cell_index_x] = player_sign;
+    if (game_matrix[cell_index_y][cell_index_x] == 0 && !game_finished)
+    {
+        game_matrix[cell_index_y][cell_index_x] = player_sign;
+
+        if (game_check_if_win())
+        {
+            g_print("game ended");
+            game_finished = 1;
+        }
+        else
+        {
+            play_next_move(against_ai_type);
+        }
+
+        redraw_game_canvas();
+    }
+}
+
+void on_game_restart_button_clicked(GtkWidget *button, gpointer user_data)
+{
+    clear_game();
 
     redraw_game_canvas();
+}
+
+void on_game_quit_button_clicked(GtkWidget *button, gpointer user_data)
+{
+    close_game_page();
+    show_main_page();
 }
 
 void on_draw(GtkWidget *canvas, cairo_t *cr, gpointer user_data)
@@ -131,4 +238,34 @@ void on_draw(GtkWidget *canvas, cairo_t *cr, gpointer user_data)
                 cairo_stroke(cr);
             }
         }
+
+    if (game_line_win != -1 && game_column_win != -1)
+    {
+        float x = canvas_width * game_line_win;
+        float xto = canvas_width * game_column_win;
+
+        cairo_move_to(cr, x, 0);
+        cairo_line_to(cr, xto, canvas_height);
+        cairo_close_path(cr);
+        cairo_stroke(cr);
+    }
+    else
+    {
+
+        if (game_line_win != -1)
+        {
+            float y = (cell_height * (game_line_win + 1)) - (cell_height / 2);
+
+            cairo_rectangle(cr, 0, y, canvas_width, 2);
+            cairo_fill(cr);
+        }
+
+        if (game_column_win != -1)
+        {
+            float x = (cell_width * (game_column_win + 1)) - (cell_width / 2);
+
+            cairo_rectangle(cr, x, 0, 2, canvas_height);
+            cairo_fill(cr);
+        }
+    }
 }

@@ -3,9 +3,6 @@
 
 #include "imports.h"
 
-#define AGAINST_AI 1
-#define AGAINST_RADNOM 2
-
 GtkWidget *new_game_page_window;
 GtkButton *new_game_ai_button;
 GtkButton *new_game_random_button;

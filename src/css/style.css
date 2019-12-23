@@ -1,3 +1,7 @@
+* {
+    font-family: monospace;
+}
+
 .window {
     background-color: #2a2b30;
 }
@@ -5,6 +9,7 @@
 .logo {
     border: 1px solid white;
     padding: 15px;
+    font-size: 1.2em;
 }
 
 .auth_buttons {

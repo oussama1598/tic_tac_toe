@@ -12,10 +12,12 @@ add_definitions(${GTK3_CFLAGS_OTHER})
 
 set(SRC_DIR ./src)
 set(HEADERS_FOLDER headers)
+set(MODULES modules)
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O0 -Wall -Werror -fdump-rtl-expand")
 
 include_directories(${SRC_DIR}/${HEADERS_FOLDER})
+include_directories(${SRC_DIR}/${MODULES}/ai_player)
 include_directories(${SRC_DIR}/pages/main)
 include_directories(${SRC_DIR}/pages/signin)
 include_directories(${SRC_DIR}/pages/signup)
@@ -27,6 +29,7 @@ set(SRCS
     ${SRC_DIR}/helpers/builder.c
     ${SRC_DIR}/helpers/tools.c
     ${SRC_DIR}/helpers/data_manager.c
+    ${SRC_DIR}/${MODULES}/ai_player/ai_player.c
     ${SRC_DIR}/pages/main/main_page.c
     ${SRC_DIR}/pages/signin/signin_page.c
     ${SRC_DIR}/pages/signup/signup_page.c

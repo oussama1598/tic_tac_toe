@@ -45,7 +45,7 @@
                 <property name="can_focus">False</property>
                 <property name="column_homogeneous">True</property>
                 <child>
-                  <object class="GtkButton">
+                  <object class="GtkButton" id="new_game_button">
                     <property name="label" translatable="yes">NEW GAME</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
@@ -60,7 +60,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkButton">
+                  <object class="GtkButton" id="load_game_button">
                     <property name="label" translatable="yes">LOAD GAME</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
@@ -75,7 +75,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkButton">
+                  <object class="GtkButton" id="score_button">
                     <property name="label" translatable="yes">SHOW SCORES</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
@@ -90,7 +90,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkButton">
+                  <object class="GtkButton" id="signout_button">
                     <property name="label" translatable="yes">SIGN OUT</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>

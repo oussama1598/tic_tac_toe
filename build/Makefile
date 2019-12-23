@@ -231,6 +231,33 @@ src/main.c.s:
 	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/modules/ai_player/ai_player.o: src/modules/ai_player/ai_player.c.o
+
+.PHONY : src/modules/ai_player/ai_player.o
+
+# target to build an object file
+src/modules/ai_player/ai_player.c.o:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/modules/ai_player/ai_player.c.o
+.PHONY : src/modules/ai_player/ai_player.c.o
+
+src/modules/ai_player/ai_player.i: src/modules/ai_player/ai_player.c.i
+
+.PHONY : src/modules/ai_player/ai_player.i
+
+# target to preprocess a source file
+src/modules/ai_player/ai_player.c.i:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/modules/ai_player/ai_player.c.i
+.PHONY : src/modules/ai_player/ai_player.c.i
+
+src/modules/ai_player/ai_player.s: src/modules/ai_player/ai_player.c.s
+
+.PHONY : src/modules/ai_player/ai_player.s
+
+# target to generate assembly for a file
+src/modules/ai_player/ai_player.c.s:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/modules/ai_player/ai_player.c.s
+.PHONY : src/modules/ai_player/ai_player.c.s
+
 src/pages/game/game.o: src/pages/game/game.c.o
 
 .PHONY : src/pages/game/game.o
@@ -387,6 +414,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/modules/ai_player/ai_player.o"
+	@echo "... src/modules/ai_player/ai_player.i"
+	@echo "... src/modules/ai_player/ai_player.s"
 	@echo "... src/pages/game/game.o"
 	@echo "... src/pages/game/game.i"
 	@echo "... src/pages/game/game.s"

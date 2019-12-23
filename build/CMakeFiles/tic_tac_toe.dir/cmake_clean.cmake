@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/tic_tac_toe.dir/src/helpers/builder.c.o"
   "CMakeFiles/tic_tac_toe.dir/src/helpers/tools.c.o"
   "CMakeFiles/tic_tac_toe.dir/src/helpers/data_manager.c.o"
+  "CMakeFiles/tic_tac_toe.dir/src/modules/ai_player/ai_player.c.o"
   "CMakeFiles/tic_tac_toe.dir/src/pages/main/main_page.c.o"
   "CMakeFiles/tic_tac_toe.dir/src/pages/signin/signin_page.c.o"
   "CMakeFiles/tic_tac_toe.dir/src/pages/signup/signup_page.c.o"

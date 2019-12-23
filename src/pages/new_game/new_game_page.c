@@ -29,10 +29,8 @@ void close_new_game_page()
 // signals
 void on_new_game_choose_button_clicked(GtkButton *button, gpointer user_data)
 {
-    g_print("%d", GPOINTER_TO_INT(user_data));
-
     close_new_game_page();
-    show_game_page();
+    show_game_page(GPOINTER_TO_INT(user_data));
 }
 
 void on_new_game_back_button_clicked(GtkButton *button, gpointer user_data)
