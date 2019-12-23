@@ -150,6 +150,33 @@ src/helpers/builder.c.s:
 	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/helpers/builder.c.s
 .PHONY : src/helpers/builder.c.s
 
+src/helpers/data_manager.o: src/helpers/data_manager.c.o
+
+.PHONY : src/helpers/data_manager.o
+
+# target to build an object file
+src/helpers/data_manager.c.o:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/helpers/data_manager.c.o
+.PHONY : src/helpers/data_manager.c.o
+
+src/helpers/data_manager.i: src/helpers/data_manager.c.i
+
+.PHONY : src/helpers/data_manager.i
+
+# target to preprocess a source file
+src/helpers/data_manager.c.i:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/helpers/data_manager.c.i
+.PHONY : src/helpers/data_manager.c.i
+
+src/helpers/data_manager.s: src/helpers/data_manager.c.s
+
+.PHONY : src/helpers/data_manager.s
+
+# target to generate assembly for a file
+src/helpers/data_manager.c.s:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/helpers/data_manager.c.s
+.PHONY : src/helpers/data_manager.c.s
+
 src/helpers/tools.o: src/helpers/tools.c.o
 
 .PHONY : src/helpers/tools.o
@@ -258,6 +285,33 @@ src/pages/main/main_page.c.s:
 	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/pages/main/main_page.c.s
 .PHONY : src/pages/main/main_page.c.s
 
+src/pages/new_game/new_game_page.o: src/pages/new_game/new_game_page.c.o
+
+.PHONY : src/pages/new_game/new_game_page.o
+
+# target to build an object file
+src/pages/new_game/new_game_page.c.o:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/pages/new_game/new_game_page.c.o
+.PHONY : src/pages/new_game/new_game_page.c.o
+
+src/pages/new_game/new_game_page.i: src/pages/new_game/new_game_page.c.i
+
+.PHONY : src/pages/new_game/new_game_page.i
+
+# target to preprocess a source file
+src/pages/new_game/new_game_page.c.i:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/pages/new_game/new_game_page.c.i
+.PHONY : src/pages/new_game/new_game_page.c.i
+
+src/pages/new_game/new_game_page.s: src/pages/new_game/new_game_page.c.s
+
+.PHONY : src/pages/new_game/new_game_page.s
+
+# target to generate assembly for a file
+src/pages/new_game/new_game_page.c.s:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/pages/new_game/new_game_page.c.s
+.PHONY : src/pages/new_game/new_game_page.c.s
+
 src/pages/signin/signin_page.o: src/pages/signin/signin_page.c.o
 
 .PHONY : src/pages/signin/signin_page.o
@@ -285,6 +339,33 @@ src/pages/signin/signin_page.c.s:
 	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/pages/signin/signin_page.c.s
 .PHONY : src/pages/signin/signin_page.c.s
 
+src/pages/signup/signup_page.o: src/pages/signup/signup_page.c.o
+
+.PHONY : src/pages/signup/signup_page.o
+
+# target to build an object file
+src/pages/signup/signup_page.c.o:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/pages/signup/signup_page.c.o
+.PHONY : src/pages/signup/signup_page.c.o
+
+src/pages/signup/signup_page.i: src/pages/signup/signup_page.c.i
+
+.PHONY : src/pages/signup/signup_page.i
+
+# target to preprocess a source file
+src/pages/signup/signup_page.c.i:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/pages/signup/signup_page.c.i
+.PHONY : src/pages/signup/signup_page.c.i
+
+src/pages/signup/signup_page.s: src/pages/signup/signup_page.c.s
+
+.PHONY : src/pages/signup/signup_page.s
+
+# target to generate assembly for a file
+src/pages/signup/signup_page.c.s:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/pages/signup/signup_page.c.s
+.PHONY : src/pages/signup/signup_page.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -297,6 +378,9 @@ help:
 	@echo "... src/helpers/builder.o"
 	@echo "... src/helpers/builder.i"
 	@echo "... src/helpers/builder.s"
+	@echo "... src/helpers/data_manager.o"
+	@echo "... src/helpers/data_manager.i"
+	@echo "... src/helpers/data_manager.s"
 	@echo "... src/helpers/tools.o"
 	@echo "... src/helpers/tools.i"
 	@echo "... src/helpers/tools.s"
@@ -309,9 +393,15 @@ help:
 	@echo "... src/pages/main/main_page.o"
 	@echo "... src/pages/main/main_page.i"
 	@echo "... src/pages/main/main_page.s"
+	@echo "... src/pages/new_game/new_game_page.o"
+	@echo "... src/pages/new_game/new_game_page.i"
+	@echo "... src/pages/new_game/new_game_page.s"
 	@echo "... src/pages/signin/signin_page.o"
 	@echo "... src/pages/signin/signin_page.i"
 	@echo "... src/pages/signin/signin_page.s"
+	@echo "... src/pages/signup/signup_page.o"
+	@echo "... src/pages/signup/signup_page.i"
+	@echo "... src/pages/signup/signup_page.s"
 .PHONY : help
 
 

@@ -75,7 +75,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkButton">
+                  <object class="GtkButton" id="new_game_back_button">
                     <property name="label" translatable="yes">BACK</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>

@@ -47,6 +47,7 @@
                   <object class="GtkButton">
                     <property name="label" translatable="yes">SIGN IN</property>
                     <property name="visible">True</property>
+                    <property name="sensitive">False</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
                     <property name="relief">none</property>
@@ -63,7 +64,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkButton">
+                  <object class="GtkButton" id="signup_show_button">
                     <property name="label" translatable="yes">SIGN UP</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>

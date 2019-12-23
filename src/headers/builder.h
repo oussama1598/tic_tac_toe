@@ -3,7 +3,7 @@
 
 #include "imports.h"
 
-#define TEMPLATES_LENGTH 3
+#define TEMPLATES_LENGTH 5
 
 GtkBuilder *builder;
 GtkCssProvider *css_provider;
@@ -22,5 +22,8 @@ void app_init();
 void load_templates();
 void load_stylesheet();
 void init_windows();
+
+// global signals
+void on_destroy(GtkWidget *widget, gpointer user_data);
 
 #endif

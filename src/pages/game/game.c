@@ -2,21 +2,36 @@
 
 void game_page_init()
 {
+    // seed the random generator
+    srand(time(NULL));
+
     game_page_window = GTK_WIDGET(gtk_builder_get_object(builder, "game_page"));
 
     // init widgets
     game_canvas = GTK_WIDGET(gtk_builder_get_object(builder, "game_canvas"));
+    game_restart_button = GTK_WIDGET(gtk_builder_get_object(builder, "game_restart_button"));
+    // game_quit_button = GTK_BUTTON(gtk_builder_get_object(builder, "game_restart_button"));
 
     gtk_widget_add_events(game_canvas, GDK_BUTTON_PRESS_MASK);
 
     // init signals
+    g_signal_connect(game_page_window, "destroy", G_CALLBACK(on_destroy), NULL);
     g_signal_connect(game_canvas, "draw", G_CALLBACK(on_draw), NULL);
     g_signal_connect(game_canvas, "button-press-event", G_CALLBACK(on_game_canvas_mouse_pressed), NULL);
+    g_signal_connect(game_restart_button, "activate", G_CALLBACK(on_game_restart_button_clicked), NULL);
 }
 
 void show_game_page()
 {
     gtk_widget_show(game_page_window);
+
+    init_game();
+}
+
+void init_game()
+{
+    // gets defined a random sign
+    player_sign = (rand() % 2) + 1;
 
     clear_game();
 }
@@ -26,6 +41,18 @@ void clear_game()
     for (int i = 0; i < 3; i++)
         for (int j = 0; j < 3; j++)
             game_matrix[i][j] = 0;
+}
+
+void redraw_game_canvas()
+{
+    gtk_widget_queue_draw_area(game_canvas, 0, 0, canvas_width, canvas_height);
+}
+
+void on_game_restart_button_clicked(GtkWidget *button, gpointer user_data)
+{
+    clear_game();
+
+    redraw_game_canvas();
 }
 
 void on_game_canvas_mouse_pressed(GtkWidget *widget, GdkEventButton *event, gpointer user_data)
@@ -39,9 +66,9 @@ void on_game_canvas_mouse_pressed(GtkWidget *widget, GdkEventButton *event, gpoi
     int cell_index_x = x / cell_width;
     int cell_index_y = y / cell_height;
 
-    game_matrix[cell_index_y][cell_index_x] = 1;
+    game_matrix[cell_index_y][cell_index_x] = player_sign;
 
-    gtk_widget_queue_draw_area(widget, 0, 0, canvas_width, canvas_height);
+    redraw_game_canvas();
 }
 
 void on_draw(GtkWidget *canvas, cairo_t *cr, gpointer user_data)

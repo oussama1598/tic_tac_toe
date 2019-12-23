@@ -10,7 +10,9 @@ void app_init()
 
     templates[0] = "pages/main/main.glade";
     templates[1] = "pages/signin/signin.glade";
-    templates[2] = "pages/game/game.glade";
+    templates[2] = "pages/signup/signup.glade";
+    templates[3] = "pages/new_game/new_game.glade";
+    templates[4] = "pages/game/game.glade";
 
     load_templates();
     load_stylesheet();
@@ -35,8 +37,18 @@ void load_stylesheet()
     gtk_style_context_add_provider_for_screen(gdk_screen_get_default(), GTK_STYLE_PROVIDER(css_provider), GTK_STYLE_PROVIDER_PRIORITY_USER);
 }
 
+// always init pages in here
 void init_windows()
 {
-    signin_init();
+    signin_page_init();
+    signup_page_init();
+    main_page_init();
+    new_game_page_init();
     game_page_init();
+}
+
+// global signals
+void on_destroy(GtkWidget *widget, gpointer user_data)
+{
+    gtk_main_quit();
 }
