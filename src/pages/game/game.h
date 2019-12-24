@@ -24,7 +24,7 @@ void game_page_init();
 void show_game_page();
 void close_game_page();
 void init_game();
-int game_check_if_win();
+void game_check_if_win();
 void clear_game();
 void redraw_game_canvas();
 

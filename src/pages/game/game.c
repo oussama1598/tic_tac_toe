@@ -55,8 +55,10 @@ void clear_game()
             game_matrix[i][j] = 0;
 }
 
-int game_check_if_win()
+void game_check_if_win()
 {
+    int winner_player = -1;
+
     game_line_win = -1;
     game_column_win = -1;
 
@@ -66,7 +68,7 @@ int game_check_if_win()
         // win
         game_line_win = 0;
 
-        return game_matrix[0][0] == player_sign ? PLAYER_WON : AI_WON;
+        winner_player = game_matrix[0][0] == player_sign ? PLAYER_WON : AI_WON;
     }
 
     if (game_matrix[1][0] != 0 && game_matrix[1][0] == game_matrix[1][1] && game_matrix[1][1] == game_matrix[1][2])
@@ -74,7 +76,7 @@ int game_check_if_win()
         // win
         game_line_win = 1;
 
-        return game_matrix[1][0] == player_sign ? PLAYER_WON : AI_WON;
+        winner_player = game_matrix[1][0] == player_sign ? PLAYER_WON : AI_WON;
     }
 
     if (game_matrix[2][0] != 0 && game_matrix[2][0] == game_matrix[2][1] && game_matrix[2][1] == game_matrix[2][2])
@@ -82,7 +84,7 @@ int game_check_if_win()
         // win
         game_line_win = 2;
 
-        return game_matrix[2][0] == player_sign ? PLAYER_WON : AI_WON;
+        winner_player = game_matrix[2][0] == player_sign ? PLAYER_WON : AI_WON;
     }
 
     // check columns
@@ -91,7 +93,7 @@ int game_check_if_win()
         // win
         game_column_win = 0;
 
-        return game_matrix[0][0] == player_sign ? PLAYER_WON : AI_WON;
+        winner_player = game_matrix[0][0] == player_sign ? PLAYER_WON : AI_WON;
     }
 
     if (game_matrix[0][1] != 0 && game_matrix[0][1] == game_matrix[1][1] && game_matrix[1][1] == game_matrix[2][1])
@@ -99,7 +101,7 @@ int game_check_if_win()
         // win
         game_column_win = 1;
 
-        return game_matrix[0][1] == player_sign ? PLAYER_WON : AI_WON;
+        winner_player = game_matrix[0][1] == player_sign ? PLAYER_WON : AI_WON;
     }
 
     if (game_matrix[0][2] != 0 && game_matrix[0][2] == game_matrix[1][2] && game_matrix[1][2] == game_matrix[2][2])
@@ -107,7 +109,7 @@ int game_check_if_win()
         // win
         game_column_win = 2;
 
-        return game_matrix[0][2] == player_sign ? PLAYER_WON : AI_WON;
+        winner_player = game_matrix[0][2] == player_sign ? PLAYER_WON : AI_WON;
     }
 
     if (game_matrix[0][0] != 0 && game_matrix[0][0] == game_matrix[1][1] && game_matrix[1][1] == game_matrix[2][2])
@@ -116,7 +118,7 @@ int game_check_if_win()
         game_line_win = 0;
         game_column_win = 1;
 
-        return game_matrix[0][0] == player_sign ? PLAYER_WON : AI_WON;
+        winner_player = game_matrix[0][0] == player_sign ? PLAYER_WON : AI_WON;
     }
 
     if (game_matrix[0][2] != 0 && game_matrix[0][2] == game_matrix[1][1] && game_matrix[1][1] == game_matrix[2][0])
@@ -125,10 +127,14 @@ int game_check_if_win()
         game_line_win = 1;
         game_column_win = 0;
 
-        return game_matrix[0][2] == player_sign ? PLAYER_WON : AI_WON;
+        winner_player = game_matrix[0][2] == player_sign ? PLAYER_WON : AI_WON;
     }
 
-    return 0;
+    if (winner_player != -1)
+    {
+        g_print("game ended %d", winner_player);
+        game_finished = 1;
+    }
 }
 
 void redraw_game_canvas()
@@ -151,14 +157,12 @@ void on_game_canvas_mouse_pressed(GtkWidget *widget, GdkEventButton *event, gpoi
     {
         game_matrix[cell_index_y][cell_index_x] = player_sign;
 
-        if (game_check_if_win())
-        {
-            g_print("game ended");
-            game_finished = 1;
-        }
-        else
+        game_check_if_win();
+
+        if (!game_finished)
         {
             play_next_move(against_ai_type);
+            game_check_if_win();
         }
 
         redraw_game_canvas();
