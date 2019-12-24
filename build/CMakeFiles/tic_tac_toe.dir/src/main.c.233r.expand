@@ -1,5 +1,5 @@
 
-;; Function main (main, funcdef_no=2087, decl_uid=59957, cgraph_uid=2088, symbol_order=2128)
+;; Function main (main, funcdef_no=2087, decl_uid=59965, cgraph_uid=2088, symbol_order=2129)
 
 
 ;; Generating RTL for gimple basic block 2
@@ -59,7 +59,7 @@ try_optimize_cfg iteration 2
 (insn 10 9 11 2 (set (reg:DI 5 di)
         (reg:DI 86)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/main.c":5:5 -1
      (nil))
-(call_insn 11 10 12 2 (call (mem:QI (symbol_ref:DI ("gtk_init") [flags 0x41]  <function_decl 0x7fd2cc41f800 gtk_init>) [0 gtk_init S1 A8])
+(call_insn 11 10 12 2 (call (mem:QI (symbol_ref:DI ("gtk_init") [flags 0x41]  <function_decl 0x7f4b0068f800 gtk_init>) [0 gtk_init S1 A8])
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/main.c":5:5 -1
      (nil)
     (expr_list:DI (use (reg:DI 5 di))
@@ -68,7 +68,7 @@ try_optimize_cfg iteration 2
 (insn 12 11 13 2 (set (reg:QI 0 ax)
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/main.c":8:5 -1
      (nil))
-(call_insn 13 12 14 2 (call (mem:QI (symbol_ref:DI ("load_data") [flags 0x41]  <function_decl 0x7fd2cb816c00 load_data>) [0 load_data S1 A8])
+(call_insn 13 12 14 2 (call (mem:QI (symbol_ref:DI ("load_data") [flags 0x41]  <function_decl 0x7f4affa86c00 load_data>) [0 load_data S1 A8])
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/main.c":8:5 -1
      (nil)
     (expr_list (use (reg:QI 0 ax))
@@ -76,7 +76,7 @@ try_optimize_cfg iteration 2
 (insn 14 13 15 2 (set (reg:QI 0 ax)
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/main.c":11:5 -1
      (nil))
-(call_insn 15 14 16 2 (call (mem:QI (symbol_ref:DI ("app_init") [flags 0x41]  <function_decl 0x7fd2cb803f00 app_init>) [0 app_init S1 A8])
+(call_insn 15 14 16 2 (call (mem:QI (symbol_ref:DI ("app_init") [flags 0x41]  <function_decl 0x7f4affa73f00 app_init>) [0 app_init S1 A8])
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/main.c":11:5 -1
      (nil)
     (expr_list (use (reg:QI 0 ax))
@@ -84,23 +84,23 @@ try_optimize_cfg iteration 2
 (insn 16 15 17 2 (set (reg:QI 0 ax)
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/main.c":14:5 -1
      (nil))
-(call_insn 17 16 18 2 (call (mem:QI (symbol_ref:DI ("show_signin_page") [flags 0x41]  <function_decl 0x7fd2cb81db00 show_signin_page>) [0 show_signin_page S1 A8])
+(call_insn 17 16 18 2 (call (mem:QI (symbol_ref:DI ("show_signin_page") [flags 0x41]  <function_decl 0x7f4affa8db00 show_signin_page>) [0 show_signin_page S1 A8])
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/main.c":14:5 -1
      (nil)
     (expr_list (use (reg:QI 0 ax))
         (nil)))
 (insn 18 17 19 2 (set (reg/f:DI 82 [ builder.0_1 ])
-        (mem/f/c:DI (symbol_ref:DI ("builder") [flags 0x2]  <var_decl 0x7fd2cc351d80 builder>) [1 builder+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/main.c":16:5 -1
+        (mem/f/c:DI (symbol_ref:DI ("builder") [flags 0x2]  <var_decl 0x7f4b005c1d80 builder>) [1 builder+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/main.c":16:5 -1
      (nil))
 (insn 19 18 20 2 (set (reg:DI 5 di)
         (reg/f:DI 82 [ builder.0_1 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/main.c":16:5 -1
      (nil))
-(call_insn 20 19 21 2 (call (mem:QI (symbol_ref:DI ("g_object_unref") [flags 0x41]  <function_decl 0x7fd2cdfb0a00 g_object_unref>) [0 g_object_unref S1 A8])
+(call_insn 20 19 21 2 (call (mem:QI (symbol_ref:DI ("g_object_unref") [flags 0x41]  <function_decl 0x7f4b02220a00 g_object_unref>) [0 g_object_unref S1 A8])
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/main.c":16:5 -1
      (nil)
     (expr_list:DI (use (reg:DI 5 di))
         (nil)))
-(call_insn 21 20 22 2 (call (mem:QI (symbol_ref:DI ("gtk_main") [flags 0x41]  <function_decl 0x7fd2cc424100 gtk_main>) [0 gtk_main S1 A8])
+(call_insn 21 20 22 2 (call (mem:QI (symbol_ref:DI ("gtk_main") [flags 0x41]  <function_decl 0x7f4b00694100 gtk_main>) [0 gtk_main S1 A8])
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/main.c":17:5 -1
      (nil)
     (nil))

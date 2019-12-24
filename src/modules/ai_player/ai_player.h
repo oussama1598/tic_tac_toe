@@ -6,7 +6,13 @@
 
 #include "imports.h"
 
-int get_empty_random_empty_cell(int *j);
+typedef struct cell
+{
+    int i;
+    int j;
+} cell;
+
+void get_empty_random_empty_cell(cell *empty_cell);
 int play_next_move(int ai_type);
 
 #endif

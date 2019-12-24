@@ -150,33 +150,6 @@ src/helpers/builder.c.s:
 	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/helpers/builder.c.s
 .PHONY : src/helpers/builder.c.s
 
-src/helpers/data_manager.o: src/helpers/data_manager.c.o
-
-.PHONY : src/helpers/data_manager.o
-
-# target to build an object file
-src/helpers/data_manager.c.o:
-	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/helpers/data_manager.c.o
-.PHONY : src/helpers/data_manager.c.o
-
-src/helpers/data_manager.i: src/helpers/data_manager.c.i
-
-.PHONY : src/helpers/data_manager.i
-
-# target to preprocess a source file
-src/helpers/data_manager.c.i:
-	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/helpers/data_manager.c.i
-.PHONY : src/helpers/data_manager.c.i
-
-src/helpers/data_manager.s: src/helpers/data_manager.c.s
-
-.PHONY : src/helpers/data_manager.s
-
-# target to generate assembly for a file
-src/helpers/data_manager.c.s:
-	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/helpers/data_manager.c.s
-.PHONY : src/helpers/data_manager.c.s
-
 src/helpers/tools.o: src/helpers/tools.c.o
 
 .PHONY : src/helpers/tools.o
@@ -257,6 +230,33 @@ src/modules/ai_player/ai_player.s: src/modules/ai_player/ai_player.c.s
 src/modules/ai_player/ai_player.c.s:
 	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/modules/ai_player/ai_player.c.s
 .PHONY : src/modules/ai_player/ai_player.c.s
+
+src/modules/data_manager/data_manager.o: src/modules/data_manager/data_manager.c.o
+
+.PHONY : src/modules/data_manager/data_manager.o
+
+# target to build an object file
+src/modules/data_manager/data_manager.c.o:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/modules/data_manager/data_manager.c.o
+.PHONY : src/modules/data_manager/data_manager.c.o
+
+src/modules/data_manager/data_manager.i: src/modules/data_manager/data_manager.c.i
+
+.PHONY : src/modules/data_manager/data_manager.i
+
+# target to preprocess a source file
+src/modules/data_manager/data_manager.c.i:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/modules/data_manager/data_manager.c.i
+.PHONY : src/modules/data_manager/data_manager.c.i
+
+src/modules/data_manager/data_manager.s: src/modules/data_manager/data_manager.c.s
+
+.PHONY : src/modules/data_manager/data_manager.s
+
+# target to generate assembly for a file
+src/modules/data_manager/data_manager.c.s:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/modules/data_manager/data_manager.c.s
+.PHONY : src/modules/data_manager/data_manager.c.s
 
 src/pages/game/game.o: src/pages/game/game.c.o
 
@@ -405,9 +405,6 @@ help:
 	@echo "... src/helpers/builder.o"
 	@echo "... src/helpers/builder.i"
 	@echo "... src/helpers/builder.s"
-	@echo "... src/helpers/data_manager.o"
-	@echo "... src/helpers/data_manager.i"
-	@echo "... src/helpers/data_manager.s"
 	@echo "... src/helpers/tools.o"
 	@echo "... src/helpers/tools.i"
 	@echo "... src/helpers/tools.s"
@@ -417,6 +414,9 @@ help:
 	@echo "... src/modules/ai_player/ai_player.o"
 	@echo "... src/modules/ai_player/ai_player.i"
 	@echo "... src/modules/ai_player/ai_player.s"
+	@echo "... src/modules/data_manager/data_manager.o"
+	@echo "... src/modules/data_manager/data_manager.i"
+	@echo "... src/modules/data_manager/data_manager.s"
 	@echo "... src/pages/game/game.o"
 	@echo "... src/pages/game/game.i"
 	@echo "... src/pages/game/game.s"

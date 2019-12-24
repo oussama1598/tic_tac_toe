@@ -47,7 +47,7 @@
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <child>
-                      <object class="GtkImageMenuItem">
+                      <object class="GtkImageMenuItem" id="game_restart_button">
                         <property name="label" translatable="yes">Restart</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
@@ -56,7 +56,7 @@
                       </object>
                     </child>
                     <child>
-                      <object class="GtkImageMenuItem">
+                      <object class="GtkImageMenuItem" id="game_quit_button">
                         <property name="label" translatable="yes">Quit</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
@@ -100,7 +100,7 @@
         <child>
           <object class="GtkDrawingArea" id="game_canvas">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can_focus">True</property>
             <property name="vexpand">True</property>
           </object>
           <packing>
@@ -109,10 +109,11 @@
           </packing>
         </child>
         <child>
-          <object class="GtkLabel">
+          <object class="GtkLabel" id="message_box">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="label" translatable="yes">label</property>
+            <property name="margin_top">15</property>
+            <property name="margin_bottom">15</property>
             <style>
               <class name="message_box"/>
             </style>

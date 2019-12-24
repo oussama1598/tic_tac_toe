@@ -4,11 +4,15 @@
 #include "imports.h"
 #define PLAYER_WON 1
 #define AI_WON 2
+#define NO_MOVES_LEFT -1
+#define O_SIGN 1
+#define X_SIGN 2
 
 GtkWidget *game_page_window;
 GtkWidget *game_canvas;
 GtkWidget *game_restart_button;
 GtkWidget *game_quit_button;
+GtkLabel *game_message_box;
 
 unsigned int game_matrix[3][3];
 int canvas_width;
@@ -24,8 +28,9 @@ void game_page_init();
 void show_game_page();
 void close_game_page();
 void init_game();
-void game_check_if_win();
 void clear_game();
+void set_message(const char *str);
+void game_check_if_win(int isTie);
 void redraw_game_canvas();
 
 // signals

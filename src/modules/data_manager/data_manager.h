@@ -18,7 +18,7 @@ int accounts_length;
 void load_data();
 void load_users();
 
-void * get_user_data(const char *username);
+void *get_user_data(const char *username);
 int check_if_user_exists(const char *username);
 int authenticate_user(const char *username, const char *password);
 

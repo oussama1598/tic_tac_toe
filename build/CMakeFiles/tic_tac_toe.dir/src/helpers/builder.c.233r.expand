@@ -1,5 +1,5 @@
 
-;; Function app_init (app_init, funcdef_no=2087, decl_uid=59948, cgraph_uid=2088, symbol_order=2128)
+;; Function app_init (app_init, funcdef_no=2087, decl_uid=59956, cgraph_uid=2088, symbol_order=2129)
 
 
 ;; Generating RTL for gimple basic block 2
@@ -26,58 +26,58 @@ try_optimize_cfg iteration 2
 (note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
 (insn 5 2 6 2 (set (reg/f:DI 82)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7fed79ef0f30 *.LC0>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":5:18 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f343e66a000 *.LC0>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":5:18 -1
      (nil))
-(insn 6 5 7 2 (set (mem/f/c:DI (symbol_ref:DI ("default_path") [flags 0x2]  <var_decl 0x7fed79ef0750 default_path>) [9 default_path+0 S8 A64])
+(insn 6 5 7 2 (set (mem/f/c:DI (symbol_ref:DI ("default_path") [flags 0x2]  <var_decl 0x7f343e64c7e0 default_path>) [9 default_path+0 S8 A64])
         (reg/f:DI 82)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":5:18 -1
      (nil))
 (insn 7 6 8 2 (set (reg/f:DI 83)
-        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7fed79f0e000 *.LC1>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":7:14 -1
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f343e66a090 *.LC1>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":7:14 -1
      (nil))
-(insn 8 7 9 2 (set (mem/f/c:DI (symbol_ref:DI ("css_file") [flags 0x2]  <var_decl 0x7fed79ef0900 css_file>) [9 css_file+0 S8 A64])
+(insn 8 7 9 2 (set (mem/f/c:DI (symbol_ref:DI ("css_file") [flags 0x2]  <var_decl 0x7f343e64c990 css_file>) [9 css_file+0 S8 A64])
         (reg/f:DI 83)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":7:14 -1
      (nil))
-(insn 9 8 10 2 (set (mem/c:SI (symbol_ref:DI ("templates_length") [flags 0x2]  <var_decl 0x7fed79ef0870 templates_length>) [2 templates_length+0 S4 A32])
+(insn 9 8 10 2 (set (mem/c:SI (symbol_ref:DI ("templates_length") [flags 0x2]  <var_decl 0x7f343e64c900 templates_length>) [2 templates_length+0 S4 A32])
         (const_int 5 [0x5])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":9:22 -1
      (nil))
 (insn 10 9 11 2 (set (reg/f:DI 84)
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7fed79f0e090 *.LC2>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":16:18 -1
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f343e66a120 *.LC2>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":16:18 -1
      (nil))
-(insn 11 10 12 2 (set (mem/f/c:DI (symbol_ref:DI ("templates") [flags 0x2]  <var_decl 0x7fed79ef07e0 templates>) [9 templates+0 S8 A128])
+(insn 11 10 12 2 (set (mem/f/c:DI (symbol_ref:DI ("templates") [flags 0x2]  <var_decl 0x7f343e64c870 templates>) [9 templates+0 S8 A128])
         (reg/f:DI 84)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":16:18 -1
      (nil))
 (insn 12 11 13 2 (set (reg/f:DI 85)
-        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7fed79f0e120 *.LC3>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":17:18 -1
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7f343e66a1b0 *.LC3>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":17:18 -1
      (nil))
-(insn 13 12 14 2 (set (mem/f/c:DI (const:DI (plus:DI (symbol_ref:DI ("templates") [flags 0x2]  <var_decl 0x7fed79ef07e0 templates>)
+(insn 13 12 14 2 (set (mem/f/c:DI (const:DI (plus:DI (symbol_ref:DI ("templates") [flags 0x2]  <var_decl 0x7f343e64c870 templates>)
                     (const_int 8 [0x8]))) [9 templates+8 S8 A64])
         (reg/f:DI 85)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":17:18 -1
      (nil))
 (insn 14 13 15 2 (set (reg/f:DI 86)
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7fed79f0e1b0 *.LC4>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":18:18 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f343e66a240 *.LC4>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":18:18 -1
      (nil))
-(insn 15 14 16 2 (set (mem/f/c:DI (const:DI (plus:DI (symbol_ref:DI ("templates") [flags 0x2]  <var_decl 0x7fed79ef07e0 templates>)
+(insn 15 14 16 2 (set (mem/f/c:DI (const:DI (plus:DI (symbol_ref:DI ("templates") [flags 0x2]  <var_decl 0x7f343e64c870 templates>)
                     (const_int 16 [0x10]))) [9 templates+16 S8 A128])
         (reg/f:DI 86)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":18:18 -1
      (nil))
 (insn 16 15 17 2 (set (reg/f:DI 87)
-        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x7fed79f0e240 *.LC5>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":19:18 -1
+        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x7f343e66a2d0 *.LC5>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":19:18 -1
      (nil))
-(insn 17 16 18 2 (set (mem/f/c:DI (const:DI (plus:DI (symbol_ref:DI ("templates") [flags 0x2]  <var_decl 0x7fed79ef07e0 templates>)
+(insn 17 16 18 2 (set (mem/f/c:DI (const:DI (plus:DI (symbol_ref:DI ("templates") [flags 0x2]  <var_decl 0x7f343e64c870 templates>)
                     (const_int 24 [0x18]))) [9 templates+24 S8 A64])
         (reg/f:DI 87)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":19:18 -1
      (nil))
 (insn 18 17 19 2 (set (reg/f:DI 88)
-        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x7fed79f0e2d0 *.LC6>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":20:18 -1
+        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x7f343e66a360 *.LC6>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":20:18 -1
      (nil))
-(insn 19 18 20 2 (set (mem/f/c:DI (const:DI (plus:DI (symbol_ref:DI ("templates") [flags 0x2]  <var_decl 0x7fed79ef07e0 templates>)
+(insn 19 18 20 2 (set (mem/f/c:DI (const:DI (plus:DI (symbol_ref:DI ("templates") [flags 0x2]  <var_decl 0x7f343e64c870 templates>)
                     (const_int 32 [0x20]))) [9 templates+32 S8 A128])
         (reg/f:DI 88)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":20:18 -1
      (nil))
 (insn 20 19 21 2 (set (reg:QI 0 ax)
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":22:5 -1
      (nil))
-(call_insn 21 20 22 2 (call (mem:QI (symbol_ref:DI ("load_templates") [flags 0x3]  <function_decl 0x7fed79ef3500 load_templates>) [0 load_templates S1 A8])
+(call_insn 21 20 22 2 (call (mem:QI (symbol_ref:DI ("load_templates") [flags 0x3]  <function_decl 0x7f343e650600 load_templates>) [0 load_templates S1 A8])
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":22:5 -1
      (nil)
     (expr_list (use (reg:QI 0 ax))
@@ -85,7 +85,7 @@ try_optimize_cfg iteration 2
 (insn 22 21 23 2 (set (reg:QI 0 ax)
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":23:5 -1
      (nil))
-(call_insn 23 22 24 2 (call (mem:QI (symbol_ref:DI ("load_stylesheet") [flags 0x3]  <function_decl 0x7fed79ef3600 load_stylesheet>) [0 load_stylesheet S1 A8])
+(call_insn 23 22 24 2 (call (mem:QI (symbol_ref:DI ("load_stylesheet") [flags 0x3]  <function_decl 0x7f343e650700 load_stylesheet>) [0 load_stylesheet S1 A8])
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":23:5 -1
      (nil)
     (expr_list (use (reg:QI 0 ax))
@@ -93,13 +93,13 @@ try_optimize_cfg iteration 2
 (insn 24 23 25 2 (set (reg:QI 0 ax)
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":25:5 -1
      (nil))
-(call_insn 25 24 0 2 (call (mem:QI (symbol_ref:DI ("init_windows") [flags 0x3]  <function_decl 0x7fed79ef3700 init_windows>) [0 init_windows S1 A8])
+(call_insn 25 24 0 2 (call (mem:QI (symbol_ref:DI ("init_windows") [flags 0x3]  <function_decl 0x7f343e650800 init_windows>) [0 init_windows S1 A8])
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":25:5 -1
      (nil)
     (expr_list (use (reg:QI 0 ax))
         (nil)))
 
-;; Function load_templates (load_templates, funcdef_no=2088, decl_uid=59949, cgraph_uid=2089, symbol_order=2129)
+;; Function load_templates (load_templates, funcdef_no=2088, decl_uid=59957, cgraph_uid=2089, symbol_order=2130)
 
 Partition 0: size 4 align 4
 	i_8
@@ -135,25 +135,25 @@ try_optimize_cfg iteration 2
 (note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
 (call_insn 5 2 6 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("gtk_builder_new") [flags 0x41]  <function_decl 0x7fed7b05e500 gtk_builder_new>) [0 gtk_builder_new S1 A8])
+        (call (mem:QI (symbol_ref:DI ("gtk_builder_new") [flags 0x41]  <function_decl 0x7f343f7b9500 gtk_builder_new>) [0 gtk_builder_new S1 A8])
             (const_int 0 [0]))) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":30:15 -1
      (nil)
     (nil))
 (insn 6 5 7 2 (set (reg/f:DI 82 [ _1 ])
         (reg:DI 0 ax)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":30:15 -1
      (nil))
-(insn 7 6 8 2 (set (mem/f/c:DI (symbol_ref:DI ("builder") [flags 0x2]  <var_decl 0x7fed79ef0630 builder>) [7 builder+0 S8 A64])
+(insn 7 6 8 2 (set (mem/f/c:DI (symbol_ref:DI ("builder") [flags 0x2]  <var_decl 0x7f343e64c6c0 builder>) [7 builder+0 S8 A64])
         (reg/f:DI 82 [ _1 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":30:13 -1
      (nil))
 (call_insn 8 7 9 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("gtk_css_provider_new") [flags 0x41]  <function_decl 0x7fed7ad39100 gtk_css_provider_new>) [0 gtk_css_provider_new S1 A8])
+        (call (mem:QI (symbol_ref:DI ("gtk_css_provider_new") [flags 0x41]  <function_decl 0x7f343f494100 gtk_css_provider_new>) [0 gtk_css_provider_new S1 A8])
             (const_int 0 [0]))) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":31:20 -1
      (nil)
     (nil))
 (insn 9 8 10 2 (set (reg/f:DI 83 [ _2 ])
         (reg:DI 0 ax)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":31:20 -1
      (nil))
-(insn 10 9 11 2 (set (mem/f/c:DI (symbol_ref:DI ("css_provider") [flags 0x2]  <var_decl 0x7fed79ef06c0 css_provider>) [8 css_provider+0 S8 A64])
+(insn 10 9 11 2 (set (mem/f/c:DI (symbol_ref:DI ("css_provider") [flags 0x2]  <var_decl 0x7f343e64c750 css_provider>) [8 css_provider+0 S8 A64])
         (reg/f:DI 83 [ _2 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":31:18 -1
      (nil))
 (insn 11 10 12 2 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
@@ -182,14 +182,14 @@ try_optimize_cfg iteration 2
         ]) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":35:44 -1
      (nil))
 (insn 18 17 19 4 (set (reg:DI 92)
-        (symbol_ref:DI ("templates") [flags 0x2]  <var_decl 0x7fed79ef07e0 templates>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":35:44 -1
+        (symbol_ref:DI ("templates") [flags 0x2]  <var_decl 0x7f343e64c870 templates>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":35:44 -1
      (nil))
 (insn 19 18 20 4 (set (reg/f:DI 84 [ _3 ])
         (mem/f:DI (plus:DI (reg:DI 91)
                 (reg:DI 92)) [9 templates S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":35:44 -1
      (nil))
 (insn 20 19 21 4 (set (reg/f:DI 85 [ default_path.0_4 ])
-        (mem/f/c:DI (symbol_ref:DI ("default_path") [flags 0x2]  <var_decl 0x7fed79ef0750 default_path>) [9 default_path+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":35:9 -1
+        (mem/f/c:DI (symbol_ref:DI ("default_path") [flags 0x2]  <var_decl 0x7f343e64c7e0 default_path>) [9 default_path+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":35:9 -1
      (nil))
 (insn 21 20 22 4 (set (reg:DI 4 si)
         (reg/f:DI 84 [ _3 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":35:44 -1
@@ -198,7 +198,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 85 [ default_path.0_4 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":35:44 -1
      (nil))
 (call_insn 23 22 24 4 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("join_strings") [flags 0x41]  <function_decl 0x7fed79ed7000 join_strings>) [0 join_strings S1 A8])
+        (call (mem:QI (symbol_ref:DI ("join_strings") [flags 0x41]  <function_decl 0x7f343e632000 join_strings>) [0 join_strings S1 A8])
             (const_int 0 [0]))) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":35:44 -1
      (nil)
     (expr_list:DI (use (reg:DI 5 di))
@@ -208,7 +208,7 @@ try_optimize_cfg iteration 2
         (reg:DI 0 ax)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":35:44 -1
      (nil))
 (insn 25 24 26 4 (set (reg/f:DI 87 [ builder.1_6 ])
-        (mem/f/c:DI (symbol_ref:DI ("builder") [flags 0x2]  <var_decl 0x7fed79ef0630 builder>) [7 builder+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":35:9 -1
+        (mem/f/c:DI (symbol_ref:DI ("builder") [flags 0x2]  <var_decl 0x7f343e64c6c0 builder>) [7 builder+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":35:9 -1
      (nil))
 (insn 26 25 27 4 (set (reg:DI 1 dx)
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":35:9 -1
@@ -220,7 +220,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 87 [ builder.1_6 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":35:9 -1
      (nil))
 (call_insn 29 28 30 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("gtk_builder_add_from_file") [flags 0x41]  <function_decl 0x7fed7b05e600 gtk_builder_add_from_file>) [0 gtk_builder_add_from_file S1 A8])
+        (call (mem:QI (symbol_ref:DI ("gtk_builder_add_from_file") [flags 0x41]  <function_decl 0x7f343f7b9600 gtk_builder_add_from_file>) [0 gtk_builder_add_from_file S1 A8])
             (const_int 0 [0]))) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":35:9 -1
      (nil)
     (expr_list:DI (use (reg:DI 5 di))
@@ -239,7 +239,7 @@ try_optimize_cfg iteration 2
 (code_label 31 30 32 5 3 (nil) [1 uses])
 (note 32 31 33 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
 (insn 33 32 35 5 (set (reg:SI 88 [ templates_length.2_7 ])
-        (mem/c:SI (symbol_ref:DI ("templates_length") [flags 0x2]  <var_decl 0x7fed79ef0870 templates_length>) [2 templates_length+0 S4 A32])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":33:23 -1
+        (mem/c:SI (symbol_ref:DI ("templates_length") [flags 0x2]  <var_decl 0x7f343e64c900 templates_length>) [2 templates_length+0 S4 A32])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":33:23 -1
      (nil))
 (insn 35 33 36 5 (set (reg:CCGC 17 flags)
         (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
@@ -255,7 +255,7 @@ try_optimize_cfg iteration 2
  -> 34)
 (note 37 36 0 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
 
-;; Function load_stylesheet (load_stylesheet, funcdef_no=2089, decl_uid=59950, cgraph_uid=2090, symbol_order=2130)
+;; Function load_stylesheet (load_stylesheet, funcdef_no=2089, decl_uid=59958, cgraph_uid=2090, symbol_order=2131)
 
 
 ;; Generating RTL for gimple basic block 2
@@ -282,10 +282,10 @@ try_optimize_cfg iteration 2
 (note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
 (insn 5 2 6 2 (set (reg/f:DI 82 [ css_file.3_1 ])
-        (mem/f/c:DI (symbol_ref:DI ("css_file") [flags 0x2]  <var_decl 0x7fed79ef0900 css_file>) [9 css_file+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":41:5 -1
+        (mem/f/c:DI (symbol_ref:DI ("css_file") [flags 0x2]  <var_decl 0x7f343e64c990 css_file>) [9 css_file+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":41:5 -1
      (nil))
 (insn 6 5 7 2 (set (reg/f:DI 83 [ default_path.4_2 ])
-        (mem/f/c:DI (symbol_ref:DI ("default_path") [flags 0x2]  <var_decl 0x7fed79ef0750 default_path>) [9 default_path+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":41:5 -1
+        (mem/f/c:DI (symbol_ref:DI ("default_path") [flags 0x2]  <var_decl 0x7f343e64c7e0 default_path>) [9 default_path+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":41:5 -1
      (nil))
 (insn 7 6 8 2 (set (reg:DI 4 si)
         (reg/f:DI 82 [ css_file.3_1 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":41:51 -1
@@ -294,7 +294,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 83 [ default_path.4_2 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":41:51 -1
      (nil))
 (call_insn 9 8 10 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("join_strings") [flags 0x41]  <function_decl 0x7fed79ed7000 join_strings>) [0 join_strings S1 A8])
+        (call (mem:QI (symbol_ref:DI ("join_strings") [flags 0x41]  <function_decl 0x7f343e632000 join_strings>) [0 join_strings S1 A8])
             (const_int 0 [0]))) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":41:51 -1
      (nil)
     (expr_list:DI (use (reg:DI 5 di))
@@ -304,7 +304,7 @@ try_optimize_cfg iteration 2
         (reg:DI 0 ax)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":41:51 -1
      (nil))
 (insn 11 10 12 2 (set (reg/f:DI 85 [ css_provider.5_4 ])
-        (mem/f/c:DI (symbol_ref:DI ("css_provider") [flags 0x2]  <var_decl 0x7fed79ef06c0 css_provider>) [8 css_provider+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":41:5 -1
+        (mem/f/c:DI (symbol_ref:DI ("css_provider") [flags 0x2]  <var_decl 0x7f343e64c750 css_provider>) [8 css_provider+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":41:5 -1
      (nil))
 (insn 12 11 13 2 (set (reg:DI 1 dx)
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":41:5 -1
@@ -316,7 +316,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 85 [ css_provider.5_4 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":41:5 -1
      (nil))
 (call_insn 15 14 16 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("gtk_css_provider_load_from_path") [flags 0x41]  <function_decl 0x7fed7ad39500 gtk_css_provider_load_from_path>) [0 gtk_css_provider_load_from_path S1 A8])
+        (call (mem:QI (symbol_ref:DI ("gtk_css_provider_load_from_path") [flags 0x41]  <function_decl 0x7f343f494500 gtk_css_provider_load_from_path>) [0 gtk_css_provider_load_from_path S1 A8])
             (const_int 0 [0]))) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":41:5 -1
      (nil)
     (expr_list:DI (use (reg:DI 5 di))
@@ -324,7 +324,7 @@ try_optimize_cfg iteration 2
             (expr_list:DI (use (reg:DI 1 dx))
                 (nil)))))
 (call_insn/u 16 15 17 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("gtk_style_provider_get_type") [flags 0x41]  <function_decl 0x7fed7ae35f00 gtk_style_provider_get_type>) [0 gtk_style_provider_get_type S1 A8])
+        (call (mem:QI (symbol_ref:DI ("gtk_style_provider_get_type") [flags 0x41]  <function_decl 0x7f343f590f00 gtk_style_provider_get_type>) [0 gtk_style_provider_get_type S1 A8])
             (const_int 0 [0]))) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":42:73 -1
      (nil)
     (nil))
@@ -332,7 +332,7 @@ try_optimize_cfg iteration 2
         (reg:DI 0 ax)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":42:73 -1
      (nil))
 (insn 18 17 19 2 (set (reg/f:DI 87 [ css_provider.6_6 ])
-        (mem/f/c:DI (symbol_ref:DI ("css_provider") [flags 0x2]  <var_decl 0x7fed79ef06c0 css_provider>) [8 css_provider+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":42:73 -1
+        (mem/f/c:DI (symbol_ref:DI ("css_provider") [flags 0x2]  <var_decl 0x7f343e64c750 css_provider>) [8 css_provider+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":42:73 -1
      (nil))
 (insn 19 18 20 2 (set (reg:DI 4 si)
         (reg:DI 86 [ _5 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":42:73 -1
@@ -341,7 +341,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 87 [ css_provider.6_6 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":42:73 -1
      (nil))
 (call_insn 21 20 22 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("g_type_check_instance_cast") [flags 0x41]  <function_decl 0x7fed7c5efa00 g_type_check_instance_cast>) [0 g_type_check_instance_cast S1 A8])
+        (call (mem:QI (symbol_ref:DI ("g_type_check_instance_cast") [flags 0x41]  <function_decl 0x7f3440d4aa00 g_type_check_instance_cast>) [0 g_type_check_instance_cast S1 A8])
             (const_int 0 [0]))) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":42:73 -1
      (nil)
     (expr_list:DI (use (reg:DI 5 di))
@@ -351,7 +351,7 @@ try_optimize_cfg iteration 2
         (reg:DI 0 ax)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":42:73 -1
      (nil))
 (call_insn 23 22 24 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("gdk_screen_get_default") [flags 0x41]  <function_decl 0x7fed7b7d9c00 gdk_screen_get_default>) [0 gdk_screen_get_default S1 A8])
+        (call (mem:QI (symbol_ref:DI ("gdk_screen_get_default") [flags 0x41]  <function_decl 0x7f343ff34c00 gdk_screen_get_default>) [0 gdk_screen_get_default S1 A8])
             (const_int 0 [0]))) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":42:5 -1
      (nil)
     (nil))
@@ -367,7 +367,7 @@ try_optimize_cfg iteration 2
 (insn 27 26 28 2 (set (reg:DI 5 di)
         (reg/f:DI 89 [ _8 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":42:5 -1
      (nil))
-(call_insn 28 27 0 2 (call (mem:QI (symbol_ref:DI ("gtk_style_context_add_provider_for_screen") [flags 0x41]  <function_decl 0x7fed7ae40500 gtk_style_context_add_provider_for_screen>) [0 gtk_style_context_add_provider_for_screen S1 A8])
+(call_insn 28 27 0 2 (call (mem:QI (symbol_ref:DI ("gtk_style_context_add_provider_for_screen") [flags 0x41]  <function_decl 0x7f343f59b500 gtk_style_context_add_provider_for_screen>) [0 gtk_style_context_add_provider_for_screen S1 A8])
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":42:5 -1
      (nil)
     (expr_list:DI (use (reg:DI 5 di))
@@ -375,7 +375,7 @@ try_optimize_cfg iteration 2
             (expr_list:SI (use (reg:SI 1 dx))
                 (nil)))))
 
-;; Function init_windows (init_windows, funcdef_no=2090, decl_uid=59951, cgraph_uid=2091, symbol_order=2131)
+;; Function init_windows (init_windows, funcdef_no=2090, decl_uid=59959, cgraph_uid=2091, symbol_order=2132)
 
 
 ;; Generating RTL for gimple basic block 2
@@ -404,7 +404,7 @@ try_optimize_cfg iteration 2
 (insn 5 2 6 2 (set (reg:QI 0 ax)
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":48:5 -1
      (nil))
-(call_insn 6 5 7 2 (call (mem:QI (symbol_ref:DI ("signin_page_init") [flags 0x41]  <function_decl 0x7fed79ee7500 signin_page_init>) [0 signin_page_init S1 A8])
+(call_insn 6 5 7 2 (call (mem:QI (symbol_ref:DI ("signin_page_init") [flags 0x41]  <function_decl 0x7f343e643500 signin_page_init>) [0 signin_page_init S1 A8])
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":48:5 -1
      (nil)
     (expr_list (use (reg:QI 0 ax))
@@ -412,7 +412,7 @@ try_optimize_cfg iteration 2
 (insn 7 6 8 2 (set (reg:QI 0 ax)
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":49:5 -1
      (nil))
-(call_insn 8 7 9 2 (call (mem:QI (symbol_ref:DI ("signup_page_init") [flags 0x41]  <function_decl 0x7fed79ee7d00 signup_page_init>) [0 signup_page_init S1 A8])
+(call_insn 8 7 9 2 (call (mem:QI (symbol_ref:DI ("signup_page_init") [flags 0x41]  <function_decl 0x7f343e643d00 signup_page_init>) [0 signup_page_init S1 A8])
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":49:5 -1
      (nil)
     (expr_list (use (reg:QI 0 ax))
@@ -420,7 +420,7 @@ try_optimize_cfg iteration 2
 (insn 9 8 10 2 (set (reg:QI 0 ax)
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":50:5 -1
      (nil))
-(call_insn 10 9 11 2 (call (mem:QI (symbol_ref:DI ("main_page_init") [flags 0x41]  <function_decl 0x7fed79ee0e00 main_page_init>) [0 main_page_init S1 A8])
+(call_insn 10 9 11 2 (call (mem:QI (symbol_ref:DI ("main_page_init") [flags 0x41]  <function_decl 0x7f343e63be00 main_page_init>) [0 main_page_init S1 A8])
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":50:5 -1
      (nil)
     (expr_list (use (reg:QI 0 ax))
@@ -428,7 +428,7 @@ try_optimize_cfg iteration 2
 (insn 11 10 12 2 (set (reg:QI 0 ax)
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":51:5 -1
      (nil))
-(call_insn 12 11 13 2 (call (mem:QI (symbol_ref:DI ("new_game_page_init") [flags 0x41]  <function_decl 0x7fed79eed400 new_game_page_init>) [0 new_game_page_init S1 A8])
+(call_insn 12 11 13 2 (call (mem:QI (symbol_ref:DI ("new_game_page_init") [flags 0x41]  <function_decl 0x7f343e648400 new_game_page_init>) [0 new_game_page_init S1 A8])
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":51:5 -1
      (nil)
     (expr_list (use (reg:QI 0 ax))
@@ -436,13 +436,13 @@ try_optimize_cfg iteration 2
 (insn 13 12 14 2 (set (reg:QI 0 ax)
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":52:5 -1
      (nil))
-(call_insn 14 13 0 2 (call (mem:QI (symbol_ref:DI ("game_page_init") [flags 0x41]  <function_decl 0x7fed79eed900 game_page_init>) [0 game_page_init S1 A8])
+(call_insn 14 13 0 2 (call (mem:QI (symbol_ref:DI ("game_page_init") [flags 0x41]  <function_decl 0x7f343e648900 game_page_init>) [0 game_page_init S1 A8])
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":52:5 -1
      (nil)
     (expr_list (use (reg:QI 0 ax))
         (nil)))
 
-;; Function on_destroy (on_destroy, funcdef_no=2091, decl_uid=59954, cgraph_uid=2092, symbol_order=2132)
+;; Function on_destroy (on_destroy, funcdef_no=2091, decl_uid=59962, cgraph_uid=2092, symbol_order=2133)
 
 
 ;; Generating RTL for gimple basic block 2
@@ -476,7 +476,7 @@ try_optimize_cfg iteration 2
         (reg:DI 4 si [ user_data ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":59:1 -1
      (nil))
 (note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
-(call_insn 7 4 0 2 (call (mem:QI (symbol_ref:DI ("gtk_main_quit") [flags 0x41]  <function_decl 0x7fed7aaee300 gtk_main_quit>) [0 gtk_main_quit S1 A8])
+(call_insn 7 4 0 2 (call (mem:QI (symbol_ref:DI ("gtk_main_quit") [flags 0x41]  <function_decl 0x7f343f249300 gtk_main_quit>) [0 gtk_main_quit S1 A8])
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c":60:5 -1
      (nil)
     (nil))

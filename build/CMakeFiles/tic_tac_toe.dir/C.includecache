@@ -10,14 +10,6 @@
 imports.h
 .././src/headers/imports.h
 
-.././src/headers/data_manager.h
-imports.h
-.././src/headers/imports.h
-sys/stat.h
--
-sys/types.h
--
-
 .././src/headers/imports.h
 stdlib.h
 -
@@ -58,6 +50,14 @@ string.h
 imports.h
 .././src/modules/ai_player/imports.h
 
+.././src/modules/data_manager/data_manager.h
+imports.h
+.././src/modules/data_manager/imports.h
+sys/stat.h
+-
+sys/types.h
+-
+
 .././src/pages/game/game.h
 imports.h
 .././src/pages/game/imports.h
@@ -82,10 +82,6 @@ imports.h
 builder.h
 /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.h
 
-/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/data_manager.c
-data_manager.h
-/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/data_manager.h
-
 /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/main.c
 imports.h
 /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/imports.h
@@ -97,6 +93,18 @@ ai_player.h
 /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/ai_player/ai_player.h
 imports.h
 /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/ai_player/imports.h
+
+/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/data_manager/data_manager.c
+data_manager.h
+/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/data_manager/data_manager.h
+
+/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/data_manager/data_manager.h
+imports.h
+/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/data_manager/imports.h
+sys/stat.h
+-
+sys/types.h
+-
 
 /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/game/game.c
 game.h

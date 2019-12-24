@@ -18,6 +18,7 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O0 -Wall -Werror -fdump-rtl-expand")
 
 include_directories(${SRC_DIR}/${HEADERS_FOLDER})
 include_directories(${SRC_DIR}/${MODULES}/ai_player)
+include_directories(${SRC_DIR}/${MODULES}/data_manager)
 include_directories(${SRC_DIR}/pages/main)
 include_directories(${SRC_DIR}/pages/signin)
 include_directories(${SRC_DIR}/pages/signup)
@@ -28,8 +29,8 @@ set(SRCS
     ${SRC_DIR}/main.c
     ${SRC_DIR}/helpers/builder.c
     ${SRC_DIR}/helpers/tools.c
-    ${SRC_DIR}/helpers/data_manager.c
     ${SRC_DIR}/${MODULES}/ai_player/ai_player.c
+    ${SRC_DIR}/${MODULES}/data_manager/data_manager.c
     ${SRC_DIR}/pages/main/main_page.c
     ${SRC_DIR}/pages/signin/signin_page.c
     ${SRC_DIR}/pages/signup/signup_page.c
