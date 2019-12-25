@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-.././src/headers/builder.h
-imports.h
-.././src/headers/imports.h
-
 .././src/headers/imports.h
 stdlib.h
 -
@@ -19,14 +15,14 @@ time.h
 -
 gtk/gtk.h
 -
-builder.h
-.././src/headers/builder.h
 tools.h
 .././src/headers/tools.h
-data_manager.h
-.././src/headers/data_manager.h
 ai_player.h
 .././src/headers/ai_player.h
+users_manager.h
+.././src/headers/users_manager.h
+builder.h
+.././src/headers/builder.h
 main_page.h
 .././src/headers/main_page.h
 signin_page.h
@@ -50,9 +46,13 @@ string.h
 imports.h
 .././src/modules/ai_player/imports.h
 
-.././src/modules/data_manager/data_manager.h
+.././src/modules/builder/builder.h
 imports.h
-.././src/modules/data_manager/imports.h
+.././src/modules/builder/imports.h
+
+.././src/modules/users_manager/users_manager.h
+imports.h
+.././src/modules/users_manager/imports.h
 sys/stat.h
 -
 sys/types.h
@@ -78,9 +78,9 @@ imports.h
 imports.h
 .././src/pages/signup/imports.h
 
-/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c
-builder.h
-/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.h
+/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/tools.c
+tools.h
+/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/tools.h
 
 /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/main.c
 imports.h
@@ -94,13 +94,21 @@ ai_player.h
 imports.h
 /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/ai_player/imports.h
 
-/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/data_manager/data_manager.c
-data_manager.h
-/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/data_manager/data_manager.h
+/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/builder/builder.c
+builder.h
+/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/builder/builder.h
 
-/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/data_manager/data_manager.h
+/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/builder/builder.h
 imports.h
-/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/data_manager/imports.h
+/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/builder/imports.h
+
+/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/users_manager/users_manager.c
+users_manager.h
+/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/users_manager/users_manager.h
+
+/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/users_manager/users_manager.h
+imports.h
+/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/users_manager/imports.h
 sys/stat.h
 -
 sys/types.h

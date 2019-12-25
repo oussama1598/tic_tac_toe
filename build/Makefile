@@ -123,33 +123,6 @@ tic_tac_toe/fast:
 	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/build
 .PHONY : tic_tac_toe/fast
 
-src/helpers/builder.o: src/helpers/builder.c.o
-
-.PHONY : src/helpers/builder.o
-
-# target to build an object file
-src/helpers/builder.c.o:
-	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/helpers/builder.c.o
-.PHONY : src/helpers/builder.c.o
-
-src/helpers/builder.i: src/helpers/builder.c.i
-
-.PHONY : src/helpers/builder.i
-
-# target to preprocess a source file
-src/helpers/builder.c.i:
-	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/helpers/builder.c.i
-.PHONY : src/helpers/builder.c.i
-
-src/helpers/builder.s: src/helpers/builder.c.s
-
-.PHONY : src/helpers/builder.s
-
-# target to generate assembly for a file
-src/helpers/builder.c.s:
-	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/helpers/builder.c.s
-.PHONY : src/helpers/builder.c.s
-
 src/helpers/tools.o: src/helpers/tools.c.o
 
 .PHONY : src/helpers/tools.o
@@ -231,32 +204,59 @@ src/modules/ai_player/ai_player.c.s:
 	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/modules/ai_player/ai_player.c.s
 .PHONY : src/modules/ai_player/ai_player.c.s
 
-src/modules/data_manager/data_manager.o: src/modules/data_manager/data_manager.c.o
+src/modules/builder/builder.o: src/modules/builder/builder.c.o
 
-.PHONY : src/modules/data_manager/data_manager.o
+.PHONY : src/modules/builder/builder.o
 
 # target to build an object file
-src/modules/data_manager/data_manager.c.o:
-	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/modules/data_manager/data_manager.c.o
-.PHONY : src/modules/data_manager/data_manager.c.o
+src/modules/builder/builder.c.o:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/modules/builder/builder.c.o
+.PHONY : src/modules/builder/builder.c.o
 
-src/modules/data_manager/data_manager.i: src/modules/data_manager/data_manager.c.i
+src/modules/builder/builder.i: src/modules/builder/builder.c.i
 
-.PHONY : src/modules/data_manager/data_manager.i
+.PHONY : src/modules/builder/builder.i
 
 # target to preprocess a source file
-src/modules/data_manager/data_manager.c.i:
-	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/modules/data_manager/data_manager.c.i
-.PHONY : src/modules/data_manager/data_manager.c.i
+src/modules/builder/builder.c.i:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/modules/builder/builder.c.i
+.PHONY : src/modules/builder/builder.c.i
 
-src/modules/data_manager/data_manager.s: src/modules/data_manager/data_manager.c.s
+src/modules/builder/builder.s: src/modules/builder/builder.c.s
 
-.PHONY : src/modules/data_manager/data_manager.s
+.PHONY : src/modules/builder/builder.s
 
 # target to generate assembly for a file
-src/modules/data_manager/data_manager.c.s:
-	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/modules/data_manager/data_manager.c.s
-.PHONY : src/modules/data_manager/data_manager.c.s
+src/modules/builder/builder.c.s:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/modules/builder/builder.c.s
+.PHONY : src/modules/builder/builder.c.s
+
+src/modules/users_manager/users_manager.o: src/modules/users_manager/users_manager.c.o
+
+.PHONY : src/modules/users_manager/users_manager.o
+
+# target to build an object file
+src/modules/users_manager/users_manager.c.o:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/modules/users_manager/users_manager.c.o
+.PHONY : src/modules/users_manager/users_manager.c.o
+
+src/modules/users_manager/users_manager.i: src/modules/users_manager/users_manager.c.i
+
+.PHONY : src/modules/users_manager/users_manager.i
+
+# target to preprocess a source file
+src/modules/users_manager/users_manager.c.i:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/modules/users_manager/users_manager.c.i
+.PHONY : src/modules/users_manager/users_manager.c.i
+
+src/modules/users_manager/users_manager.s: src/modules/users_manager/users_manager.c.s
+
+.PHONY : src/modules/users_manager/users_manager.s
+
+# target to generate assembly for a file
+src/modules/users_manager/users_manager.c.s:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/modules/users_manager/users_manager.c.s
+.PHONY : src/modules/users_manager/users_manager.c.s
 
 src/pages/game/game.o: src/pages/game/game.c.o
 
@@ -402,9 +402,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... tic_tac_toe"
 	@echo "... edit_cache"
-	@echo "... src/helpers/builder.o"
-	@echo "... src/helpers/builder.i"
-	@echo "... src/helpers/builder.s"
 	@echo "... src/helpers/tools.o"
 	@echo "... src/helpers/tools.i"
 	@echo "... src/helpers/tools.s"
@@ -414,9 +411,12 @@ help:
 	@echo "... src/modules/ai_player/ai_player.o"
 	@echo "... src/modules/ai_player/ai_player.i"
 	@echo "... src/modules/ai_player/ai_player.s"
-	@echo "... src/modules/data_manager/data_manager.o"
-	@echo "... src/modules/data_manager/data_manager.i"
-	@echo "... src/modules/data_manager/data_manager.s"
+	@echo "... src/modules/builder/builder.o"
+	@echo "... src/modules/builder/builder.i"
+	@echo "... src/modules/builder/builder.s"
+	@echo "... src/modules/users_manager/users_manager.o"
+	@echo "... src/modules/users_manager/users_manager.i"
+	@echo "... src/modules/users_manager/users_manager.s"
 	@echo "... src/pages/game/game.o"
 	@echo "... src/pages/game/game.i"
 	@echo "... src/pages/game/game.s"

@@ -69,7 +69,9 @@ int on_signup_button_clicked(GtkButton *button, gpointer user_data)
         return 0;
     }
 
-    signup_hide_error();
+    add_user(username, password);
+
+    signup_show_error("You've registred successfly.");
 
     return 0;
 }

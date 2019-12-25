@@ -3,7 +3,12 @@
 
 #include "imports.h"
 
-#define TEMPLATES_LENGTH 5
+typedef struct template
+{
+    char *path;
+    void (*init_fn)();
+}
+template;
 
 GtkBuilder *builder;
 GtkCssProvider *css_provider;
@@ -12,16 +17,18 @@ GtkCssProvider *css_provider;
 char *default_path;
 
 // templates
-char *templates[TEMPLATES_LENGTH];
+template *templates;
+int last_template_index;
 int templates_length;
 
 // css file
 char *css_file;
 
 void app_init();
+void config_templates(int size, char *style_path);
+void add_template(template template_data);
 void load_templates();
 void load_stylesheet();
-void init_windows();
 
 // global signals
 void on_destroy(GtkWidget *widget, gpointer user_data);

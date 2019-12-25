@@ -70,22 +70,9 @@ CMakeFiles/tic_tac_toe.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tic_tac_toe.dir/src/main.c.s"
 	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/main.c -o CMakeFiles/tic_tac_toe.dir/src/main.c.s
 
-CMakeFiles/tic_tac_toe.dir/src/helpers/builder.c.o: CMakeFiles/tic_tac_toe.dir/flags.make
-CMakeFiles/tic_tac_toe.dir/src/helpers/builder.c.o: ../src/helpers/builder.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/tic_tac_toe.dir/src/helpers/builder.c.o"
-	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/tic_tac_toe.dir/src/helpers/builder.c.o   -c /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c
-
-CMakeFiles/tic_tac_toe.dir/src/helpers/builder.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tic_tac_toe.dir/src/helpers/builder.c.i"
-	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c > CMakeFiles/tic_tac_toe.dir/src/helpers/builder.c.i
-
-CMakeFiles/tic_tac_toe.dir/src/helpers/builder.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tic_tac_toe.dir/src/helpers/builder.c.s"
-	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/builder.c -o CMakeFiles/tic_tac_toe.dir/src/helpers/builder.c.s
-
 CMakeFiles/tic_tac_toe.dir/src/helpers/tools.c.o: CMakeFiles/tic_tac_toe.dir/flags.make
 CMakeFiles/tic_tac_toe.dir/src/helpers/tools.c.o: ../src/helpers/tools.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/tic_tac_toe.dir/src/helpers/tools.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/tic_tac_toe.dir/src/helpers/tools.c.o"
 	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/tic_tac_toe.dir/src/helpers/tools.c.o   -c /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/tools.c
 
 CMakeFiles/tic_tac_toe.dir/src/helpers/tools.c.i: cmake_force
@@ -98,7 +85,7 @@ CMakeFiles/tic_tac_toe.dir/src/helpers/tools.c.s: cmake_force
 
 CMakeFiles/tic_tac_toe.dir/src/modules/ai_player/ai_player.c.o: CMakeFiles/tic_tac_toe.dir/flags.make
 CMakeFiles/tic_tac_toe.dir/src/modules/ai_player/ai_player.c.o: ../src/modules/ai_player/ai_player.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/tic_tac_toe.dir/src/modules/ai_player/ai_player.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/tic_tac_toe.dir/src/modules/ai_player/ai_player.c.o"
 	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/tic_tac_toe.dir/src/modules/ai_player/ai_player.c.o   -c /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/ai_player/ai_player.c
 
 CMakeFiles/tic_tac_toe.dir/src/modules/ai_player/ai_player.c.i: cmake_force
@@ -109,18 +96,31 @@ CMakeFiles/tic_tac_toe.dir/src/modules/ai_player/ai_player.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tic_tac_toe.dir/src/modules/ai_player/ai_player.c.s"
 	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/ai_player/ai_player.c -o CMakeFiles/tic_tac_toe.dir/src/modules/ai_player/ai_player.c.s
 
-CMakeFiles/tic_tac_toe.dir/src/modules/data_manager/data_manager.c.o: CMakeFiles/tic_tac_toe.dir/flags.make
-CMakeFiles/tic_tac_toe.dir/src/modules/data_manager/data_manager.c.o: ../src/modules/data_manager/data_manager.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/tic_tac_toe.dir/src/modules/data_manager/data_manager.c.o"
-	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/tic_tac_toe.dir/src/modules/data_manager/data_manager.c.o   -c /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/data_manager/data_manager.c
+CMakeFiles/tic_tac_toe.dir/src/modules/users_manager/users_manager.c.o: CMakeFiles/tic_tac_toe.dir/flags.make
+CMakeFiles/tic_tac_toe.dir/src/modules/users_manager/users_manager.c.o: ../src/modules/users_manager/users_manager.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/tic_tac_toe.dir/src/modules/users_manager/users_manager.c.o"
+	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/tic_tac_toe.dir/src/modules/users_manager/users_manager.c.o   -c /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/users_manager/users_manager.c
 
-CMakeFiles/tic_tac_toe.dir/src/modules/data_manager/data_manager.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tic_tac_toe.dir/src/modules/data_manager/data_manager.c.i"
-	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/data_manager/data_manager.c > CMakeFiles/tic_tac_toe.dir/src/modules/data_manager/data_manager.c.i
+CMakeFiles/tic_tac_toe.dir/src/modules/users_manager/users_manager.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tic_tac_toe.dir/src/modules/users_manager/users_manager.c.i"
+	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/users_manager/users_manager.c > CMakeFiles/tic_tac_toe.dir/src/modules/users_manager/users_manager.c.i
 
-CMakeFiles/tic_tac_toe.dir/src/modules/data_manager/data_manager.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tic_tac_toe.dir/src/modules/data_manager/data_manager.c.s"
-	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/data_manager/data_manager.c -o CMakeFiles/tic_tac_toe.dir/src/modules/data_manager/data_manager.c.s
+CMakeFiles/tic_tac_toe.dir/src/modules/users_manager/users_manager.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tic_tac_toe.dir/src/modules/users_manager/users_manager.c.s"
+	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/users_manager/users_manager.c -o CMakeFiles/tic_tac_toe.dir/src/modules/users_manager/users_manager.c.s
+
+CMakeFiles/tic_tac_toe.dir/src/modules/builder/builder.c.o: CMakeFiles/tic_tac_toe.dir/flags.make
+CMakeFiles/tic_tac_toe.dir/src/modules/builder/builder.c.o: ../src/modules/builder/builder.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/tic_tac_toe.dir/src/modules/builder/builder.c.o"
+	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/tic_tac_toe.dir/src/modules/builder/builder.c.o   -c /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/builder/builder.c
+
+CMakeFiles/tic_tac_toe.dir/src/modules/builder/builder.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tic_tac_toe.dir/src/modules/builder/builder.c.i"
+	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/builder/builder.c > CMakeFiles/tic_tac_toe.dir/src/modules/builder/builder.c.i
+
+CMakeFiles/tic_tac_toe.dir/src/modules/builder/builder.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tic_tac_toe.dir/src/modules/builder/builder.c.s"
+	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/builder/builder.c -o CMakeFiles/tic_tac_toe.dir/src/modules/builder/builder.c.s
 
 CMakeFiles/tic_tac_toe.dir/src/pages/main/main_page.c.o: CMakeFiles/tic_tac_toe.dir/flags.make
 CMakeFiles/tic_tac_toe.dir/src/pages/main/main_page.c.o: ../src/pages/main/main_page.c
@@ -190,10 +190,10 @@ CMakeFiles/tic_tac_toe.dir/src/pages/game/game.c.s: cmake_force
 # Object files for target tic_tac_toe
 tic_tac_toe_OBJECTS = \
 "CMakeFiles/tic_tac_toe.dir/src/main.c.o" \
-"CMakeFiles/tic_tac_toe.dir/src/helpers/builder.c.o" \
 "CMakeFiles/tic_tac_toe.dir/src/helpers/tools.c.o" \
 "CMakeFiles/tic_tac_toe.dir/src/modules/ai_player/ai_player.c.o" \
-"CMakeFiles/tic_tac_toe.dir/src/modules/data_manager/data_manager.c.o" \
+"CMakeFiles/tic_tac_toe.dir/src/modules/users_manager/users_manager.c.o" \
+"CMakeFiles/tic_tac_toe.dir/src/modules/builder/builder.c.o" \
 "CMakeFiles/tic_tac_toe.dir/src/pages/main/main_page.c.o" \
 "CMakeFiles/tic_tac_toe.dir/src/pages/signin/signin_page.c.o" \
 "CMakeFiles/tic_tac_toe.dir/src/pages/signup/signup_page.c.o" \
@@ -204,10 +204,10 @@ tic_tac_toe_OBJECTS = \
 tic_tac_toe_EXTERNAL_OBJECTS =
 
 tic_tac_toe: CMakeFiles/tic_tac_toe.dir/src/main.c.o
-tic_tac_toe: CMakeFiles/tic_tac_toe.dir/src/helpers/builder.c.o
 tic_tac_toe: CMakeFiles/tic_tac_toe.dir/src/helpers/tools.c.o
 tic_tac_toe: CMakeFiles/tic_tac_toe.dir/src/modules/ai_player/ai_player.c.o
-tic_tac_toe: CMakeFiles/tic_tac_toe.dir/src/modules/data_manager/data_manager.c.o
+tic_tac_toe: CMakeFiles/tic_tac_toe.dir/src/modules/users_manager/users_manager.c.o
+tic_tac_toe: CMakeFiles/tic_tac_toe.dir/src/modules/builder/builder.c.o
 tic_tac_toe: CMakeFiles/tic_tac_toe.dir/src/pages/main/main_page.c.o
 tic_tac_toe: CMakeFiles/tic_tac_toe.dir/src/pages/signin/signin_page.c.o
 tic_tac_toe: CMakeFiles/tic_tac_toe.dir/src/pages/signup/signup_page.c.o

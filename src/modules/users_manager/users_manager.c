@@ -1,17 +1,21 @@
-#include "data_manager.h"
+#include "users_manager.h"
 
-void load_data()
+void set_users_file(char *file_path)
 {
-    // create the data folder if it does not exist
-    mkdir("./data", 0700);
-
-    load_users();
+    users_file = join_strings("./data/", file_path);
 }
 
 void load_users()
 {
+    mkdir("./data", 0700);
+
+    if (!file_exists(users_file))
+    {
+        append_to_file(users_file, "");
+    }
+
     char *user_file_content, **users;
-    load_file("./data/tes.txt", &user_file_content);
+    load_file(users_file, &user_file_content);
 
     int size = split(user_file_content, "\n", &users);
     accounts = (account *)malloc(sizeof(account) * size);
@@ -65,4 +69,23 @@ int authenticate_user(const char *username, const char *password)
         return 1;
 
     return 0;
+}
+
+void add_user(const char *username, const char *password)
+{
+    account user_data;
+
+    strcpy(user_data.username, username);
+    strcpy(user_data.password, password);
+
+    accounts_length += 1;
+
+    accounts = realloc(accounts, sizeof(account) * accounts_length);
+
+    accounts[accounts_length - 1] = user_data;
+
+    char data_to_save[250];
+
+    sprintf(data_to_save, "%s:%s\n", user_data.username, user_data.password);
+    append_to_file(users_file, data_to_save);
 }

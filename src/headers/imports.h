@@ -7,12 +7,12 @@
 #include <gtk/gtk.h>
 
 // includes global headers
-#include "builder.h"
 #include "tools.h"
-#include "data_manager.h"
 
 // include modules
 #include "ai_player.h"
+#include "users_manager.h"
+#include "builder.h"
 
 // include pages
 #include "main_page.h"

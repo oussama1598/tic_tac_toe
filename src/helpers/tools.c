@@ -26,6 +26,30 @@ int load_file(char *filename, char **file_content)
     return file_length;
 }
 
+void append_to_file(char *filename, char *data)
+{
+    FILE *file = fopen(filename, "a");
+
+    fprintf(file, "%s", data);
+
+    fclose(file);
+}
+
+int file_exists(char *filename)
+{
+    FILE *file = fopen(filename, "r");
+
+    if (file != NULL)
+    {
+        fclose(file);
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
 char *join_strings(char *str1, char *str2)
 {
     char *joined_str = (char *)malloc(sizeof(char) * (strlen(str1) + strlen(str2) + 1));

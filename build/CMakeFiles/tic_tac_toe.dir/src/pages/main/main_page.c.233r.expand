@@ -1,5 +1,5 @@
 
-;; Function main_page_init (main_page_init, funcdef_no=2087, decl_uid=59948, cgraph_uid=2088, symbol_order=2129)
+;; Function main_page_init (main_page_init, funcdef_no=2087, decl_uid=59967, cgraph_uid=2088, symbol_order=2131)
 
 
 ;; Generating RTL for gimple basic block 2
@@ -26,7 +26,7 @@ try_optimize_cfg iteration 2
 (note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
 (call_insn/u 5 2 6 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("gtk_widget_get_type") [flags 0x41]  <function_decl 0x7f4912e6b200 gtk_widget_get_type>) [0 gtk_widget_get_type S1 A8])
+        (call (mem:QI (symbol_ref:DI ("gtk_widget_get_type") [flags 0x41]  <function_decl 0x7f38e51c2200 gtk_widget_get_type>) [0 gtk_widget_get_type S1 A8])
             (const_int 0 [0]))) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":5:24 -1
      (nil)
     (nil))
@@ -34,16 +34,16 @@ try_optimize_cfg iteration 2
         (reg:DI 0 ax)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":5:24 -1
      (nil))
 (insn 7 6 8 2 (set (reg/f:DI 83 [ builder.0_2 ])
-        (mem/f/c:DI (symbol_ref:DI ("builder") [flags 0x2]  <var_decl 0x7f491271dd80 builder>) [1 builder+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":5:24 -1
+        (mem/f/c:DI (symbol_ref:DI ("builder") [flags 0x2]  <var_decl 0x7f38e3f373f0 builder>) [4 builder+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":5:24 -1
      (nil))
 (insn 8 7 9 2 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f4911c065a0 *.LC0>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":5:24 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f38e3f5f6c0 *.LC0>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":5:24 -1
      (nil))
 (insn 9 8 10 2 (set (reg:DI 5 di)
         (reg/f:DI 83 [ builder.0_2 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":5:24 -1
      (nil))
 (call_insn 10 9 11 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("gtk_builder_get_object") [flags 0x41]  <function_decl 0x7f4912d60c00 gtk_builder_get_object>) [0 gtk_builder_get_object S1 A8])
+        (call (mem:QI (symbol_ref:DI ("gtk_builder_get_object") [flags 0x41]  <function_decl 0x7f38e50b7c00 gtk_builder_get_object>) [0 gtk_builder_get_object S1 A8])
             (const_int 0 [0]))) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":5:24 -1
      (nil)
     (expr_list:DI (use (reg:DI 5 di))
@@ -59,7 +59,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 84 [ _3 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":5:24 -1
      (nil))
 (call_insn 14 13 15 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("g_type_check_instance_cast") [flags 0x41]  <function_decl 0x7f49142f1a00 g_type_check_instance_cast>) [0 g_type_check_instance_cast S1 A8])
+        (call (mem:QI (symbol_ref:DI ("g_type_check_instance_cast") [flags 0x41]  <function_decl 0x7f38e6648a00 g_type_check_instance_cast>) [0 g_type_check_instance_cast S1 A8])
             (const_int 0 [0]))) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":5:24 -1
      (nil)
     (expr_list:DI (use (reg:DI 5 di))
@@ -68,11 +68,11 @@ try_optimize_cfg iteration 2
 (insn 15 14 16 2 (set (reg/f:DI 85 [ _4 ])
         (reg:DI 0 ax)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":5:24 -1
      (nil))
-(insn 16 15 17 2 (set (mem/f/c:DI (symbol_ref:DI ("main_page_window") [flags 0x2]  <var_decl 0x7f4911bf3750 main_page_window>) [6 main_page_window+0 S8 A64])
+(insn 16 15 17 2 (set (mem/f/c:DI (symbol_ref:DI ("main_page_window") [flags 0x2]  <var_decl 0x7f38e3f4a870 main_page_window>) [7 main_page_window+0 S8 A64])
         (reg/f:DI 85 [ _4 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":5:22 -1
      (nil))
 (call_insn/u 17 16 18 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("gtk_button_get_type") [flags 0x41]  <function_decl 0x7f491297da00 gtk_button_get_type>) [0 gtk_button_get_type S1 A8])
+        (call (mem:QI (symbol_ref:DI ("gtk_button_get_type") [flags 0x41]  <function_decl 0x7f38e4cd4a00 gtk_button_get_type>) [0 gtk_button_get_type S1 A8])
             (const_int 0 [0]))) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":6:23 -1
      (nil)
     (nil))
@@ -80,16 +80,16 @@ try_optimize_cfg iteration 2
         (reg:DI 0 ax)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":6:23 -1
      (nil))
 (insn 19 18 20 2 (set (reg/f:DI 87 [ builder.1_6 ])
-        (mem/f/c:DI (symbol_ref:DI ("builder") [flags 0x2]  <var_decl 0x7f491271dd80 builder>) [1 builder+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":6:23 -1
+        (mem/f/c:DI (symbol_ref:DI ("builder") [flags 0x2]  <var_decl 0x7f38e3f373f0 builder>) [4 builder+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":6:23 -1
      (nil))
 (insn 20 19 21 2 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f4911c06630 *.LC1>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":6:23 -1
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f38e3f5f750 *.LC1>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":6:23 -1
      (nil))
 (insn 21 20 22 2 (set (reg:DI 5 di)
         (reg/f:DI 87 [ builder.1_6 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":6:23 -1
      (nil))
 (call_insn 22 21 23 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("gtk_builder_get_object") [flags 0x41]  <function_decl 0x7f4912d60c00 gtk_builder_get_object>) [0 gtk_builder_get_object S1 A8])
+        (call (mem:QI (symbol_ref:DI ("gtk_builder_get_object") [flags 0x41]  <function_decl 0x7f38e50b7c00 gtk_builder_get_object>) [0 gtk_builder_get_object S1 A8])
             (const_int 0 [0]))) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":6:23 -1
      (nil)
     (expr_list:DI (use (reg:DI 5 di))
@@ -105,7 +105,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 88 [ _7 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":6:23 -1
      (nil))
 (call_insn 26 25 27 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("g_type_check_instance_cast") [flags 0x41]  <function_decl 0x7f49142f1a00 g_type_check_instance_cast>) [0 g_type_check_instance_cast S1 A8])
+        (call (mem:QI (symbol_ref:DI ("g_type_check_instance_cast") [flags 0x41]  <function_decl 0x7f38e6648a00 g_type_check_instance_cast>) [0 g_type_check_instance_cast S1 A8])
             (const_int 0 [0]))) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":6:23 -1
      (nil)
     (expr_list:DI (use (reg:DI 5 di))
@@ -114,11 +114,11 @@ try_optimize_cfg iteration 2
 (insn 27 26 28 2 (set (reg/f:DI 89 [ _8 ])
         (reg:DI 0 ax)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":6:23 -1
      (nil))
-(insn 28 27 29 2 (set (mem/f/c:DI (symbol_ref:DI ("new_game_button") [flags 0x2]  <var_decl 0x7f4911bf37e0 new_game_button>) [7 new_game_button+0 S8 A64])
+(insn 28 27 29 2 (set (mem/f/c:DI (symbol_ref:DI ("new_game_button") [flags 0x2]  <var_decl 0x7f38e3f4a900 new_game_button>) [8 new_game_button+0 S8 A64])
         (reg/f:DI 89 [ _8 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":6:21 -1
      (nil))
 (call_insn/u 29 28 30 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("gtk_button_get_type") [flags 0x41]  <function_decl 0x7f491297da00 gtk_button_get_type>) [0 gtk_button_get_type S1 A8])
+        (call (mem:QI (symbol_ref:DI ("gtk_button_get_type") [flags 0x41]  <function_decl 0x7f38e4cd4a00 gtk_button_get_type>) [0 gtk_button_get_type S1 A8])
             (const_int 0 [0]))) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":7:24 -1
      (nil)
     (nil))
@@ -126,16 +126,16 @@ try_optimize_cfg iteration 2
         (reg:DI 0 ax)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":7:24 -1
      (nil))
 (insn 31 30 32 2 (set (reg/f:DI 91 [ builder.2_10 ])
-        (mem/f/c:DI (symbol_ref:DI ("builder") [flags 0x2]  <var_decl 0x7f491271dd80 builder>) [1 builder+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":7:24 -1
+        (mem/f/c:DI (symbol_ref:DI ("builder") [flags 0x2]  <var_decl 0x7f38e3f373f0 builder>) [4 builder+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":7:24 -1
      (nil))
 (insn 32 31 33 2 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f4911c066c0 *.LC2>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":7:24 -1
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f38e3f5f7e0 *.LC2>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":7:24 -1
      (nil))
 (insn 33 32 34 2 (set (reg:DI 5 di)
         (reg/f:DI 91 [ builder.2_10 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":7:24 -1
      (nil))
 (call_insn 34 33 35 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("gtk_builder_get_object") [flags 0x41]  <function_decl 0x7f4912d60c00 gtk_builder_get_object>) [0 gtk_builder_get_object S1 A8])
+        (call (mem:QI (symbol_ref:DI ("gtk_builder_get_object") [flags 0x41]  <function_decl 0x7f38e50b7c00 gtk_builder_get_object>) [0 gtk_builder_get_object S1 A8])
             (const_int 0 [0]))) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":7:24 -1
      (nil)
     (expr_list:DI (use (reg:DI 5 di))
@@ -151,7 +151,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 92 [ _11 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":7:24 -1
      (nil))
 (call_insn 38 37 39 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("g_type_check_instance_cast") [flags 0x41]  <function_decl 0x7f49142f1a00 g_type_check_instance_cast>) [0 g_type_check_instance_cast S1 A8])
+        (call (mem:QI (symbol_ref:DI ("g_type_check_instance_cast") [flags 0x41]  <function_decl 0x7f38e6648a00 g_type_check_instance_cast>) [0 g_type_check_instance_cast S1 A8])
             (const_int 0 [0]))) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":7:24 -1
      (nil)
     (expr_list:DI (use (reg:DI 5 di))
@@ -160,11 +160,11 @@ try_optimize_cfg iteration 2
 (insn 39 38 40 2 (set (reg/f:DI 93 [ _12 ])
         (reg:DI 0 ax)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":7:24 -1
      (nil))
-(insn 40 39 41 2 (set (mem/f/c:DI (symbol_ref:DI ("load_game_button") [flags 0x2]  <var_decl 0x7f4911bf3870 load_game_button>) [7 load_game_button+0 S8 A64])
+(insn 40 39 41 2 (set (mem/f/c:DI (symbol_ref:DI ("load_game_button") [flags 0x2]  <var_decl 0x7f38e3f4a990 load_game_button>) [8 load_game_button+0 S8 A64])
         (reg/f:DI 93 [ _12 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":7:22 -1
      (nil))
 (call_insn/u 41 40 42 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("gtk_button_get_type") [flags 0x41]  <function_decl 0x7f491297da00 gtk_button_get_type>) [0 gtk_button_get_type S1 A8])
+        (call (mem:QI (symbol_ref:DI ("gtk_button_get_type") [flags 0x41]  <function_decl 0x7f38e4cd4a00 gtk_button_get_type>) [0 gtk_button_get_type S1 A8])
             (const_int 0 [0]))) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":8:20 -1
      (nil)
     (nil))
@@ -172,16 +172,16 @@ try_optimize_cfg iteration 2
         (reg:DI 0 ax)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":8:20 -1
      (nil))
 (insn 43 42 44 2 (set (reg/f:DI 95 [ builder.3_14 ])
-        (mem/f/c:DI (symbol_ref:DI ("builder") [flags 0x2]  <var_decl 0x7f491271dd80 builder>) [1 builder+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":8:20 -1
+        (mem/f/c:DI (symbol_ref:DI ("builder") [flags 0x2]  <var_decl 0x7f38e3f373f0 builder>) [4 builder+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":8:20 -1
      (nil))
 (insn 44 43 45 2 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7f4911c06750 *.LC3>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":8:20 -1
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7f38e3f5f870 *.LC3>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":8:20 -1
      (nil))
 (insn 45 44 46 2 (set (reg:DI 5 di)
         (reg/f:DI 95 [ builder.3_14 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":8:20 -1
      (nil))
 (call_insn 46 45 47 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("gtk_builder_get_object") [flags 0x41]  <function_decl 0x7f4912d60c00 gtk_builder_get_object>) [0 gtk_builder_get_object S1 A8])
+        (call (mem:QI (symbol_ref:DI ("gtk_builder_get_object") [flags 0x41]  <function_decl 0x7f38e50b7c00 gtk_builder_get_object>) [0 gtk_builder_get_object S1 A8])
             (const_int 0 [0]))) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":8:20 -1
      (nil)
     (expr_list:DI (use (reg:DI 5 di))
@@ -197,7 +197,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 96 [ _15 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":8:20 -1
      (nil))
 (call_insn 50 49 51 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("g_type_check_instance_cast") [flags 0x41]  <function_decl 0x7f49142f1a00 g_type_check_instance_cast>) [0 g_type_check_instance_cast S1 A8])
+        (call (mem:QI (symbol_ref:DI ("g_type_check_instance_cast") [flags 0x41]  <function_decl 0x7f38e6648a00 g_type_check_instance_cast>) [0 g_type_check_instance_cast S1 A8])
             (const_int 0 [0]))) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":8:20 -1
      (nil)
     (expr_list:DI (use (reg:DI 5 di))
@@ -206,11 +206,11 @@ try_optimize_cfg iteration 2
 (insn 51 50 52 2 (set (reg/f:DI 97 [ _16 ])
         (reg:DI 0 ax)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":8:20 -1
      (nil))
-(insn 52 51 53 2 (set (mem/f/c:DI (symbol_ref:DI ("score_button") [flags 0x2]  <var_decl 0x7f4911bf3900 score_button>) [7 score_button+0 S8 A64])
+(insn 52 51 53 2 (set (mem/f/c:DI (symbol_ref:DI ("score_button") [flags 0x2]  <var_decl 0x7f38e3f4aa20 score_button>) [8 score_button+0 S8 A64])
         (reg/f:DI 97 [ _16 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":8:18 -1
      (nil))
 (call_insn/u 53 52 54 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("gtk_button_get_type") [flags 0x41]  <function_decl 0x7f491297da00 gtk_button_get_type>) [0 gtk_button_get_type S1 A8])
+        (call (mem:QI (symbol_ref:DI ("gtk_button_get_type") [flags 0x41]  <function_decl 0x7f38e4cd4a00 gtk_button_get_type>) [0 gtk_button_get_type S1 A8])
             (const_int 0 [0]))) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":9:22 -1
      (nil)
     (nil))
@@ -218,16 +218,16 @@ try_optimize_cfg iteration 2
         (reg:DI 0 ax)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":9:22 -1
      (nil))
 (insn 55 54 56 2 (set (reg/f:DI 99 [ builder.4_18 ])
-        (mem/f/c:DI (symbol_ref:DI ("builder") [flags 0x2]  <var_decl 0x7f491271dd80 builder>) [1 builder+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":9:22 -1
+        (mem/f/c:DI (symbol_ref:DI ("builder") [flags 0x2]  <var_decl 0x7f38e3f373f0 builder>) [4 builder+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":9:22 -1
      (nil))
 (insn 56 55 57 2 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f4911c067e0 *.LC4>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":9:22 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f38e3f5f900 *.LC4>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":9:22 -1
      (nil))
 (insn 57 56 58 2 (set (reg:DI 5 di)
         (reg/f:DI 99 [ builder.4_18 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":9:22 -1
      (nil))
 (call_insn 58 57 59 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("gtk_builder_get_object") [flags 0x41]  <function_decl 0x7f4912d60c00 gtk_builder_get_object>) [0 gtk_builder_get_object S1 A8])
+        (call (mem:QI (symbol_ref:DI ("gtk_builder_get_object") [flags 0x41]  <function_decl 0x7f38e50b7c00 gtk_builder_get_object>) [0 gtk_builder_get_object S1 A8])
             (const_int 0 [0]))) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":9:22 -1
      (nil)
     (expr_list:DI (use (reg:DI 5 di))
@@ -243,7 +243,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 100 [ _19 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":9:22 -1
      (nil))
 (call_insn 62 61 63 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("g_type_check_instance_cast") [flags 0x41]  <function_decl 0x7f49142f1a00 g_type_check_instance_cast>) [0 g_type_check_instance_cast S1 A8])
+        (call (mem:QI (symbol_ref:DI ("g_type_check_instance_cast") [flags 0x41]  <function_decl 0x7f38e6648a00 g_type_check_instance_cast>) [0 g_type_check_instance_cast S1 A8])
             (const_int 0 [0]))) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":9:22 -1
      (nil)
     (expr_list:DI (use (reg:DI 5 di))
@@ -252,11 +252,11 @@ try_optimize_cfg iteration 2
 (insn 63 62 64 2 (set (reg/f:DI 101 [ _20 ])
         (reg:DI 0 ax)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":9:22 -1
      (nil))
-(insn 64 63 65 2 (set (mem/f/c:DI (symbol_ref:DI ("signout_button") [flags 0x2]  <var_decl 0x7f4911bf3990 signout_button>) [7 signout_button+0 S8 A64])
+(insn 64 63 65 2 (set (mem/f/c:DI (symbol_ref:DI ("signout_button") [flags 0x2]  <var_decl 0x7f38e3f4aab0 signout_button>) [8 signout_button+0 S8 A64])
         (reg/f:DI 101 [ _20 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":9:20 -1
      (nil))
 (insn 65 64 66 2 (set (reg/f:DI 102 [ main_page_window.5_21 ])
-        (mem/f/c:DI (symbol_ref:DI ("main_page_window") [flags 0x2]  <var_decl 0x7f4911bf3750 main_page_window>) [6 main_page_window+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":12:5 -1
+        (mem/f/c:DI (symbol_ref:DI ("main_page_window") [flags 0x2]  <var_decl 0x7f38e3f4a870 main_page_window>) [7 main_page_window+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":12:5 -1
      (nil))
 (insn 66 65 67 2 (set (reg:SI 37 r9)
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":12:5 -1
@@ -269,21 +269,21 @@ try_optimize_cfg iteration 2
      (nil))
 (insn 69 68 70 2 (set (reg:DI 107)
         (mem/u/c:DI (const:DI (unspec:DI [
-                        (symbol_ref:DI ("on_destroy") [flags 0x41]  <function_decl 0x7f4911bda300 on_destroy>)
-                    ] UNSPEC_GOTPCREL)) [10  S8 A8])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":12:5 -1
+                        (symbol_ref:DI ("on_destroy") [flags 0x41]  <function_decl 0x7f38e3f41600 on_destroy>)
+                    ] UNSPEC_GOTPCREL)) [11  S8 A8])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":12:5 -1
      (nil))
 (insn 70 69 71 2 (set (reg:DI 1 dx)
         (reg:DI 107)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":12:5 -1
-     (expr_list:REG_EQUAL (symbol_ref:DI ("on_destroy") [flags 0x41]  <function_decl 0x7f4911bda300 on_destroy>)
+     (expr_list:REG_EQUAL (symbol_ref:DI ("on_destroy") [flags 0x41]  <function_decl 0x7f38e3f41600 on_destroy>)
         (nil)))
 (insn 71 70 72 2 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x7f4911c06870 *.LC5>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":12:5 -1
+        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x7f38e3f5f990 *.LC5>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":12:5 -1
      (nil))
 (insn 72 71 73 2 (set (reg:DI 5 di)
         (reg/f:DI 102 [ main_page_window.5_21 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":12:5 -1
      (nil))
 (call_insn 73 72 74 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("g_signal_connect_data") [flags 0x41]  <function_decl 0x7f491434bd00 g_signal_connect_data>) [0 g_signal_connect_data S1 A8])
+        (call (mem:QI (symbol_ref:DI ("g_signal_connect_data") [flags 0x41]  <function_decl 0x7f38e66a2d00 g_signal_connect_data>) [0 g_signal_connect_data S1 A8])
             (const_int 0 [0]))) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":12:5 -1
      (nil)
     (expr_list:DI (use (reg:DI 5 di))
@@ -294,7 +294,7 @@ try_optimize_cfg iteration 2
                         (expr_list:SI (use (reg:SI 37 r9))
                             (nil))))))))
 (insn 74 73 75 2 (set (reg/f:DI 103 [ new_game_button.6_22 ])
-        (mem/f/c:DI (symbol_ref:DI ("new_game_button") [flags 0x2]  <var_decl 0x7f4911bf37e0 new_game_button>) [7 new_game_button+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":13:5 -1
+        (mem/f/c:DI (symbol_ref:DI ("new_game_button") [flags 0x2]  <var_decl 0x7f38e3f4a900 new_game_button>) [8 new_game_button+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":13:5 -1
      (nil))
 (insn 75 74 76 2 (set (reg:SI 37 r9)
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":13:5 -1
@@ -306,16 +306,16 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":13:5 -1
      (nil))
 (insn 78 77 79 2 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("on_new_game_button_clicked") [flags 0x3]  <function_decl 0x7f4911bf7600 on_new_game_button_clicked>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":13:5 -1
+        (symbol_ref:DI ("on_new_game_button_clicked") [flags 0x3]  <function_decl 0x7f38e3f4ea00 on_new_game_button_clicked>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":13:5 -1
      (nil))
 (insn 79 78 80 2 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x7f4911c06900 *.LC6>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":13:5 -1
+        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x7f38e3f5fa20 *.LC6>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":13:5 -1
      (nil))
 (insn 80 79 81 2 (set (reg:DI 5 di)
         (reg/f:DI 103 [ new_game_button.6_22 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":13:5 -1
      (nil))
 (call_insn 81 80 82 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("g_signal_connect_data") [flags 0x41]  <function_decl 0x7f491434bd00 g_signal_connect_data>) [0 g_signal_connect_data S1 A8])
+        (call (mem:QI (symbol_ref:DI ("g_signal_connect_data") [flags 0x41]  <function_decl 0x7f38e66a2d00 g_signal_connect_data>) [0 g_signal_connect_data S1 A8])
             (const_int 0 [0]))) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":13:5 -1
      (nil)
     (expr_list:DI (use (reg:DI 5 di))
@@ -326,7 +326,7 @@ try_optimize_cfg iteration 2
                         (expr_list:SI (use (reg:SI 37 r9))
                             (nil))))))))
 (insn 82 81 83 2 (set (reg/f:DI 104 [ load_game_button.7_23 ])
-        (mem/f/c:DI (symbol_ref:DI ("load_game_button") [flags 0x2]  <var_decl 0x7f4911bf3870 load_game_button>) [7 load_game_button+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":14:5 -1
+        (mem/f/c:DI (symbol_ref:DI ("load_game_button") [flags 0x2]  <var_decl 0x7f38e3f4a990 load_game_button>) [8 load_game_button+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":14:5 -1
      (nil))
 (insn 83 82 84 2 (set (reg:SI 37 r9)
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":14:5 -1
@@ -338,16 +338,16 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":14:5 -1
      (nil))
 (insn 86 85 87 2 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("on_load_game_button_clicked") [flags 0x3]  <function_decl 0x7f4911bf7700 on_load_game_button_clicked>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":14:5 -1
+        (symbol_ref:DI ("on_load_game_button_clicked") [flags 0x3]  <function_decl 0x7f38e3f4eb00 on_load_game_button_clicked>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":14:5 -1
      (nil))
 (insn 87 86 88 2 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x7f4911c06900 *.LC6>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":14:5 -1
+        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x7f38e3f5fa20 *.LC6>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":14:5 -1
      (nil))
 (insn 88 87 89 2 (set (reg:DI 5 di)
         (reg/f:DI 104 [ load_game_button.7_23 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":14:5 -1
      (nil))
 (call_insn 89 88 90 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("g_signal_connect_data") [flags 0x41]  <function_decl 0x7f491434bd00 g_signal_connect_data>) [0 g_signal_connect_data S1 A8])
+        (call (mem:QI (symbol_ref:DI ("g_signal_connect_data") [flags 0x41]  <function_decl 0x7f38e66a2d00 g_signal_connect_data>) [0 g_signal_connect_data S1 A8])
             (const_int 0 [0]))) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":14:5 -1
      (nil)
     (expr_list:DI (use (reg:DI 5 di))
@@ -358,7 +358,7 @@ try_optimize_cfg iteration 2
                         (expr_list:SI (use (reg:SI 37 r9))
                             (nil))))))))
 (insn 90 89 91 2 (set (reg/f:DI 105 [ score_button.8_24 ])
-        (mem/f/c:DI (symbol_ref:DI ("score_button") [flags 0x2]  <var_decl 0x7f4911bf3900 score_button>) [7 score_button+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":15:5 -1
+        (mem/f/c:DI (symbol_ref:DI ("score_button") [flags 0x2]  <var_decl 0x7f38e3f4aa20 score_button>) [8 score_button+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":15:5 -1
      (nil))
 (insn 91 90 92 2 (set (reg:SI 37 r9)
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":15:5 -1
@@ -370,16 +370,16 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":15:5 -1
      (nil))
 (insn 94 93 95 2 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("on_score_button_clicked") [flags 0x3]  <function_decl 0x7f4911bf7800 on_score_button_clicked>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":15:5 -1
+        (symbol_ref:DI ("on_score_button_clicked") [flags 0x3]  <function_decl 0x7f38e3f4ec00 on_score_button_clicked>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":15:5 -1
      (nil))
 (insn 95 94 96 2 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x7f4911c06900 *.LC6>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":15:5 -1
+        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x7f38e3f5fa20 *.LC6>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":15:5 -1
      (nil))
 (insn 96 95 97 2 (set (reg:DI 5 di)
         (reg/f:DI 105 [ score_button.8_24 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":15:5 -1
      (nil))
 (call_insn 97 96 98 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("g_signal_connect_data") [flags 0x41]  <function_decl 0x7f491434bd00 g_signal_connect_data>) [0 g_signal_connect_data S1 A8])
+        (call (mem:QI (symbol_ref:DI ("g_signal_connect_data") [flags 0x41]  <function_decl 0x7f38e66a2d00 g_signal_connect_data>) [0 g_signal_connect_data S1 A8])
             (const_int 0 [0]))) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":15:5 -1
      (nil)
     (expr_list:DI (use (reg:DI 5 di))
@@ -390,7 +390,7 @@ try_optimize_cfg iteration 2
                         (expr_list:SI (use (reg:SI 37 r9))
                             (nil))))))))
 (insn 98 97 99 2 (set (reg/f:DI 106 [ signout_button.9_25 ])
-        (mem/f/c:DI (symbol_ref:DI ("signout_button") [flags 0x2]  <var_decl 0x7f4911bf3990 signout_button>) [7 signout_button+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":16:5 -1
+        (mem/f/c:DI (symbol_ref:DI ("signout_button") [flags 0x2]  <var_decl 0x7f38e3f4aab0 signout_button>) [8 signout_button+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":16:5 -1
      (nil))
 (insn 99 98 100 2 (set (reg:SI 37 r9)
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":16:5 -1
@@ -402,16 +402,16 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":16:5 -1
      (nil))
 (insn 102 101 103 2 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("on_signout_button_clicked") [flags 0x3]  <function_decl 0x7f4911bf7900 on_signout_button_clicked>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":16:5 -1
+        (symbol_ref:DI ("on_signout_button_clicked") [flags 0x3]  <function_decl 0x7f38e3f4ed00 on_signout_button_clicked>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":16:5 -1
      (nil))
 (insn 103 102 104 2 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x7f4911c06900 *.LC6>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":16:5 -1
+        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x7f38e3f5fa20 *.LC6>)) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":16:5 -1
      (nil))
 (insn 104 103 105 2 (set (reg:DI 5 di)
         (reg/f:DI 106 [ signout_button.9_25 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":16:5 -1
      (nil))
 (call_insn 105 104 0 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("g_signal_connect_data") [flags 0x41]  <function_decl 0x7f491434bd00 g_signal_connect_data>) [0 g_signal_connect_data S1 A8])
+        (call (mem:QI (symbol_ref:DI ("g_signal_connect_data") [flags 0x41]  <function_decl 0x7f38e66a2d00 g_signal_connect_data>) [0 g_signal_connect_data S1 A8])
             (const_int 0 [0]))) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":16:5 -1
      (nil)
     (expr_list:DI (use (reg:DI 5 di))
@@ -422,7 +422,7 @@ try_optimize_cfg iteration 2
                         (expr_list:SI (use (reg:SI 37 r9))
                             (nil))))))))
 
-;; Function show_main_page (show_main_page, funcdef_no=2088, decl_uid=59949, cgraph_uid=2089, symbol_order=2130)
+;; Function show_main_page (show_main_page, funcdef_no=2088, decl_uid=59968, cgraph_uid=2089, symbol_order=2132)
 
 
 ;; Generating RTL for gimple basic block 2
@@ -449,18 +449,18 @@ try_optimize_cfg iteration 2
 (note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
 (insn 5 2 6 2 (set (reg/f:DI 82 [ main_page_window.10_1 ])
-        (mem/f/c:DI (symbol_ref:DI ("main_page_window") [flags 0x2]  <var_decl 0x7f4911bf3750 main_page_window>) [6 main_page_window+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":21:5 -1
+        (mem/f/c:DI (symbol_ref:DI ("main_page_window") [flags 0x2]  <var_decl 0x7f38e3f4a870 main_page_window>) [7 main_page_window+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":21:5 -1
      (nil))
 (insn 6 5 7 2 (set (reg:DI 5 di)
         (reg/f:DI 82 [ main_page_window.10_1 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":21:5 -1
      (nil))
-(call_insn 7 6 0 2 (call (mem:QI (symbol_ref:DI ("gtk_widget_show") [flags 0x41]  <function_decl 0x7f4912e6b700 gtk_widget_show>) [0 gtk_widget_show S1 A8])
+(call_insn 7 6 0 2 (call (mem:QI (symbol_ref:DI ("gtk_widget_show") [flags 0x41]  <function_decl 0x7f38e51c2700 gtk_widget_show>) [0 gtk_widget_show S1 A8])
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":21:5 -1
      (nil)
     (expr_list:DI (use (reg:DI 5 di))
         (nil)))
 
-;; Function close_main_page (close_main_page, funcdef_no=2089, decl_uid=59950, cgraph_uid=2090, symbol_order=2131)
+;; Function close_main_page (close_main_page, funcdef_no=2089, decl_uid=59969, cgraph_uid=2090, symbol_order=2133)
 
 
 ;; Generating RTL for gimple basic block 2
@@ -487,18 +487,18 @@ try_optimize_cfg iteration 2
 (note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
 (insn 5 2 6 2 (set (reg/f:DI 82 [ main_page_window.11_1 ])
-        (mem/f/c:DI (symbol_ref:DI ("main_page_window") [flags 0x2]  <var_decl 0x7f4911bf3750 main_page_window>) [6 main_page_window+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":26:5 -1
+        (mem/f/c:DI (symbol_ref:DI ("main_page_window") [flags 0x2]  <var_decl 0x7f38e3f4a870 main_page_window>) [7 main_page_window+0 S8 A64])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":26:5 -1
      (nil))
 (insn 6 5 7 2 (set (reg:DI 5 di)
         (reg/f:DI 82 [ main_page_window.11_1 ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":26:5 -1
      (nil))
-(call_insn 7 6 0 2 (call (mem:QI (symbol_ref:DI ("gtk_widget_hide") [flags 0x41]  <function_decl 0x7f4912e6b800 gtk_widget_hide>) [0 gtk_widget_hide S1 A8])
+(call_insn 7 6 0 2 (call (mem:QI (symbol_ref:DI ("gtk_widget_hide") [flags 0x41]  <function_decl 0x7f38e51c2800 gtk_widget_hide>) [0 gtk_widget_hide S1 A8])
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":26:5 -1
      (nil)
     (expr_list:DI (use (reg:DI 5 di))
         (nil)))
 
-;; Function on_new_game_button_clicked (on_new_game_button_clicked, funcdef_no=2090, decl_uid=59953, cgraph_uid=2091, symbol_order=2132)
+;; Function on_new_game_button_clicked (on_new_game_button_clicked, funcdef_no=2090, decl_uid=59972, cgraph_uid=2091, symbol_order=2134)
 
 
 ;; Generating RTL for gimple basic block 2
@@ -524,18 +524,18 @@ try_optimize_cfg iteration 2
 (note 1 0 5 NOTE_INSN_DELETED)
 (note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (insn 2 5 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
-                (const_int -8 [0xfffffffffffffff8])) [7 button+0 S8 A64])
+                (const_int -8 [0xfffffffffffffff8])) [8 button+0 S8 A64])
         (reg:DI 5 di [ button ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":30:1 -1
      (nil))
 (insn 3 2 4 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
-                (const_int -16 [0xfffffffffffffff0])) [11 user_data+0 S8 A64])
+                (const_int -16 [0xfffffffffffffff0])) [12 user_data+0 S8 A64])
         (reg:DI 4 si [ user_data ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":30:1 -1
      (nil))
 (note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
 (insn 7 4 8 2 (set (reg:QI 0 ax)
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":31:5 -1
      (nil))
-(call_insn 8 7 9 2 (call (mem:QI (symbol_ref:DI ("close_main_page") [flags 0x3]  <function_decl 0x7f4911bf7500 close_main_page>) [0 close_main_page S1 A8])
+(call_insn 8 7 9 2 (call (mem:QI (symbol_ref:DI ("close_main_page") [flags 0x3]  <function_decl 0x7f38e3f4e900 close_main_page>) [0 close_main_page S1 A8])
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":31:5 -1
      (nil)
     (expr_list (use (reg:QI 0 ax))
@@ -543,13 +543,13 @@ try_optimize_cfg iteration 2
 (insn 9 8 10 2 (set (reg:QI 0 ax)
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":32:5 -1
      (nil))
-(call_insn 10 9 0 2 (call (mem:QI (symbol_ref:DI ("show_new_game_page") [flags 0x41]  <function_decl 0x7f4911bee300 show_new_game_page>) [0 show_new_game_page S1 A8])
+(call_insn 10 9 0 2 (call (mem:QI (symbol_ref:DI ("show_new_game_page") [flags 0x41]  <function_decl 0x7f38e3f49700 show_new_game_page>) [0 show_new_game_page S1 A8])
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":32:5 -1
      (nil)
     (expr_list (use (reg:QI 0 ax))
         (nil)))
 
-;; Function on_load_game_button_clicked (on_load_game_button_clicked, funcdef_no=2091, decl_uid=59956, cgraph_uid=2092, symbol_order=2133)
+;; Function on_load_game_button_clicked (on_load_game_button_clicked, funcdef_no=2091, decl_uid=59975, cgraph_uid=2092, symbol_order=2135)
 
 
 ;; Generating RTL for gimple basic block 2
@@ -575,16 +575,16 @@ try_optimize_cfg iteration 2
 (note 1 0 5 NOTE_INSN_DELETED)
 (note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (insn 2 5 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
-                (const_int -8 [0xfffffffffffffff8])) [7 button+0 S8 A64])
+                (const_int -8 [0xfffffffffffffff8])) [8 button+0 S8 A64])
         (reg:DI 5 di [ button ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":34:73 -1
      (nil))
 (insn 3 2 4 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
-                (const_int -16 [0xfffffffffffffff0])) [11 user_data+0 S8 A64])
+                (const_int -16 [0xfffffffffffffff0])) [12 user_data+0 S8 A64])
         (reg:DI 4 si [ user_data ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":34:73 -1
      (nil))
 (note 4 3 0 2 NOTE_INSN_FUNCTION_BEG)
 
-;; Function on_score_button_clicked (on_score_button_clicked, funcdef_no=2092, decl_uid=59959, cgraph_uid=2093, symbol_order=2134)
+;; Function on_score_button_clicked (on_score_button_clicked, funcdef_no=2092, decl_uid=59978, cgraph_uid=2093, symbol_order=2136)
 
 
 ;; Generating RTL for gimple basic block 2
@@ -610,16 +610,16 @@ try_optimize_cfg iteration 2
 (note 1 0 5 NOTE_INSN_DELETED)
 (note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (insn 2 5 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
-                (const_int -8 [0xfffffffffffffff8])) [7 button+0 S8 A64])
+                (const_int -8 [0xfffffffffffffff8])) [8 button+0 S8 A64])
         (reg:DI 5 di [ button ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":35:69 -1
      (nil))
 (insn 3 2 4 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
-                (const_int -16 [0xfffffffffffffff0])) [11 user_data+0 S8 A64])
+                (const_int -16 [0xfffffffffffffff0])) [12 user_data+0 S8 A64])
         (reg:DI 4 si [ user_data ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":35:69 -1
      (nil))
 (note 4 3 0 2 NOTE_INSN_FUNCTION_BEG)
 
-;; Function on_signout_button_clicked (on_signout_button_clicked, funcdef_no=2093, decl_uid=59962, cgraph_uid=2094, symbol_order=2135)
+;; Function on_signout_button_clicked (on_signout_button_clicked, funcdef_no=2093, decl_uid=59981, cgraph_uid=2094, symbol_order=2137)
 
 
 ;; Generating RTL for gimple basic block 2
@@ -645,18 +645,18 @@ try_optimize_cfg iteration 2
 (note 1 0 5 NOTE_INSN_DELETED)
 (note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (insn 2 5 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
-                (const_int -8 [0xfffffffffffffff8])) [7 button+0 S8 A64])
+                (const_int -8 [0xfffffffffffffff8])) [8 button+0 S8 A64])
         (reg:DI 5 di [ button ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":37:1 -1
      (nil))
 (insn 3 2 4 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
-                (const_int -16 [0xfffffffffffffff0])) [11 user_data+0 S8 A64])
+                (const_int -16 [0xfffffffffffffff0])) [12 user_data+0 S8 A64])
         (reg:DI 4 si [ user_data ])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":37:1 -1
      (nil))
 (note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
 (insn 7 4 8 2 (set (reg:QI 0 ax)
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":38:5 -1
      (nil))
-(call_insn 8 7 9 2 (call (mem:QI (symbol_ref:DI ("close_main_page") [flags 0x3]  <function_decl 0x7f4911bf7500 close_main_page>) [0 close_main_page S1 A8])
+(call_insn 8 7 9 2 (call (mem:QI (symbol_ref:DI ("close_main_page") [flags 0x3]  <function_decl 0x7f38e3f4e900 close_main_page>) [0 close_main_page S1 A8])
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":38:5 -1
      (nil)
     (expr_list (use (reg:QI 0 ax))
@@ -664,7 +664,7 @@ try_optimize_cfg iteration 2
 (insn 9 8 10 2 (set (reg:QI 0 ax)
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":39:5 -1
      (nil))
-(call_insn 10 9 0 2 (call (mem:QI (symbol_ref:DI ("show_signin_page") [flags 0x41]  <function_decl 0x7f4911be9400 show_signin_page>) [0 show_signin_page S1 A8])
+(call_insn 10 9 0 2 (call (mem:QI (symbol_ref:DI ("show_signin_page") [flags 0x41]  <function_decl 0x7f38e3f41800 show_signin_page>) [0 show_signin_page S1 A8])
         (const_int 0 [0])) "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c":39:5 -1
      (nil)
     (expr_list (use (reg:QI 0 ax))
