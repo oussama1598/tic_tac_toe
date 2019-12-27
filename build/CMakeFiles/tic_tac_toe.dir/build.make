@@ -64,11 +64,11 @@ CMakeFiles/tic_tac_toe.dir/src/main.c.o: ../src/main.c
 
 CMakeFiles/tic_tac_toe.dir/src/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tic_tac_toe.dir/src/main.c.i"
-	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/main.c > CMakeFiles/tic_tac_toe.dir/src/main.c.i
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_C_CREATE_PREPROCESSED_SOURCE
 
 CMakeFiles/tic_tac_toe.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tic_tac_toe.dir/src/main.c.s"
-	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/main.c -o CMakeFiles/tic_tac_toe.dir/src/main.c.s
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_C_CREATE_ASSEMBLY_SOURCE
 
 CMakeFiles/tic_tac_toe.dir/src/helpers/tools.c.o: CMakeFiles/tic_tac_toe.dir/flags.make
 CMakeFiles/tic_tac_toe.dir/src/helpers/tools.c.o: ../src/helpers/tools.c
@@ -77,11 +77,11 @@ CMakeFiles/tic_tac_toe.dir/src/helpers/tools.c.o: ../src/helpers/tools.c
 
 CMakeFiles/tic_tac_toe.dir/src/helpers/tools.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tic_tac_toe.dir/src/helpers/tools.c.i"
-	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/tools.c > CMakeFiles/tic_tac_toe.dir/src/helpers/tools.c.i
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_C_CREATE_PREPROCESSED_SOURCE
 
 CMakeFiles/tic_tac_toe.dir/src/helpers/tools.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tic_tac_toe.dir/src/helpers/tools.c.s"
-	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/tools.c -o CMakeFiles/tic_tac_toe.dir/src/helpers/tools.c.s
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_C_CREATE_ASSEMBLY_SOURCE
 
 CMakeFiles/tic_tac_toe.dir/src/modules/ai_player/ai_player.c.o: CMakeFiles/tic_tac_toe.dir/flags.make
 CMakeFiles/tic_tac_toe.dir/src/modules/ai_player/ai_player.c.o: ../src/modules/ai_player/ai_player.c
@@ -90,11 +90,11 @@ CMakeFiles/tic_tac_toe.dir/src/modules/ai_player/ai_player.c.o: ../src/modules/a
 
 CMakeFiles/tic_tac_toe.dir/src/modules/ai_player/ai_player.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tic_tac_toe.dir/src/modules/ai_player/ai_player.c.i"
-	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/ai_player/ai_player.c > CMakeFiles/tic_tac_toe.dir/src/modules/ai_player/ai_player.c.i
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_C_CREATE_PREPROCESSED_SOURCE
 
 CMakeFiles/tic_tac_toe.dir/src/modules/ai_player/ai_player.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tic_tac_toe.dir/src/modules/ai_player/ai_player.c.s"
-	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/ai_player/ai_player.c -o CMakeFiles/tic_tac_toe.dir/src/modules/ai_player/ai_player.c.s
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_C_CREATE_ASSEMBLY_SOURCE
 
 CMakeFiles/tic_tac_toe.dir/src/modules/users_manager/users_manager.c.o: CMakeFiles/tic_tac_toe.dir/flags.make
 CMakeFiles/tic_tac_toe.dir/src/modules/users_manager/users_manager.c.o: ../src/modules/users_manager/users_manager.c
@@ -103,89 +103,115 @@ CMakeFiles/tic_tac_toe.dir/src/modules/users_manager/users_manager.c.o: ../src/m
 
 CMakeFiles/tic_tac_toe.dir/src/modules/users_manager/users_manager.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tic_tac_toe.dir/src/modules/users_manager/users_manager.c.i"
-	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/users_manager/users_manager.c > CMakeFiles/tic_tac_toe.dir/src/modules/users_manager/users_manager.c.i
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_C_CREATE_PREPROCESSED_SOURCE
 
 CMakeFiles/tic_tac_toe.dir/src/modules/users_manager/users_manager.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tic_tac_toe.dir/src/modules/users_manager/users_manager.c.s"
-	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/users_manager/users_manager.c -o CMakeFiles/tic_tac_toe.dir/src/modules/users_manager/users_manager.c.s
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_C_CREATE_ASSEMBLY_SOURCE
+
+CMakeFiles/tic_tac_toe.dir/src/modules/saves_manager/saves_manager.c.o: CMakeFiles/tic_tac_toe.dir/flags.make
+CMakeFiles/tic_tac_toe.dir/src/modules/saves_manager/saves_manager.c.o: ../src/modules/saves_manager/saves_manager.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/tic_tac_toe.dir/src/modules/saves_manager/saves_manager.c.o"
+	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/tic_tac_toe.dir/src/modules/saves_manager/saves_manager.c.o   -c /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/saves_manager/saves_manager.c
+
+CMakeFiles/tic_tac_toe.dir/src/modules/saves_manager/saves_manager.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tic_tac_toe.dir/src/modules/saves_manager/saves_manager.c.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_C_CREATE_PREPROCESSED_SOURCE
+
+CMakeFiles/tic_tac_toe.dir/src/modules/saves_manager/saves_manager.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tic_tac_toe.dir/src/modules/saves_manager/saves_manager.c.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_C_CREATE_ASSEMBLY_SOURCE
 
 CMakeFiles/tic_tac_toe.dir/src/modules/builder/builder.c.o: CMakeFiles/tic_tac_toe.dir/flags.make
 CMakeFiles/tic_tac_toe.dir/src/modules/builder/builder.c.o: ../src/modules/builder/builder.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/tic_tac_toe.dir/src/modules/builder/builder.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/tic_tac_toe.dir/src/modules/builder/builder.c.o"
 	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/tic_tac_toe.dir/src/modules/builder/builder.c.o   -c /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/builder/builder.c
 
 CMakeFiles/tic_tac_toe.dir/src/modules/builder/builder.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tic_tac_toe.dir/src/modules/builder/builder.c.i"
-	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/builder/builder.c > CMakeFiles/tic_tac_toe.dir/src/modules/builder/builder.c.i
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_C_CREATE_PREPROCESSED_SOURCE
 
 CMakeFiles/tic_tac_toe.dir/src/modules/builder/builder.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tic_tac_toe.dir/src/modules/builder/builder.c.s"
-	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/builder/builder.c -o CMakeFiles/tic_tac_toe.dir/src/modules/builder/builder.c.s
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_C_CREATE_ASSEMBLY_SOURCE
 
 CMakeFiles/tic_tac_toe.dir/src/pages/main/main_page.c.o: CMakeFiles/tic_tac_toe.dir/flags.make
 CMakeFiles/tic_tac_toe.dir/src/pages/main/main_page.c.o: ../src/pages/main/main_page.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/tic_tac_toe.dir/src/pages/main/main_page.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/tic_tac_toe.dir/src/pages/main/main_page.c.o"
 	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/tic_tac_toe.dir/src/pages/main/main_page.c.o   -c /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c
 
 CMakeFiles/tic_tac_toe.dir/src/pages/main/main_page.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tic_tac_toe.dir/src/pages/main/main_page.c.i"
-	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c > CMakeFiles/tic_tac_toe.dir/src/pages/main/main_page.c.i
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_C_CREATE_PREPROCESSED_SOURCE
 
 CMakeFiles/tic_tac_toe.dir/src/pages/main/main_page.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tic_tac_toe.dir/src/pages/main/main_page.c.s"
-	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c -o CMakeFiles/tic_tac_toe.dir/src/pages/main/main_page.c.s
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_C_CREATE_ASSEMBLY_SOURCE
 
 CMakeFiles/tic_tac_toe.dir/src/pages/signin/signin_page.c.o: CMakeFiles/tic_tac_toe.dir/flags.make
 CMakeFiles/tic_tac_toe.dir/src/pages/signin/signin_page.c.o: ../src/pages/signin/signin_page.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/tic_tac_toe.dir/src/pages/signin/signin_page.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/tic_tac_toe.dir/src/pages/signin/signin_page.c.o"
 	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/tic_tac_toe.dir/src/pages/signin/signin_page.c.o   -c /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/signin/signin_page.c
 
 CMakeFiles/tic_tac_toe.dir/src/pages/signin/signin_page.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tic_tac_toe.dir/src/pages/signin/signin_page.c.i"
-	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/signin/signin_page.c > CMakeFiles/tic_tac_toe.dir/src/pages/signin/signin_page.c.i
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_C_CREATE_PREPROCESSED_SOURCE
 
 CMakeFiles/tic_tac_toe.dir/src/pages/signin/signin_page.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tic_tac_toe.dir/src/pages/signin/signin_page.c.s"
-	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/signin/signin_page.c -o CMakeFiles/tic_tac_toe.dir/src/pages/signin/signin_page.c.s
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_C_CREATE_ASSEMBLY_SOURCE
 
 CMakeFiles/tic_tac_toe.dir/src/pages/signup/signup_page.c.o: CMakeFiles/tic_tac_toe.dir/flags.make
 CMakeFiles/tic_tac_toe.dir/src/pages/signup/signup_page.c.o: ../src/pages/signup/signup_page.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/tic_tac_toe.dir/src/pages/signup/signup_page.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/tic_tac_toe.dir/src/pages/signup/signup_page.c.o"
 	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/tic_tac_toe.dir/src/pages/signup/signup_page.c.o   -c /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/signup/signup_page.c
 
 CMakeFiles/tic_tac_toe.dir/src/pages/signup/signup_page.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tic_tac_toe.dir/src/pages/signup/signup_page.c.i"
-	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/signup/signup_page.c > CMakeFiles/tic_tac_toe.dir/src/pages/signup/signup_page.c.i
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_C_CREATE_PREPROCESSED_SOURCE
 
 CMakeFiles/tic_tac_toe.dir/src/pages/signup/signup_page.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tic_tac_toe.dir/src/pages/signup/signup_page.c.s"
-	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/signup/signup_page.c -o CMakeFiles/tic_tac_toe.dir/src/pages/signup/signup_page.c.s
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_C_CREATE_ASSEMBLY_SOURCE
 
 CMakeFiles/tic_tac_toe.dir/src/pages/new_game/new_game_page.c.o: CMakeFiles/tic_tac_toe.dir/flags.make
 CMakeFiles/tic_tac_toe.dir/src/pages/new_game/new_game_page.c.o: ../src/pages/new_game/new_game_page.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/tic_tac_toe.dir/src/pages/new_game/new_game_page.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/tic_tac_toe.dir/src/pages/new_game/new_game_page.c.o"
 	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/tic_tac_toe.dir/src/pages/new_game/new_game_page.c.o   -c /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/new_game/new_game_page.c
 
 CMakeFiles/tic_tac_toe.dir/src/pages/new_game/new_game_page.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tic_tac_toe.dir/src/pages/new_game/new_game_page.c.i"
-	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/new_game/new_game_page.c > CMakeFiles/tic_tac_toe.dir/src/pages/new_game/new_game_page.c.i
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_C_CREATE_PREPROCESSED_SOURCE
 
 CMakeFiles/tic_tac_toe.dir/src/pages/new_game/new_game_page.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tic_tac_toe.dir/src/pages/new_game/new_game_page.c.s"
-	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/new_game/new_game_page.c -o CMakeFiles/tic_tac_toe.dir/src/pages/new_game/new_game_page.c.s
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_C_CREATE_ASSEMBLY_SOURCE
+
+CMakeFiles/tic_tac_toe.dir/src/pages/about/about_page.c.o: CMakeFiles/tic_tac_toe.dir/flags.make
+CMakeFiles/tic_tac_toe.dir/src/pages/about/about_page.c.o: ../src/pages/about/about_page.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/tic_tac_toe.dir/src/pages/about/about_page.c.o"
+	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/tic_tac_toe.dir/src/pages/about/about_page.c.o   -c /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/about/about_page.c
+
+CMakeFiles/tic_tac_toe.dir/src/pages/about/about_page.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tic_tac_toe.dir/src/pages/about/about_page.c.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_C_CREATE_PREPROCESSED_SOURCE
+
+CMakeFiles/tic_tac_toe.dir/src/pages/about/about_page.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tic_tac_toe.dir/src/pages/about/about_page.c.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_C_CREATE_ASSEMBLY_SOURCE
 
 CMakeFiles/tic_tac_toe.dir/src/pages/game/game.c.o: CMakeFiles/tic_tac_toe.dir/flags.make
 CMakeFiles/tic_tac_toe.dir/src/pages/game/game.c.o: ../src/pages/game/game.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/tic_tac_toe.dir/src/pages/game/game.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/tic_tac_toe.dir/src/pages/game/game.c.o"
 	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/tic_tac_toe.dir/src/pages/game/game.c.o   -c /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/game/game.c
 
 CMakeFiles/tic_tac_toe.dir/src/pages/game/game.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tic_tac_toe.dir/src/pages/game/game.c.i"
-	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/game/game.c > CMakeFiles/tic_tac_toe.dir/src/pages/game/game.c.i
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_C_CREATE_PREPROCESSED_SOURCE
 
 CMakeFiles/tic_tac_toe.dir/src/pages/game/game.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tic_tac_toe.dir/src/pages/game/game.c.s"
-	/bin/c99-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/game/game.c -o CMakeFiles/tic_tac_toe.dir/src/pages/game/game.c.s
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_C_CREATE_ASSEMBLY_SOURCE
 
 # Object files for target tic_tac_toe
 tic_tac_toe_OBJECTS = \
@@ -193,11 +219,13 @@ tic_tac_toe_OBJECTS = \
 "CMakeFiles/tic_tac_toe.dir/src/helpers/tools.c.o" \
 "CMakeFiles/tic_tac_toe.dir/src/modules/ai_player/ai_player.c.o" \
 "CMakeFiles/tic_tac_toe.dir/src/modules/users_manager/users_manager.c.o" \
+"CMakeFiles/tic_tac_toe.dir/src/modules/saves_manager/saves_manager.c.o" \
 "CMakeFiles/tic_tac_toe.dir/src/modules/builder/builder.c.o" \
 "CMakeFiles/tic_tac_toe.dir/src/pages/main/main_page.c.o" \
 "CMakeFiles/tic_tac_toe.dir/src/pages/signin/signin_page.c.o" \
 "CMakeFiles/tic_tac_toe.dir/src/pages/signup/signup_page.c.o" \
 "CMakeFiles/tic_tac_toe.dir/src/pages/new_game/new_game_page.c.o" \
+"CMakeFiles/tic_tac_toe.dir/src/pages/about/about_page.c.o" \
 "CMakeFiles/tic_tac_toe.dir/src/pages/game/game.c.o"
 
 # External object files for target tic_tac_toe
@@ -207,15 +235,17 @@ tic_tac_toe: CMakeFiles/tic_tac_toe.dir/src/main.c.o
 tic_tac_toe: CMakeFiles/tic_tac_toe.dir/src/helpers/tools.c.o
 tic_tac_toe: CMakeFiles/tic_tac_toe.dir/src/modules/ai_player/ai_player.c.o
 tic_tac_toe: CMakeFiles/tic_tac_toe.dir/src/modules/users_manager/users_manager.c.o
+tic_tac_toe: CMakeFiles/tic_tac_toe.dir/src/modules/saves_manager/saves_manager.c.o
 tic_tac_toe: CMakeFiles/tic_tac_toe.dir/src/modules/builder/builder.c.o
 tic_tac_toe: CMakeFiles/tic_tac_toe.dir/src/pages/main/main_page.c.o
 tic_tac_toe: CMakeFiles/tic_tac_toe.dir/src/pages/signin/signin_page.c.o
 tic_tac_toe: CMakeFiles/tic_tac_toe.dir/src/pages/signup/signup_page.c.o
 tic_tac_toe: CMakeFiles/tic_tac_toe.dir/src/pages/new_game/new_game_page.c.o
+tic_tac_toe: CMakeFiles/tic_tac_toe.dir/src/pages/about/about_page.c.o
 tic_tac_toe: CMakeFiles/tic_tac_toe.dir/src/pages/game/game.c.o
 tic_tac_toe: CMakeFiles/tic_tac_toe.dir/build.make
 tic_tac_toe: CMakeFiles/tic_tac_toe.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking C executable tic_tac_toe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking C executable tic_tac_toe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tic_tac_toe.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

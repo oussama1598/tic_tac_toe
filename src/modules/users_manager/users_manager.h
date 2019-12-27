@@ -1,5 +1,5 @@
-#ifndef DATA_MANAGER_H
-#define DATA_MANAGER_H
+#ifndef USERS_MANAGER_H
+#define USERS_MANAGER_H
 
 #include "imports.h"
 #include <sys/stat.h>
@@ -13,8 +13,8 @@ typedef struct account
 
 char *users_file;
 account *accounts;
-
 int accounts_length;
+char logged_in_user[100];
 
 void set_users_file(char *file_path);
 void load_users();

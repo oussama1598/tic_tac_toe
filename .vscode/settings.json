@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "imports.h": "c",
-        "signin_page.h": "c"
+        "signin_page.h": "c",
+        "saves_manager.h": "c"
     }
 }

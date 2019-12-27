@@ -82,6 +82,9 @@ int on_signin_button_clicked(GtkButton *button, gpointer user_data)
 
     signin_hide_error();
 
+    // set logged in user
+    strcpy(logged_in_user, username);
+
     // close this page and open up the game page
     signin_clear_entries();
     close_signin_page();

@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
+#include <math.h>
 #include <gtk/gtk.h>
 
 // includes global headers
@@ -12,6 +13,7 @@
 // include modules
 #include "ai_player.h"
 #include "users_manager.h"
+#include "saves_manager.h"
 #include "builder.h"
 
 // include pages
@@ -19,6 +21,7 @@
 #include "signin_page.h"
 #include "signup_page.h"
 #include "new_game_page.h"
+#include "about_page.h"
 #include "game.h"
 
 #endif

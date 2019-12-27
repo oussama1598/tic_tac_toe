@@ -12,6 +12,7 @@ GtkWidget *game_page_window;
 GtkWidget *game_canvas;
 GtkWidget *game_restart_button;
 GtkWidget *game_quit_button;
+GtkWidget *game_save_button;
 GtkLabel *game_message_box;
 
 unsigned int game_matrix[3][3];
@@ -37,6 +38,7 @@ void redraw_game_canvas();
 void on_draw(GtkWidget *canvas, cairo_t *cr, gpointer user_data);
 void on_game_canvas_mouse_pressed(GtkWidget *widget, GdkEventButton *event, gpointer user_data);
 void on_game_restart_button_clicked(GtkWidget *button, gpointer user_data);
+void on_save_button_clicked(GtkWidget *button, gpointer user_data);
 void on_game_quit_button_clicked(GtkWidget *button, gpointer user_data);
 
 #endif

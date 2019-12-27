@@ -1,15 +1,148 @@
-Detecting C [-std=c11] compiler features failed to compile with the following output:
-Change Dir: /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles/CMakeTmp
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /bin/c99-gcc 
+Build flags: 
+Id flags:  
 
-Run Build Command:"/usr/bin/make" "cmTC_17927/fast"
-/usr/bin/make -f CMakeFiles/cmTC_17927.dir/build.make CMakeFiles/cmTC_17927.dir/build
-make[1]: Entering directory '/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_17927.dir/feature_tests.c.o
-/bin/c99-gcc   -std=c11 -o CMakeFiles/cmTC_17927.dir/feature_tests.c.o   -c /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles/feature_tests.c
-c99-gcc called with non ISO C99 option -std=c11
-make[1]: *** [CMakeFiles/cmTC_17927.dir/build.make:66: CMakeFiles/cmTC_17927.dir/feature_tests.c.o] Error 1
-make[1]: Leaving directory '/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_17927/fast] Error 2
+The output was:
+No such file or directory
 
 
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /bin/c99-gcc 
+Build flags: 
+Id flags: -c 
 
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /bin/c99-gcc 
+Build flags: 
+Id flags: -Aa 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /bin/c99-gcc 
+Build flags: 
+Id flags: -D__CLASSIC_C__ 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /bin/c99-gcc 
+Build flags: 
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /bin/c99-gcc 
+Build flags: 
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /bin/c99-gcc 
+Build flags: 
+Id flags: -Aa 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /bin/c99-gcc 
+Build flags: 
+Id flags: -D__CLASSIC_C__ 
+
+The output was:
+No such file or directory
+
+
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /bin/c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /bin/c++ 
+Build flags: 
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /bin/c++ 
+Build flags: 
+Id flags: --c++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /bin/c++ 
+Build flags: 
+Id flags: --ec++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /bin/c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /bin/c++ 
+Build flags: 
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /bin/c++ 
+Build flags: 
+Id flags: --c++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /bin/c++ 
+Build flags: 
+Id flags: --ec++ 
+
+The output was:
+No such file or directory
+
+
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":

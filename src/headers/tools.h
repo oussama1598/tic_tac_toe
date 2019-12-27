@@ -11,5 +11,6 @@ int file_exists(char *filename);
 char *join_strings(char *str1, char *str2);
 int count_occurence(char *str, char delimiter);
 int split(char *str, char *delimiter, char ***result);
+long map(long x, long in_min, long in_max, long out_min, long out_max);
 
 #endif

@@ -231,6 +231,33 @@ src/modules/builder/builder.c.s:
 	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/modules/builder/builder.c.s
 .PHONY : src/modules/builder/builder.c.s
 
+src/modules/saves_manager/saves_manager.o: src/modules/saves_manager/saves_manager.c.o
+
+.PHONY : src/modules/saves_manager/saves_manager.o
+
+# target to build an object file
+src/modules/saves_manager/saves_manager.c.o:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/modules/saves_manager/saves_manager.c.o
+.PHONY : src/modules/saves_manager/saves_manager.c.o
+
+src/modules/saves_manager/saves_manager.i: src/modules/saves_manager/saves_manager.c.i
+
+.PHONY : src/modules/saves_manager/saves_manager.i
+
+# target to preprocess a source file
+src/modules/saves_manager/saves_manager.c.i:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/modules/saves_manager/saves_manager.c.i
+.PHONY : src/modules/saves_manager/saves_manager.c.i
+
+src/modules/saves_manager/saves_manager.s: src/modules/saves_manager/saves_manager.c.s
+
+.PHONY : src/modules/saves_manager/saves_manager.s
+
+# target to generate assembly for a file
+src/modules/saves_manager/saves_manager.c.s:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/modules/saves_manager/saves_manager.c.s
+.PHONY : src/modules/saves_manager/saves_manager.c.s
+
 src/modules/users_manager/users_manager.o: src/modules/users_manager/users_manager.c.o
 
 .PHONY : src/modules/users_manager/users_manager.o
@@ -257,6 +284,33 @@ src/modules/users_manager/users_manager.s: src/modules/users_manager/users_manag
 src/modules/users_manager/users_manager.c.s:
 	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/modules/users_manager/users_manager.c.s
 .PHONY : src/modules/users_manager/users_manager.c.s
+
+src/pages/about/about_page.o: src/pages/about/about_page.c.o
+
+.PHONY : src/pages/about/about_page.o
+
+# target to build an object file
+src/pages/about/about_page.c.o:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/pages/about/about_page.c.o
+.PHONY : src/pages/about/about_page.c.o
+
+src/pages/about/about_page.i: src/pages/about/about_page.c.i
+
+.PHONY : src/pages/about/about_page.i
+
+# target to preprocess a source file
+src/pages/about/about_page.c.i:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/pages/about/about_page.c.i
+.PHONY : src/pages/about/about_page.c.i
+
+src/pages/about/about_page.s: src/pages/about/about_page.c.s
+
+.PHONY : src/pages/about/about_page.s
+
+# target to generate assembly for a file
+src/pages/about/about_page.c.s:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/pages/about/about_page.c.s
+.PHONY : src/pages/about/about_page.c.s
 
 src/pages/game/game.o: src/pages/game/game.c.o
 
@@ -414,9 +468,15 @@ help:
 	@echo "... src/modules/builder/builder.o"
 	@echo "... src/modules/builder/builder.i"
 	@echo "... src/modules/builder/builder.s"
+	@echo "... src/modules/saves_manager/saves_manager.o"
+	@echo "... src/modules/saves_manager/saves_manager.i"
+	@echo "... src/modules/saves_manager/saves_manager.s"
 	@echo "... src/modules/users_manager/users_manager.o"
 	@echo "... src/modules/users_manager/users_manager.i"
 	@echo "... src/modules/users_manager/users_manager.s"
+	@echo "... src/pages/about/about_page.o"
+	@echo "... src/pages/about/about_page.i"
+	@echo "... src/pages/about/about_page.s"
 	@echo "... src/pages/game/game.o"
 	@echo "... src/pages/game/game.i"
 	@echo "... src/pages/game/game.s"

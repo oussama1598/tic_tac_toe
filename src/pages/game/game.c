@@ -11,6 +11,7 @@ void game_page_init()
     game_canvas = GTK_WIDGET(gtk_builder_get_object(builder, "game_canvas"));
     game_restart_button = GTK_WIDGET(gtk_builder_get_object(builder, "game_restart_button"));
     game_quit_button = GTK_WIDGET(gtk_builder_get_object(builder, "game_quit_button"));
+    game_save_button = GTK_WIDGET(gtk_builder_get_object(builder, "game_save_button"));
     game_message_box = GTK_LABEL(gtk_builder_get_object(builder, "game_message_box"));
 
     gtk_widget_add_events(game_canvas, GDK_BUTTON_PRESS_MASK);
@@ -21,6 +22,7 @@ void game_page_init()
     g_signal_connect(game_canvas, "button-press-event", G_CALLBACK(on_game_canvas_mouse_pressed), NULL);
     g_signal_connect(game_restart_button, "activate", G_CALLBACK(on_game_restart_button_clicked), NULL);
     g_signal_connect(game_quit_button, "activate", G_CALLBACK(on_game_quit_button_clicked), NULL);
+    g_signal_connect(game_save_button, "activate", G_CALLBACK(on_save_button_clicked), NULL);
 }
 
 void show_game_page(int ai_type)
@@ -63,6 +65,26 @@ void clear_game()
     sprintf(message, "Your signe is %c", player_sign == X_SIGN ? 'x' : 'o');
 
     set_message(message);
+}
+
+void save_game()
+{
+    char game_state[200] = {'\0'};
+
+    for (int i = 0; i < 3; i++)
+        for (int j = 0; j < 3; j++)
+        {
+            char cell_data[3] = "-0";
+
+            sprintf(cell_data, "%s%d", i == 0 && j == 0 ? "" : "-", game_matrix[i][j]);
+
+            strcat(game_state, cell_data);
+        }
+
+    if(add_save(game_state, 0) < 0) 
+    {
+        g_print("Can't save");
+    }
 }
 
 void set_message(const char *str)
@@ -212,6 +234,11 @@ void on_game_quit_button_clicked(GtkWidget *button, gpointer user_data)
 {
     close_game_page();
     show_main_page();
+}
+
+void on_save_button_clicked(GtkWidget *button, gpointer user_data)
+{
+    save_game();
 }
 
 void on_draw(GtkWidget *canvas, cairo_t *cr, gpointer user_data)

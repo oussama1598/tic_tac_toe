@@ -13,6 +13,8 @@ stdio.h
 -
 time.h
 -
+math.h
+-
 gtk/gtk.h
 -
 tools.h
@@ -21,6 +23,8 @@ ai_player.h
 .././src/headers/ai_player.h
 users_manager.h
 .././src/headers/users_manager.h
+saves_manager.h
+.././src/headers/saves_manager.h
 builder.h
 .././src/headers/builder.h
 main_page.h
@@ -31,6 +35,8 @@ signup_page.h
 .././src/headers/signup_page.h
 new_game_page.h
 .././src/headers/new_game_page.h
+about_page.h
+.././src/headers/about_page.h
 game.h
 .././src/headers/game.h
 
@@ -50,6 +56,10 @@ imports.h
 imports.h
 .././src/modules/builder/imports.h
 
+.././src/modules/saves_manager/saves_manager.h
+imports.h
+.././src/modules/saves_manager/imports.h
+
 .././src/modules/users_manager/users_manager.h
 imports.h
 .././src/modules/users_manager/imports.h
@@ -57,6 +67,10 @@ sys/stat.h
 -
 sys/types.h
 -
+
+.././src/pages/about/about_page.h
+imports.h
+.././src/pages/about/imports.h
 
 .././src/pages/game/game.h
 imports.h
@@ -78,10 +92,6 @@ imports.h
 imports.h
 .././src/pages/signup/imports.h
 
-/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/tools.c
-tools.h
-/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/helpers/tools.h
-
 /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/main.c
 imports.h
 /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/imports.h
@@ -102,6 +112,14 @@ builder.h
 imports.h
 /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/builder/imports.h
 
+/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/saves_manager/saves_manager.c
+saves_manager.h
+/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/saves_manager/saves_manager.h
+
+/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/saves_manager/saves_manager.h
+imports.h
+/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/saves_manager/imports.h
+
 /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/users_manager/users_manager.c
 users_manager.h
 /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/users_manager/users_manager.h
@@ -113,6 +131,14 @@ sys/stat.h
 -
 sys/types.h
 -
+
+/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/about/about_page.c
+about_page.h
+/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/about/about_page.h
+
+/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/about/about_page.h
+imports.h
+/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/about/imports.h
 
 /home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/game/game.c
 game.h

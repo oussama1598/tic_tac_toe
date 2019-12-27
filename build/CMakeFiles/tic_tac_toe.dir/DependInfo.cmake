@@ -8,14 +8,15 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/main.c" "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles/tic_tac_toe.dir/src/main.c.o"
   "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/ai_player/ai_player.c" "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles/tic_tac_toe.dir/src/modules/ai_player/ai_player.c.o"
   "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/builder/builder.c" "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles/tic_tac_toe.dir/src/modules/builder/builder.c.o"
+  "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/saves_manager/saves_manager.c" "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles/tic_tac_toe.dir/src/modules/saves_manager/saves_manager.c.o"
   "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/modules/users_manager/users_manager.c" "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles/tic_tac_toe.dir/src/modules/users_manager/users_manager.c.o"
+  "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/about/about_page.c" "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles/tic_tac_toe.dir/src/pages/about/about_page.c.o"
   "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/game/game.c" "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles/tic_tac_toe.dir/src/pages/game/game.c.o"
   "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/main/main_page.c" "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles/tic_tac_toe.dir/src/pages/main/main_page.c.o"
   "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/new_game/new_game_page.c" "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles/tic_tac_toe.dir/src/pages/new_game/new_game_page.c.o"
   "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/signin/signin_page.c" "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles/tic_tac_toe.dir/src/pages/signin/signin_page.c.o"
   "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/pages/signup/signup_page.c" "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles/tic_tac_toe.dir/src/pages/signup/signup_page.c.o"
   )
-set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
@@ -43,12 +44,14 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   ".././src/headers"
   ".././src/modules/ai_player"
   ".././src/modules/users_manager"
+  ".././src/modules/saves_manager"
   ".././src/modules/builder"
   ".././src/pages/main"
   ".././src/pages/signin"
   ".././src/pages/signup"
   ".././src/pages/game"
   ".././src/pages/new_game"
+  ".././src/pages/about"
   )
 
 # Targets to which this target links.
