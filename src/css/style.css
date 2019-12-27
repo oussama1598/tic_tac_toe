@@ -1,86 +1,88 @@
 * {
-    font-family: monospace;
+  font-family: monospace;
 }
 
 .window {
-    background-color: #2a2b30;
+  background-color: #2a2b30;
 }
 
 .logo {
-    color: white;
-    border: 1px solid white;
-    padding: 15px;
-    font-size: 1.2em;
+  color: white;
+  border: 1px solid white;
+  padding: 15px;
+  font-size: 1.2em;
 }
 
 .auth_buttons {
-    padding: 15px;
+  padding: 15px;
 }
 
 .auth_button {
-    padding: 5px;
-    border-radius: 0;
-    font-size: 1.5em;
-    color: white;
-    outline: none;
+  padding: 5px;
+  border-radius: 0;
+  font-size: 1.5em;
+  color: white;
+  outline: none;
 }
 
 .auth_button.active {
-    border-bottom: 2px solid white;
+  border-bottom: 2px solid white;
 }
 
 .form {
-    margin-top: 38px;
+  margin-top: 38px;
 }
 
 .error {
-    padding: 10px;
-    color: red;
-    font-size: 1.1em;
+  padding: 10px;
+  color: red;
+  font-size: 1.1em;
 }
 
 .input {
-    margin: 10px 0;
-    padding: 5px 10px;
-    border-radius: 0;
-    border: 1px solid white;
-    outline: none;
+  margin: 10px 0;
+  padding: 5px 10px;
+  border-radius: 0;
+  border: 1px solid white;
+  outline: none;
 }
 
 .input:focus {
-    border: 1px solid white;
+  border: 1px solid white;
 }
 
 .btn {
-    margin-top: 30px;
-    padding: 5px;
-    border-radius: 0;
-    outline: 0;
-    border: 1px solid white;
-    color: white;
-    font-size: 1.1em;
+  margin-top: 30px;
+  padding: 5px;
+  border-radius: 0;
+  outline: 0;
+  border: 1px solid white;
+  color: white;
+  font-size: 1.1em;
 }
 
 .form.main {
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
 .back {
-    margin-top: 140px;
+  margin-top: 140px;
 }
 
 .message_box {
-    padding: 20px;
-    border: 1px solid white;
+  padding: 20px;
+  border: 1px solid white;
 }
 
 .scores_label {
-    padding: 10px;
-    font-size: 1.1em;
+  padding: 10px;
+  font-size: 1.1em;
 }
 
 .score {
-    margin: 10px;
+  margin: 10px;
 }
 
-.about_box {}
+.about_names {
+  padding-top: 10px;
+}
