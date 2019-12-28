@@ -4,34 +4,36 @@ void about_page_init()
 {
     about_page_window = GTK_WIDGET(gtk_builder_get_object(builder, "about_page"));
     about_canvas = GTK_WIDGET(gtk_builder_get_object(builder, "about_canvas"));
+    about_back_button = GTK_BUTTON(gtk_builder_get_object(builder, "about_back_button"));
 
     // init signals
     g_signal_connect(about_page_window, "destroy", G_CALLBACK(on_destroy), NULL);
+    g_signal_connect(about_back_button, "clicked", G_CALLBACK(on_about_back_button_clicked), NULL);
     g_signal_connect(about_canvas, "draw", G_CALLBACK(on_about_canvas_draw), NULL);
 }
 
 int on_animate()
 {
-    if (forward_reverse)
+    if (animation_direction == ANIMATION_FORWARD)
         scale += 0.1;
     else
         scale -= 0.1;
 
     if (scale > 2)
-        forward_reverse = 0;
+        animation_direction = ANIMATION_BACKWARD;
     else if (scale <= 0)
-        forward_reverse = 1;
+        animation_direction = ANIMATION_FORWARD;
 
     gtk_widget_queue_draw_area(about_canvas, 0, 0, about_canvas_width, about_canvas_height);
 
-    return !about_closed;
+    return !animate;
 }
 
 void show_about_page()
 {
-    forward_reverse = 1;
+    animation_direction = ANIMATION_FORWARD;
     scale = 0;
-    about_closed = 0;
+    animate = 0;
 
     gtk_widget_show(about_page_window);
 
@@ -40,9 +42,15 @@ void show_about_page()
 
 void close_about_page()
 {
-    about_closed = 1;
+    animate = 1;
 
     gtk_widget_hide(about_page_window);
+}
+
+void on_about_back_button_clicked(GtkButton *button, gpointer user_data)
+{
+    close_about_page();
+    show_main_page();
 }
 
 void on_about_canvas_draw(GtkWidget *canvas, cairo_t *cr, gpointer user_data)

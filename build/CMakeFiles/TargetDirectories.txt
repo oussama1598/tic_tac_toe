@@ -1,3 +1,0 @@
-/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles/rebuild_cache.dir
-/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles/tic_tac_toe.dir
-/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/build/CMakeFiles/edit_cache.dir

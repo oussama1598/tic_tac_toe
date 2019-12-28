@@ -8,7 +8,7 @@
     <property name="resizable">False</property>
     <property name="window_position">center</property>
     <property name="default_width">450</property>
-    <property name="default_height">450</property>
+    <property name="default_height">500</property>
     <child type="titlebar">
       <placeholder/>
     </child>
@@ -63,6 +63,21 @@ Abdelhakim Hayaoui</property>
               <packing>
                 <property name="left_attach">0</property>
                 <property name="top_attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="about_back_button">
+                <property name="label" translatable="yes">BACK</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <style>
+                  <class name="btn"/>
+                </style>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">3</property>
               </packing>
             </child>
           </object>

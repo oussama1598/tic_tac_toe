@@ -25,9 +25,7 @@ int main(int argc, char **argv)
     app_init();
 
     // // show the login page
-    // show_signin_page();
-
-    show_about_page();
+    show_signin_page();
 
     g_object_unref(builder); // frees the pointer builder
     gtk_main();              // enter the main loop
