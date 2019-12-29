@@ -21,6 +21,7 @@
 #include "signin_page.h"
 #include "signup_page.h"
 #include "new_game_page.h"
+#include "load_game_page.h"
 #include "about_page.h"
 #include "game.h"
 

@@ -8,16 +8,16 @@ int main(int argc, char **argv)
     set_users_file("users.txt");
     load_users();
 
-    // load saves
+    // set the saves file
     set_saves_file("saves.txt");
-    load_saves();
 
     // add individual templates
-    config_templates(6, "css/style.css");
+    config_templates(7, "css/style.css");
     add_template((template){"pages/signin/signin.glade", signin_page_init});
     add_template((template){"pages/signup/signup.glade", signup_page_init});
     add_template((template){"pages/main/main.glade", main_page_init});
     add_template((template){"pages/new_game/new_game.glade", new_game_page_init});
+    add_template((template){"pages/load_game/load_game.glade", load_game_page_init});
     add_template((template){"pages/about/about.glade", about_page_init});
     add_template((template){"pages/game/game.glade", game_page_init});
 

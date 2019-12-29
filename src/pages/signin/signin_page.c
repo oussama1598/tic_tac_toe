@@ -85,6 +85,9 @@ int on_signin_button_clicked(GtkButton *button, gpointer user_data)
     // set logged in user
     strcpy(logged_in_user, username);
 
+    // load the saves for this user
+    load_saves();
+
     // close this page and open up the game page
     signin_clear_entries();
     close_signin_page();

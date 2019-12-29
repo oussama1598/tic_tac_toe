@@ -15,13 +15,17 @@ int load_file(char *filename, char **file_content)
     // return back to the start for reading
     fseek(file, 0, SEEK_SET);
 
-    *file_content = (char *)malloc(sizeof(char) * (file_length + 1));
+    if (file_length > 0)
+    {
 
-    fread(*file_content, sizeof(char), file_length, file);
+        *file_content = (char *)malloc(sizeof(char) * (file_length + 1));
 
-    fclose(file);
+        fread(*file_content, sizeof(char), file_length, file);
 
-    (*file_content)[file_length + 1] = 0;
+        fclose(file);
+
+        (*file_content)[file_length + 1] = 0;
+    }
 
     return file_length;
 }

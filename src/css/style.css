@@ -86,3 +86,18 @@
 .about_names {
   padding-top: 10px;
 }
+
+.radio_btn {
+  border: 1px solid white;
+  padding: 10px;
+  margin: 10px 15px;
+}
+
+.radio_btn radio {
+  margin-left: 5px;
+  border: 1px solid white;
+}
+
+.option_label {
+  padding-left: 20px;
+}

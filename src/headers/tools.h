@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "imports.h"
 
 int load_file(char *filename, char **file_content);
 void append_to_file(char *filename, char *data);

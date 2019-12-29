@@ -14,47 +14,72 @@ void load_saves()
         append_to_file(saves_file, "");
     }
 
-    // char *saves_file_content, **saves;
-    // load_file(saves_file, &saves_file_content);
+    char *saves_file_content, **saves_data;
+    int file_length = load_file(saves_file, &saves_file_content);
 
-    // int size = split(saves_file_content, "\n", &saves);
+    if (file_length > 0)
+    {
 
-    // add to the list only if it belongs to the user
-    //accounts = (account *)malloc(sizeof(account) * size);
+        int size = split(saves_file_content, "\n", &saves_data);
 
-    // for (int i = 0; i < size; i++)
-    // {
-    //     char **user;
-    //     split(saves[i], ":", &user);
+        saves = (save_data *)malloc(sizeof(save_data) * size);
 
-    //     account user_data;
+        for (int i = 0; i < size; i++)
+        {
+            char **savedata;
+            split(saves_data[i], ":", &savedata);
 
-    //     strcpy(user_data.username, user[0]);
-    //     strcpy(user_data.password, user[1]);
+            if (strstr(savedata[2], logged_in_user) != NULL)
+            {
+                save_data save_content;
 
-    //     accounts[i] = user_data;
+                strcpy(save_content.board_state, savedata[0]);
+                strcpy(save_content.timestamp, savedata[1]);
 
-    //     free(user);
-    // }
+                saves[i] = save_content;
 
-    saves_length = 0;
+                saves_length += 1;
+            }
 
-    // free(user_file_content);
+            free(savedata);
+        }
+
+        free(saves_file_content);
+    }
 }
 
 int add_save(char *game_state, int force)
 {
     if (saves_length < 3 && !force)
     {
+        save_data savedata;
         char user[103];
-        sprintf(user, ":%s\n", logged_in_user);
+        char timestamp[100];
 
+        time_t tm = time(NULL);
+
+        // add to the local list
+        sprintf(savedata.timestamp, "%d", (int)tm);
+        strcpy(savedata.board_state, game_state);
+
+        saves_length += 1;
+        saves = realloc(saves, sizeof(save_data) * saves_length);
+
+        saves[saves_length - 1] = savedata;
+
+        // add to the file
+        sprintf(timestamp, ":%d", (int)tm);
+        sprintf(user, ":%s:\n", logged_in_user);
+
+        strcat(game_state, timestamp);
         strcat(game_state, user);
 
         append_to_file(saves_file, game_state);
 
         return 0;
-    }else{
+    }
+    else
+    {
         return -1;
     }
 

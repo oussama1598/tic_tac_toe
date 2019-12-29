@@ -76,12 +76,12 @@ void save_game()
         {
             char cell_data[3] = "-0";
 
-            sprintf(cell_data, "%s%d", i == 0 && j == 0 ? "" : "-", game_matrix[i][j]);
+            sprintf(cell_data, "%d-", game_matrix[i][j]);
 
             strcat(game_state, cell_data);
         }
 
-    if(add_save(game_state, 0) < 0) 
+    if (add_save(game_state, 0) < 0)
     {
         g_print("Can't save");
     }

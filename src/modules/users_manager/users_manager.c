@@ -15,29 +15,34 @@ void load_users()
     }
 
     char *user_file_content, **users;
-    load_file(users_file, &user_file_content);
+    int file_length = load_file(users_file, &user_file_content);
 
-    int size = split(user_file_content, "\n", &users);
-    accounts = (account *)malloc(sizeof(account) * size);
-
-    for (int i = 0; i < size; i++)
+    if (file_length > 0)
     {
-        char **user;
-        split(users[i], ":", &user);
 
-        account user_data;
+        int size = split(user_file_content, "\n", &users);
 
-        strcpy(user_data.username, user[0]);
-        strcpy(user_data.password, user[1]);
+        accounts = (account *)malloc(sizeof(account) * size);
 
-        accounts[i] = user_data;
+        for (int i = 0; i < size; i++)
+        {
+            char **user;
+            split(users[i], ":", &user);
 
-        free(user);
+            account user_data;
+
+            strcpy(user_data.username, user[0]);
+            strcpy(user_data.password, user[1]);
+
+            accounts[i] = user_data;
+
+            free(user);
+        }
+
+        accounts_length = size;
+
+        free(user_file_content);
     }
-
-    accounts_length = size;
-
-    free(user_file_content);
 }
 
 void *get_user_data(const char *username)
@@ -86,6 +91,6 @@ void add_user(const char *username, const char *password)
 
     char data_to_save[250];
 
-    sprintf(data_to_save, "%s:%s\n", user_data.username, user_data.password);
+    sprintf(data_to_save, "%s:%s:\n", user_data.username, user_data.password);
     append_to_file(users_file, data_to_save);
 }

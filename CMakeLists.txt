@@ -26,6 +26,7 @@ include_directories(${SRC_DIR}/pages/signin)
 include_directories(${SRC_DIR}/pages/signup)
 include_directories(${SRC_DIR}/pages/game)
 include_directories(${SRC_DIR}/pages/new_game)
+include_directories(${SRC_DIR}/pages/load_game)
 include_directories(${SRC_DIR}/pages/about)
 
 set(SRCS
@@ -39,6 +40,7 @@ set(SRCS
     ${SRC_DIR}/pages/signin/signin_page.c
     ${SRC_DIR}/pages/signup/signup_page.c
     ${SRC_DIR}/pages/new_game/new_game_page.c
+    ${SRC_DIR}/pages/load_game/load_game_page.c
     ${SRC_DIR}/pages/about/about_page.c
     ${SRC_DIR}/pages/game/game.c
 )

@@ -3,8 +3,14 @@
 
 #include "imports.h"
 
+typedef struct save_data
+{
+    char board_state[20];
+    char timestamp[100];
+} save_data;
+
 char *saves_file;
-char *saves;
+save_data *saves;
 
 int saves_length;
 
