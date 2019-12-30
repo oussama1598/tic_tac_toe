@@ -14,6 +14,7 @@
 #include "ai_player.h"
 #include "users_manager.h"
 #include "saves_manager.h"
+#include "score_manager.h"
 #include "builder.h"
 
 // include pages
@@ -23,6 +24,8 @@
 #include "new_game_page.h"
 #include "load_game_page.h"
 #include "about_page.h"
+#include "scores_page.h"
 #include "game.h"
+#include "history_page.h"
 
 #endif

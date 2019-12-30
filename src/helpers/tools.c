@@ -99,3 +99,16 @@ int split(char *str, char *delimiter, char ***result)
 
     return 0;
 }
+
+int compare_scores_reverse(const void *a, const void *b)
+{
+    return (((score_data *)b)->score - ((score_data *)a)->score);
+}
+
+int min(int a, int b)
+{
+    if (a > b)
+        return b;
+    else
+        return a;
+}

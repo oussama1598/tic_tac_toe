@@ -88,6 +88,9 @@ int on_signin_button_clicked(GtkButton *button, gpointer user_data)
     // load the saves for this user
     load_saves();
 
+    // load the score of that user
+    load_scores();
+
     // close this page and open up the game page
     signin_clear_entries();
     close_signin_page();

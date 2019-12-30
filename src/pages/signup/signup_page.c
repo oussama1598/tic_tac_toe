@@ -69,7 +69,8 @@ int on_signup_button_clicked(GtkButton *button, gpointer user_data)
         return 0;
     }
 
-    add_user(username, password);
+    add_user(username, password); // add user to the database
+    add_score(0, username);       // add the score of 0 to that user
 
     signup_show_error("You've registred successfly.");
 

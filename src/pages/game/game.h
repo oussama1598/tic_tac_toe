@@ -9,11 +9,14 @@
 #define X_SIGN 2
 
 GtkWidget *game_page_window;
+GtkWidget *game_save_dialog;
 GtkWidget *game_canvas;
 GtkWidget *game_restart_button;
 GtkWidget *game_quit_button;
 GtkWidget *game_save_button;
 GtkLabel *game_message_box;
+
+GtkDialogFlags flags;
 
 unsigned int game_matrix[3][3];
 int canvas_width;

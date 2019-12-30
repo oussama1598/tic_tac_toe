@@ -38,7 +38,11 @@ void on_load_game_button_clicked(GtkButton *button, gpointer user_data)
     close_main_page();
     show_load_game_page();
 }
-void on_score_button_clicked(GtkButton *button, gpointer user_data) {}
+void on_score_button_clicked(GtkButton *button, gpointer user_data)
+{
+    close_main_page();
+    show_scores_page();
+}
 void on_about_button_clicked(GtkButton *button, gpointer user_data)
 {
     close_main_page();

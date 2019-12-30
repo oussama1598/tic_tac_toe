@@ -5,6 +5,8 @@ void game_page_init()
     // seed the random generator
     srand(time(NULL));
 
+    flags = GTK_DIALOG_MODAL;
+
     game_page_window = GTK_WIDGET(gtk_builder_get_object(builder, "game_page"));
 
     // init widgets
@@ -83,8 +85,24 @@ void save_game()
 
     if (add_save(game_state, 0) < 0)
     {
-        g_print("Can't save");
+        GtkWidget *dialog = gtk_message_dialog_new(GTK_WINDOW(game_page_window),
+                                                   flags,
+                                                   GTK_MESSAGE_WARNING,
+                                                   GTK_BUTTONS_YES_NO,
+                                                   "The saves limit (3) is exceded. Do you want to replace the oldest save ?");
+
+        gint clicked_button = gtk_dialog_run(GTK_DIALOG(dialog));
+        gtk_widget_destroy(dialog);
+
+        if (clicked_button == GTK_RESPONSE_YES)
+        {
+            //add_save(game_state, 1);
+        }
     }
+}
+
+void show_error_saving_dialog()
+{
 }
 
 void set_message(const char *str)
