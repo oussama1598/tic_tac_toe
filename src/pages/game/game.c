@@ -80,9 +80,8 @@ void clear_game()
 
 void load_game_save(char *ai_type, char *saved_player_sign, char *board_state)
 {
-    g_print("%s", saved_player_sign);
     // TODO: set player sign
-    // player_sign = atoi(saved_player_sign);
+    player_sign = atoi(saved_player_sign);
     against_ai_type = atoi(ai_type);
 
     clear_game();
@@ -114,7 +113,7 @@ void save_game()
 {
     if (game_finished)
     {
-        // TODO: show an error
+        show_dialog(GTK_MESSAGE_ERROR, GTK_BUTTONS_OK, "Can't save after the game is finished.");
         return;
     }
 
@@ -135,15 +134,18 @@ void save_game()
     if (add_save(game_state, 0) < 0)
     {
         if (show_dialog(
+                GTK_MESSAGE_WARNING,
                 GTK_BUTTONS_YES_NO,
                 "The saves limit (3) is exceded. Do you want to replace the oldest save ?") == GTK_RESPONSE_YES)
         {
-            //add_save(game_state, 1);
+            add_save(game_state, 1);
+
+            show_dialog(GTK_MESSAGE_INFO, GTK_BUTTONS_OK, "Game saved successfly.");
         }
     }
     else
     {
-        show_dialog(GTK_BUTTONS_OK, "Game saved successfly.");
+        show_dialog(GTK_MESSAGE_INFO, GTK_BUTTONS_OK, "Game saved successfly.");
     }
 }
 

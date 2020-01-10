@@ -31,7 +31,7 @@ void load_templates();
 void load_stylesheet();
 
 // global methods
-gint show_dialog(GtkButtonsType buttons, const gchar *message);
+gint show_dialog(GtkMessageType type, GtkButtonsType buttons, const char *message);
 
 // global signals
 void on_destroy(GtkWidget *widget, gpointer user_data);

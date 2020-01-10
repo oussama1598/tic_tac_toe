@@ -42,7 +42,7 @@ void load_saves()
 
 int add_save(char *game_state, int force)
 {
-    if (saves_length < 3 && !force)
+    if (saves_length < 3 || force)
     {
         save_data savedata;
         char user[103];
@@ -54,9 +54,19 @@ int add_save(char *game_state, int force)
         sprintf(savedata.timestamp, "%d", (int)tm);
         strcpy(savedata.board_state, game_state);
 
-        saves_length += 1;
+        if (!force)
+        {
+            saves_length += 1;
 
-        saves[saves_length - 1] = savedata;
+            saves[saves_length - 1] = savedata;
+        }
+        else
+        {
+            saves[0] = saves[1];
+            saves[1] = saves[2];
+
+            saves[2] = savedata;
+        }
 
         // add to the file
         sprintf(timestamp, ":%d", (int)tm);
@@ -64,6 +74,9 @@ int add_save(char *game_state, int force)
 
         strcat(game_state, timestamp);
         strcat(game_state, user);
+
+        if (force)
+            remove_first_instance_in_file_of_user(saves_file, logged_in_user);
 
         append_to_file(saves_file, game_state);
 

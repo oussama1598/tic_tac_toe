@@ -45,11 +45,11 @@ void load_stylesheet()
 }
 
 // global methods
-gint show_dialog(GtkButtonsType buttons, const gchar *message)
+gint show_dialog(GtkMessageType type, GtkButtonsType buttons, const char *message)
 {
     GtkWidget *dialog = gtk_message_dialog_new(GTK_WINDOW(game_page_window),
                                                flags,
-                                               GTK_MESSAGE_WARNING,
+                                               type,
                                                buttons,
                                                "%s", message);
 

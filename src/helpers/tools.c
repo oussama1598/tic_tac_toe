@@ -39,6 +39,55 @@ void append_to_file(char *filename, char *data)
     fclose(file);
 }
 
+void update_first_instance_in_file_of_user(char *filename, char *data, char *username)
+{
+    FILE *file = fopen(filename, "r");
+    FILE *tmp = fopen("file.tmp", "w");
+
+    char line[1000];
+
+    while (fscanf(file, "%s\n", line) != -1)
+    {
+        if (strstr(line, logged_in_user) != NULL) // this save belongs to the logged in user
+        {
+            fprintf(tmp, "%s", data);
+        }
+        else
+            fprintf(tmp, "%s\n", line);
+    }
+
+    fclose(tmp);
+    fclose(file);
+
+    remove(filename);             // remove the old file
+    rename("file.tmp", filename); // rename the temp to the new file
+}
+
+void remove_first_instance_in_file_of_user(char *filename, char *username)
+{
+    FILE *file = fopen(filename, "r");
+    FILE *tmp = fopen("file.tmp", "w");
+
+    int already_deleted = 0;
+    char line[1000];
+
+    while (fscanf(file, "%s\n", line) != -1)
+    {
+        if (strstr(line, logged_in_user) != NULL && !already_deleted)
+        {
+            already_deleted = 1;
+        }
+        else
+            fprintf(tmp, "%s\n", line);
+    }
+
+    fclose(tmp);
+    fclose(file);
+
+    remove(filename);             // remove the old file
+    rename("file.tmp", filename); // rename the temp to the new file
+}
+
 int file_exists(char *filename)
 {
     FILE *file = fopen(filename, "r");
@@ -73,31 +122,6 @@ int count_occurence(char *str, char delimiter)
             count++;
 
     return count;
-}
-
-int split(char *str, char *delimiter, char ***result)
-{
-    int size = count_occurence(str, *delimiter);
-
-    *result = (char **)malloc(sizeof(char) * size);
-
-    if (size > 0)
-    {
-        int index = 0;
-        char *token = strtok(str, delimiter);
-
-        while (token != NULL)
-        {
-            (*result)[index] = token;
-
-            token = strtok(NULL, delimiter);
-            index++;
-        }
-
-        return size;
-    }
-
-    return 0;
 }
 
 int compare_scores_reverse(const void *a, const void *b)
