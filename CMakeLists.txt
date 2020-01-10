@@ -17,7 +17,8 @@ set(MODULES modules)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -lm -O0 -Wall -Werror -fdump-rtl-expand")
 
 include_directories(${SRC_DIR}/${HEADERS_FOLDER})
-include_directories(${SRC_DIR}/${MODULES}/ai_player)
+include_directories(${SRC_DIR}/${MODULES}/random_ai_player)
+include_directories(${SRC_DIR}/${MODULES}/minimax_alphabeta_ai_player)
 include_directories(${SRC_DIR}/${MODULES}/users_manager)
 include_directories(${SRC_DIR}/${MODULES}/saves_manager)
 include_directories(${SRC_DIR}/${MODULES}/score_manager)
@@ -36,7 +37,8 @@ include_directories(${SRC_DIR}/pages/about)
 set(SRCS
     ${SRC_DIR}/main.c
     ${SRC_DIR}/helpers/tools.c
-    ${SRC_DIR}/${MODULES}/ai_player/ai_player.c
+    ${SRC_DIR}/${MODULES}/random_ai_player/random_ai_player.c
+    ${SRC_DIR}/${MODULES}/minimax_alphabeta_ai_player/minimax_alphabeta_ai_player.c
     ${SRC_DIR}/${MODULES}/users_manager/users_manager.c
     ${SRC_DIR}/${MODULES}/saves_manager/saves_manager.c
     ${SRC_DIR}/${MODULES}/score_manager/score_manager.c

@@ -3,6 +3,8 @@
         "imports.h": "c",
         "signin_page.h": "c",
         "saves_manager.h": "c",
-        "game.h": "c"
+        "game.h": "c",
+        "random_ai_player.h": "c",
+        "minimax_alphabeta_ai_player.h": "c"
     }
 }

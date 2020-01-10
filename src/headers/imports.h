@@ -11,7 +11,8 @@
 #include "tools.h"
 
 // include modules
-#include "ai_player.h"
+#include "random_ai_player.h"
+#include "minimax_alphabeta_ai_player.h"
 #include "users_manager.h"
 #include "score_manager.h"
 #include "saves_manager.h"

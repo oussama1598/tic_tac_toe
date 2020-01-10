@@ -8,6 +8,8 @@
 #define NO_MOVES_LEFT -1
 #define O_SIGN 1
 #define X_SIGN 2
+#define AGAINST_AI 1
+#define AGAINST_RADNOM 2
 
 GtkWidget *game_page_window;
 GtkWidget *game_save_dialog;
@@ -40,7 +42,8 @@ void clear_game();
 void load_game_save(char *ai_type, char *saved_player_sign, char *board_state);
 void save_game();
 void set_message(const char *str);
-void game_check_if_win(int isTie);
+int is_board_full();
+void game_check_if_win();
 void redraw_game_canvas();
 
 // signals

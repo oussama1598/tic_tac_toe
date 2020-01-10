@@ -1,6 +1,5 @@
-#include "ai_player.h"
+#include "random_ai_player.h"
 
-// these functions is for the random ai
 void get_empty_random_empty_cell(cell *empty_cell)
 {
     cell empty_cells[9];
@@ -31,29 +30,20 @@ void get_empty_random_empty_cell(cell *empty_cell)
     }
 }
 
-int play_next_move(int ai_type)
+int random_ai_play_next_move()
 {
-    if (ai_type == AGAINST_AI)
+
+    cell empty_random_cell = {-1,
+                              -1};
+    get_empty_random_empty_cell(&empty_random_cell);
+
+    if (empty_random_cell.i == -1)
     {
-        return 0;
+        return NO_MOVES_LEFT;
     }
 
-    if (ai_type == AGAINST_RADNOM)
-    {
-        cell empty_random_cell = {-1,
-                                  -1};
-        get_empty_random_empty_cell(&empty_random_cell);
-
-        if (empty_random_cell.i == -1)
-        {
-            return NO_MOVES_LEFT;
-        }
-
-        game_matrix[empty_random_cell.i][empty_random_cell.j] = player_sign == 1 ? 2 : 1;
-        game_history[empty_random_cell.i][empty_random_cell.j] = ++turns_played;
-
-        return 0;
-    }
+    game_matrix[empty_random_cell.i][empty_random_cell.j] = player_sign == 1 ? 2 : 1;
+    game_history[empty_random_cell.i][empty_random_cell.j] = ++turns_played;
 
     return 0;
 }

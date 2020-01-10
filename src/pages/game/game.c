@@ -154,77 +154,86 @@ void set_message(const char *str)
     gtk_label_set_text(game_message_box, str);
 }
 
-void game_check_if_win(int isTie)
+int is_board_full()
+{
+    for (int i = 0; i < 3; i++)
+        for (int j = 0; j < 3; j++)
+        {
+            if (game_matrix[i][j] == 0)
+                return 0;
+        }
+
+    return 1;
+}
+
+void game_check_if_win()
 {
     int winner_player = -1;
 
     game_line_win = -1;
     game_column_win = -1;
 
-    if (!isTie)
+    // check lines
+    for (int i = 0; i < 3; i++)
+        if (game_matrix[i][0] != 0 && game_matrix[i][0] == game_matrix[i][1] && game_matrix[i][1] == game_matrix[i][2])
+        {
+            // win
+            game_line_win = i;
+
+            winner_player = game_matrix[i][0] == player_sign ? PLAYER_WON : AI_WON;
+        }
+
+    // check columns
+    for (int j = 0; j < 3; j++)
+        if (game_matrix[0][j] != 0 && game_matrix[0][j] == game_matrix[1][j] && game_matrix[1][j] == game_matrix[2][j])
+        {
+            // win
+            game_column_win = j;
+
+            winner_player = game_matrix[0][j] == player_sign ? PLAYER_WON : AI_WON;
+        }
+
+    if (game_matrix[0][0] != 0 && game_matrix[0][0] == game_matrix[1][1] && game_matrix[1][1] == game_matrix[2][2])
     {
-        // check lines
-        for (int i = 0; i < 3; i++)
-            if (game_matrix[i][0] != 0 && game_matrix[i][0] == game_matrix[i][1] && game_matrix[i][1] == game_matrix[i][2])
-            {
-                // win
-                game_line_win = i;
+        // win
+        game_line_win = 0;
+        game_column_win = 1;
 
-                winner_player = game_matrix[i][0] == player_sign ? PLAYER_WON : AI_WON;
-            }
+        winner_player = game_matrix[0][0] == player_sign ? PLAYER_WON : AI_WON;
+    }
 
-        // check columns
-        for (int j = 0; j < 3; j++)
-            if (game_matrix[0][j] != 0 && game_matrix[0][j] == game_matrix[1][j] && game_matrix[1][j] == game_matrix[2][j])
-            {
-                // win
-                game_column_win = j;
+    if (game_matrix[0][2] != 0 && game_matrix[0][2] == game_matrix[1][1] && game_matrix[1][1] == game_matrix[2][0])
+    {
+        // win
+        game_line_win = 1;
+        game_column_win = 0;
 
-                winner_player = game_matrix[0][j] == player_sign ? PLAYER_WON : AI_WON;
-            }
+        winner_player = game_matrix[0][2] == player_sign ? PLAYER_WON : AI_WON;
+    }
 
-        if (game_matrix[0][0] != 0 && game_matrix[0][0] == game_matrix[1][1] && game_matrix[1][1] == game_matrix[2][2])
+    if (winner_player != -1)
+    {
+        char message[50];
+        sprintf(message, "%s", winner_player == PLAYER_WON ? "You Win" : "The Ai wins");
+
+        set_message(message);
+
+        game_finished = 1;
+
+        if (winner_player == PLAYER_WON)
         {
-            // win
-            game_line_win = 0;
-            game_column_win = 1;
+            score += AGAINST_AI ? 50 : 10;
 
-            winner_player = game_matrix[0][0] == player_sign ? PLAYER_WON : AI_WON;
-        }
-
-        if (game_matrix[0][2] != 0 && game_matrix[0][2] == game_matrix[1][1] && game_matrix[1][1] == game_matrix[2][0])
-        {
-            // win
-            game_line_win = 1;
-            game_column_win = 0;
-
-            winner_player = game_matrix[0][2] == player_sign ? PLAYER_WON : AI_WON;
-        }
-
-        if (winner_player != -1)
-        {
-            char message[50];
-            sprintf(message, "%s", winner_player == PLAYER_WON ? "You Win" : "The Ai wins");
-
-            set_message(message);
-
-            game_finished = 1;
-
-            if (winner_player == PLAYER_WON)
-            {
-                score += 10;
-
-                update_score();
-            }
+            update_score();
         }
     }
-    else
+
+    if (winner_player == -1 && is_board_full())
     {
         char message[50];
         sprintf(message, "%s", "No one wins, its a tie.");
 
         set_message(message);
-
         game_finished = 1;
     }
 }
@@ -250,13 +259,16 @@ void on_game_canvas_mouse_pressed(GtkWidget *widget, GdkEventButton *event, gpoi
         game_matrix[cell_index_y][cell_index_x] = player_sign;
         game_history[cell_index_y][cell_index_x] = ++turns_played;
 
-        game_check_if_win(0);
+        game_check_if_win();
 
         if (!game_finished)
         {
-            int isTie = play_next_move(against_ai_type) == NO_MOVES_LEFT;
+            if (against_ai_type == AGAINST_RADNOM)
+                random_ai_play_next_move();
+            else if (against_ai_type == AGAINST_AI)
+                minimax_alphabeta_ai_play_next_move();
 
-            game_check_if_win(isTie);
+            game_check_if_win();
         }
 
         redraw_game_canvas();
