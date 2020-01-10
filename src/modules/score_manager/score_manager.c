@@ -7,6 +7,8 @@ void set_scores_file(char *file_path)
 
 void load_scores()
 {
+    scores_length = 0;
+
     mkdir("./data", 0700);
 
     if (!file_exists(scores_file))
@@ -21,6 +23,8 @@ void load_scores()
     {
 
         int size = split(scores_file_content, "\n", &scores_data);
+
+        g_print("%d \n", size);
 
         scores = (score_data *)malloc(sizeof(score_data) * size);
 
@@ -40,14 +44,10 @@ void load_scores()
             scores[i] = score_content;
 
             scores_length += 1;
-
-            free(scoredata);
         }
 
         if (scores_length > 0)
             qsort(scores, scores_length, sizeof(score_data), compare_scores_reverse);
-
-        free(scores_file_content);
     }
 }
 

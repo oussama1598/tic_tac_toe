@@ -18,13 +18,13 @@ int load_file(char *filename, char **file_content)
     if (file_length > 0)
     {
 
-        *file_content = (char *)malloc(sizeof(char) * (file_length + 1));
+        *file_content = (char *)malloc(sizeof(char) * (file_length + 2));
 
         fread(*file_content, sizeof(char), file_length, file);
 
         fclose(file);
 
-        (*file_content)[file_length + 1] = 0;
+        (*file_content)[file_length + 1] = '\0';
     }
 
     return file_length;

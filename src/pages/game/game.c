@@ -11,9 +11,10 @@ void game_page_init()
 
     // init widgets
     game_canvas = GTK_WIDGET(gtk_builder_get_object(builder, "game_canvas"));
-    game_restart_button = GTK_WIDGET(gtk_builder_get_object(builder, "game_restart_button"));
-    game_quit_button = GTK_WIDGET(gtk_builder_get_object(builder, "game_quit_button"));
-    game_save_button = GTK_WIDGET(gtk_builder_get_object(builder, "game_save_button"));
+    game_restart_button = GTK_MENU_ITEM(gtk_builder_get_object(builder, "game_restart_button"));
+    game_quit_button = GTK_MENU_ITEM(gtk_builder_get_object(builder, "game_quit_button"));
+    game_save_button = GTK_MENU_ITEM(gtk_builder_get_object(builder, "game_save_button"));
+    game_history_button = GTK_MENU_ITEM(gtk_builder_get_object(builder, "game_history_button"));
     game_message_box = GTK_LABEL(gtk_builder_get_object(builder, "game_message_box"));
 
     gtk_widget_add_events(game_canvas, GDK_BUTTON_PRESS_MASK);
@@ -25,15 +26,18 @@ void game_page_init()
     g_signal_connect(game_restart_button, "activate", G_CALLBACK(on_game_restart_button_clicked), NULL);
     g_signal_connect(game_quit_button, "activate", G_CALLBACK(on_game_quit_button_clicked), NULL);
     g_signal_connect(game_save_button, "activate", G_CALLBACK(on_save_button_clicked), NULL);
+    g_signal_connect(game_history_button, "activate", G_CALLBACK(on_game_history_button_clicked), NULL);
 }
 
-void show_game_page(int ai_type)
+void show_game_page(int ai_type, int did_back)
 {
-    against_ai_type = ai_type;
-
     gtk_widget_show(game_page_window);
 
-    init_game();
+    if (!did_back)
+    {
+        against_ai_type = ai_type;
+        init_game();
+    }
 }
 
 void close_game_page()
@@ -56,11 +60,16 @@ void clear_game()
     game_line_win = -1;
     game_column_win = -1;
 
+    turns_played = 0;
+
     // reseting the board
 
     for (int i = 0; i < 3; i++)
         for (int j = 0; j < 3; j++)
+        {
             game_matrix[i][j] = 0;
+            game_history[i][j] = 0;
+        }
 
     // reshowing the signe message
     char message[50];
@@ -76,33 +85,34 @@ void save_game()
     for (int i = 0; i < 3; i++)
         for (int j = 0; j < 3; j++)
         {
-            char cell_data[3] = "-0";
+            char cell_data[5] = "-0";
 
-            sprintf(cell_data, "%d-", game_matrix[i][j]);
+            sprintf(cell_data, "%d;%d-", game_matrix[i][j], game_history[i][j]);
 
             strcat(game_state, cell_data);
         }
 
     if (add_save(game_state, 0) < 0)
     {
-        GtkWidget *dialog = gtk_message_dialog_new(GTK_WINDOW(game_page_window),
-                                                   flags,
-                                                   GTK_MESSAGE_WARNING,
-                                                   GTK_BUTTONS_YES_NO,
-                                                   "The saves limit (3) is exceded. Do you want to replace the oldest save ?");
-
-        gint clicked_button = gtk_dialog_run(GTK_DIALOG(dialog));
-        gtk_widget_destroy(dialog);
-
-        if (clicked_button == GTK_RESPONSE_YES)
+        if (show_error_saving_dialog() == GTK_RESPONSE_YES)
         {
             //add_save(game_state, 1);
         }
     }
 }
 
-void show_error_saving_dialog()
+gint show_error_saving_dialog()
 {
+    GtkWidget *dialog = gtk_message_dialog_new(GTK_WINDOW(game_page_window),
+                                               flags,
+                                               GTK_MESSAGE_WARNING,
+                                               GTK_BUTTONS_YES_NO,
+                                               "The saves limit (3) is exceded. Do you want to replace the oldest save ?");
+
+    gint clicked_button = gtk_dialog_run(GTK_DIALOG(dialog));
+    gtk_widget_destroy(dialog);
+
+    return clicked_button;
 }
 
 void set_message(const char *str)
@@ -120,54 +130,24 @@ void game_check_if_win(int isTie)
     if (!isTie)
     {
         // check lines
-        if (game_matrix[0][0] != 0 && game_matrix[0][0] == game_matrix[0][1] && game_matrix[0][1] == game_matrix[0][2])
-        {
-            // win
-            game_line_win = 0;
+        for (int i = 0; i < 3; i++)
+            if (game_matrix[i][0] != 0 && game_matrix[i][0] == game_matrix[i][1] && game_matrix[i][1] == game_matrix[i][2])
+            {
+                // win
+                game_line_win = i;
 
-            winner_player = game_matrix[0][0] == player_sign ? PLAYER_WON : AI_WON;
-        }
-
-        if (game_matrix[1][0] != 0 && game_matrix[1][0] == game_matrix[1][1] && game_matrix[1][1] == game_matrix[1][2])
-        {
-            // win
-            game_line_win = 1;
-
-            winner_player = game_matrix[1][0] == player_sign ? PLAYER_WON : AI_WON;
-        }
-
-        if (game_matrix[2][0] != 0 && game_matrix[2][0] == game_matrix[2][1] && game_matrix[2][1] == game_matrix[2][2])
-        {
-            // win
-            game_line_win = 2;
-
-            winner_player = game_matrix[2][0] == player_sign ? PLAYER_WON : AI_WON;
-        }
+                winner_player = game_matrix[i][0] == player_sign ? PLAYER_WON : AI_WON;
+            }
 
         // check columns
-        if (game_matrix[0][0] != 0 && game_matrix[0][0] == game_matrix[1][0] && game_matrix[1][0] == game_matrix[2][0])
-        {
-            // win
-            game_column_win = 0;
+        for (int j = 0; j < 3; j++)
+            if (game_matrix[0][j] != 0 && game_matrix[0][j] == game_matrix[1][j] && game_matrix[1][j] == game_matrix[2][j])
+            {
+                // win
+                game_column_win = j;
 
-            winner_player = game_matrix[0][0] == player_sign ? PLAYER_WON : AI_WON;
-        }
-
-        if (game_matrix[0][1] != 0 && game_matrix[0][1] == game_matrix[1][1] && game_matrix[1][1] == game_matrix[2][1])
-        {
-            // win
-            game_column_win = 1;
-
-            winner_player = game_matrix[0][1] == player_sign ? PLAYER_WON : AI_WON;
-        }
-
-        if (game_matrix[0][2] != 0 && game_matrix[0][2] == game_matrix[1][2] && game_matrix[1][2] == game_matrix[2][2])
-        {
-            // win
-            game_column_win = 2;
-
-            winner_player = game_matrix[0][2] == player_sign ? PLAYER_WON : AI_WON;
-        }
+                winner_player = game_matrix[0][0] == player_sign ? PLAYER_WON : AI_WON;
+            }
 
         if (game_matrix[0][0] != 0 && game_matrix[0][0] == game_matrix[1][1] && game_matrix[1][1] == game_matrix[2][2])
         {
@@ -227,6 +207,7 @@ void on_game_canvas_mouse_pressed(GtkWidget *widget, GdkEventButton *event, gpoi
     if (game_matrix[cell_index_y][cell_index_x] == 0 && !game_finished)
     {
         game_matrix[cell_index_y][cell_index_x] = player_sign;
+        game_history[cell_index_y][cell_index_x] = ++turns_played;
 
         game_check_if_win(0);
 
@@ -241,22 +222,28 @@ void on_game_canvas_mouse_pressed(GtkWidget *widget, GdkEventButton *event, gpoi
     }
 }
 
-void on_game_restart_button_clicked(GtkWidget *button, gpointer user_data)
+void on_game_restart_button_clicked(GtkMenuItem *button, gpointer user_data)
 {
     clear_game();
 
     redraw_game_canvas();
 }
 
-void on_game_quit_button_clicked(GtkWidget *button, gpointer user_data)
+void on_game_quit_button_clicked(GtkMenuItem *button, gpointer user_data)
 {
     close_game_page();
     show_main_page();
 }
 
-void on_save_button_clicked(GtkWidget *button, gpointer user_data)
+void on_save_button_clicked(GtkMenuItem *button, gpointer user_data)
 {
     save_game();
+}
+
+void on_game_history_button_clicked(GtkMenuItem *button, gpointer user_data)
+{
+    close_game_page();
+    show_history_page();
 }
 
 void on_draw(GtkWidget *canvas, cairo_t *cr, gpointer user_data)

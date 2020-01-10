@@ -50,6 +50,7 @@ int play_next_move(int ai_type)
         }
 
         game_matrix[empty_random_cell.i][empty_random_cell.j] = player_sign == 1 ? 2 : 1;
+        game_history[empty_random_cell.i][empty_random_cell.j] = ++turns_played;
 
         return 0;
     }

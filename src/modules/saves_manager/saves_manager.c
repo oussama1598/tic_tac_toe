@@ -14,12 +14,13 @@ void load_saves()
         append_to_file(saves_file, "");
     }
 
+    saves_length = 0;
+
     char *saves_file_content, **saves_data;
     int file_length = load_file(saves_file, &saves_file_content);
 
     if (file_length > 0)
     {
-
         int size = split(saves_file_content, "\n", &saves_data);
 
         saves = (save_data *)malloc(sizeof(save_data) * size);
@@ -40,11 +41,7 @@ void load_saves()
 
                 saves_length += 1;
             }
-
-            free(savedata);
         }
-
-        free(saves_file_content);
     }
 }
 

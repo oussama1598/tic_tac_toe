@@ -48,4 +48,9 @@ void load_stylesheet()
 void on_destroy(GtkWidget *widget, gpointer user_data)
 {
     gtk_main_quit();
+
+    // TODO: to be moved from here
+    free(accounts);
+    free(saves);
+    free(scores);
 }

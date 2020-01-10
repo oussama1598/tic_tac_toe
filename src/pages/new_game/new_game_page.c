@@ -30,7 +30,7 @@ void close_new_game_page()
 void on_new_game_choose_button_clicked(GtkButton *button, gpointer user_data)
 {
     close_new_game_page();
-    show_game_page(GPOINTER_TO_INT(user_data));
+    show_game_page(GPOINTER_TO_INT(user_data), 0);
 }
 
 void on_new_game_back_button_clicked(GtkButton *button, gpointer user_data)
