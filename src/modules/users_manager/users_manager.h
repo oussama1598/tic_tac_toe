@@ -12,7 +12,7 @@ typedef struct account
 } account;
 
 char *users_file;
-account *accounts;
+account accounts[1000];
 int accounts_length;
 char logged_in_user[100];
 

@@ -14,35 +14,26 @@ void load_users()
         append_to_file(users_file, "");
     }
 
-    char *user_file_content, **users;
-    int file_length = load_file(users_file, &user_file_content);
+    accounts_length = 0;
 
-    if (file_length > 0)
+    FILE *users_file_pointer = fopen(users_file, "r");
+
+    char account_line[250];
+
+    while (fscanf(users_file_pointer, "%s\n", account_line) != -1)
     {
 
-        int size = split(user_file_content, "\n", &users);
+        account account_data;
 
-        accounts = (account *)malloc(sizeof(account) * size);
+        strcpy(account_data.username, strtok(account_line, ":"));
+        strcpy(account_data.password, strtok(NULL, ":"));
 
-        for (int i = 0; i < size; i++)
-        {
-            char **user;
-            split(users[i], ":", &user);
+        accounts[accounts_length] = account_data;
 
-            account user_data;
-
-            strcpy(user_data.username, user[0]);
-            strcpy(user_data.password, user[1]);
-
-            accounts[i] = user_data;
-
-            free(user);
-        }
-
-        accounts_length = size;
-
-        free(user_file_content);
+        accounts_length += 1;
     }
+
+    fclose(users_file_pointer);
 }
 
 void *get_user_data(const char *username)
@@ -84,8 +75,6 @@ void add_user(const char *username, const char *password)
     strcpy(user_data.password, password);
 
     accounts_length += 1;
-
-    accounts = realloc(accounts, sizeof(account) * accounts_length);
 
     accounts[accounts_length - 1] = user_data;
 
