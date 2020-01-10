@@ -16,33 +16,27 @@ void load_saves()
 
     saves_length = 0;
 
-    char *saves_file_content, **saves_data;
-    int file_length = load_file(saves_file, &saves_file_content);
+    FILE *saves_file_pointer = fopen(saves_file, "r");
 
-    if (file_length > 0)
+    char save_line[250];
+
+    while (fscanf(saves_file_pointer, "%s\n", save_line) != -1)
     {
-        int size = split(saves_file_content, "\n", &saves_data);
-
-        saves = (save_data *)malloc(sizeof(save_data) * size);
-
-        for (int i = 0; i < size; i++)
+        if (strstr(save_line, logged_in_user) != NULL) // this save belongs to the logged in user
         {
-            char **savedata;
-            split(saves_data[i], ":", &savedata);
+            save_data save;
 
-            if (strstr(savedata[2], logged_in_user) != NULL)
-            {
-                save_data save_content;
+            strcpy(save.ai_type, strtok(save_line, ":"));
+            strcpy(save.board_state, strtok(NULL, ":"));
+            strcpy(save.timestamp, strtok(NULL, ":"));
 
-                strcpy(save_content.board_state, savedata[0]);
-                strcpy(save_content.timestamp, savedata[1]);
+            saves[saves_length] = save;
 
-                saves[i] = save_content;
-
-                saves_length += 1;
-            }
+            saves_length += 1;
         }
     }
+
+    fclose(saves_file_pointer);
 }
 
 int add_save(char *game_state, int force)
@@ -60,7 +54,6 @@ int add_save(char *game_state, int force)
         strcpy(savedata.board_state, game_state);
 
         saves_length += 1;
-        saves = realloc(saves, sizeof(save_data) * saves_length);
 
         saves[saves_length - 1] = savedata;
 

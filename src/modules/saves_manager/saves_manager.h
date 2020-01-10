@@ -5,12 +5,13 @@
 
 typedef struct save_data
 {
-    char board_state[20];
+    char ai_type[5];
+    char board_state[100];
     char timestamp[100];
 } save_data;
 
 char *saves_file;
-save_data *saves;
+save_data saves[3];
 
 int saves_length;
 

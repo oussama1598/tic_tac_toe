@@ -51,6 +51,5 @@ void on_destroy(GtkWidget *widget, gpointer user_data)
 
     // TODO: to be moved from here
     free(accounts);
-    free(saves);
     free(scores);
 }

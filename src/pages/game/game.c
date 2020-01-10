@@ -78,9 +78,39 @@ void clear_game()
     set_message(message);
 }
 
+void load_game_save(char *ai_type, char *board_state)
+{
+    // TODO: set player sign
+    against_ai_type = atoi(ai_type);
+
+    clear_game();
+
+    char *board_state_rest = board_state;
+
+    for (int i = 0; i < 3; i++)
+        for (int j = 0; j < 3; j++)
+        {
+            char *cell_state = strtok_r(board_state_rest, "-", &board_state_rest);
+            char *cell_value = strtok(cell_state, ";");
+
+            game_matrix[i][j] = atoi(cell_value);
+
+            char *cell_turn_value = strtok(NULL, ";");
+
+            game_history[i][j] = atoi(cell_turn_value);
+
+            if (game_matrix[i][j] == O_SIGN || game_matrix[i][j] == X_SIGN)
+            {
+                turns_played += 1;
+            }
+        }
+}
+
 void save_game()
 {
-    char game_state[200] = {'\0'};
+    char game_state[250] = {'\0'};
+
+    sprintf(game_state, "%d:", against_ai_type);
 
     for (int i = 0; i < 3; i++)
         for (int j = 0; j < 3; j++)

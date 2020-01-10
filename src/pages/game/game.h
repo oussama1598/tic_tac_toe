@@ -2,6 +2,7 @@
 #define GAME_H
 
 #include "imports.h"
+
 #define PLAYER_WON 1
 #define AI_WON 2
 #define NO_MOVES_LEFT -1
@@ -36,6 +37,7 @@ void show_game_page(int ai_type, int did_back);
 void close_game_page();
 void init_game();
 void clear_game();
+void load_game_save(char *ai_type, char *board_state);
 void save_game();
 gint show_error_saving_dialog();
 void set_message(const char *str);
