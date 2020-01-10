@@ -44,6 +44,21 @@ void load_stylesheet()
     gtk_style_context_add_provider_for_screen(gdk_screen_get_default(), GTK_STYLE_PROVIDER(css_provider), GTK_STYLE_PROVIDER_PRIORITY_USER);
 }
 
+// global methods
+gint show_dialog(GtkButtonsType buttons, const gchar *message)
+{
+    GtkWidget *dialog = gtk_message_dialog_new(GTK_WINDOW(game_page_window),
+                                               flags,
+                                               GTK_MESSAGE_WARNING,
+                                               buttons,
+                                               "%s", message);
+
+    gint clicked_button = gtk_dialog_run(GTK_DIALOG(dialog));
+    gtk_widget_destroy(dialog);
+
+    return clicked_button;
+}
+
 // global signals
 void on_destroy(GtkWidget *widget, gpointer user_data)
 {

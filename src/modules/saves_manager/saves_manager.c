@@ -18,7 +18,7 @@ void load_saves()
 
     FILE *saves_file_pointer = fopen(saves_file, "r");
 
-    char save_line[250];
+    char save_line[300];
 
     while (fscanf(saves_file_pointer, "%s\n", save_line) != -1)
     {
@@ -27,6 +27,7 @@ void load_saves()
             save_data save;
 
             strcpy(save.ai_type, strtok(save_line, ":"));
+            strcpy(save.player_sign, strtok(NULL, ":"));
             strcpy(save.board_state, strtok(NULL, ":"));
             strcpy(save.timestamp, strtok(NULL, ":"));
 

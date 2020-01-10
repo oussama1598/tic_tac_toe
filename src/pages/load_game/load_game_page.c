@@ -100,7 +100,10 @@ void on_load_game_select_button_clicked(GtkButton *button, gpointer user_data)
                            gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(load_game_option2)) +
                            gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(load_game_option3)) * 2;
 
-    load_game_save(saves[selected_save_id].ai_type, saves[selected_save_id].board_state);
+    load_game_save(
+        saves[selected_save_id].ai_type,
+        saves[selected_save_id].player_sign,
+        saves[selected_save_id].board_state);
 
     close_load_game_page();
     show_game_page(0, 1);

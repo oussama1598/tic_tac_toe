@@ -78,26 +78,30 @@ void clear_game()
     set_message(message);
 }
 
-void load_game_save(char *ai_type, char *board_state)
+void load_game_save(char *ai_type, char *saved_player_sign, char *board_state)
 {
+    g_print("%s", saved_player_sign);
     // TODO: set player sign
+    // player_sign = atoi(saved_player_sign);
     against_ai_type = atoi(ai_type);
 
     clear_game();
 
-    char *board_state_rest = board_state;
+    // this block of code copies the board state to a new string
+    // in order for the board state to no be touched by the strtok
+    char board_state_copy[strlen(board_state) + 1];
+
+    strcpy(board_state_copy, board_state);
+
+    char *board_state_rest = board_state_copy;
 
     for (int i = 0; i < 3; i++)
         for (int j = 0; j < 3; j++)
         {
             char *cell_state = strtok_r(board_state_rest, "-", &board_state_rest);
-            char *cell_value = strtok(cell_state, ";");
 
-            game_matrix[i][j] = atoi(cell_value);
-
-            char *cell_turn_value = strtok(NULL, ";");
-
-            game_history[i][j] = atoi(cell_turn_value);
+            game_matrix[i][j] = atoi(strtok(cell_state, ";"));
+            game_history[i][j] = atoi(strtok(NULL, ";"));
 
             if (game_matrix[i][j] == O_SIGN || game_matrix[i][j] == X_SIGN)
             {
@@ -108,9 +112,15 @@ void load_game_save(char *ai_type, char *board_state)
 
 void save_game()
 {
-    char game_state[250] = {'\0'};
+    if (game_finished)
+    {
+        // TODO: show an error
+        return;
+    }
 
-    sprintf(game_state, "%d:", against_ai_type);
+    char game_state[300] = {'\0'};
+
+    sprintf(game_state, "%d:%d:", against_ai_type, player_sign);
 
     for (int i = 0; i < 3; i++)
         for (int j = 0; j < 3; j++)
@@ -124,25 +134,17 @@ void save_game()
 
     if (add_save(game_state, 0) < 0)
     {
-        if (show_error_saving_dialog() == GTK_RESPONSE_YES)
+        if (show_dialog(
+                GTK_BUTTONS_YES_NO,
+                "The saves limit (3) is exceded. Do you want to replace the oldest save ?") == GTK_RESPONSE_YES)
         {
             //add_save(game_state, 1);
         }
     }
-}
-
-gint show_error_saving_dialog()
-{
-    GtkWidget *dialog = gtk_message_dialog_new(GTK_WINDOW(game_page_window),
-                                               flags,
-                                               GTK_MESSAGE_WARNING,
-                                               GTK_BUTTONS_YES_NO,
-                                               "The saves limit (3) is exceded. Do you want to replace the oldest save ?");
-
-    gint clicked_button = gtk_dialog_run(GTK_DIALOG(dialog));
-    gtk_widget_destroy(dialog);
-
-    return clicked_button;
+    else
+    {
+        show_dialog(GTK_BUTTONS_OK, "Game saved successfly.");
+    }
 }
 
 void set_message(const char *str)

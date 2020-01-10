@@ -30,6 +30,9 @@ void add_template(template template_data);
 void load_templates();
 void load_stylesheet();
 
+// global methods
+gint show_dialog(GtkButtonsType buttons, const gchar *message);
+
 // global signals
 void on_destroy(GtkWidget *widget, gpointer user_data);
 

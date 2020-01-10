@@ -6,6 +6,7 @@
 typedef struct save_data
 {
     char ai_type[5];
+    char player_sign[5];
     char board_state[100];
     char timestamp[100];
 } save_data;
