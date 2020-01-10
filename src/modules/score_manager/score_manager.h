@@ -10,7 +10,7 @@ typedef struct score_data
 } score_data;
 
 char *scores_file;
-score_data *scores;
+score_data scores[1000];
 int scores_length;
 int score;
 

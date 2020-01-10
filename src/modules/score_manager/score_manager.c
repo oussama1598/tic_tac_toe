@@ -7,8 +7,6 @@ void set_scores_file(char *file_path)
 
 void load_scores()
 {
-    scores_length = 0;
-
     mkdir("./data", 0700);
 
     if (!file_exists(scores_file))
@@ -16,39 +14,32 @@ void load_scores()
         append_to_file(scores_file, "");
     }
 
-    char *scores_file_content, **scores_data;
-    int file_length = load_file(scores_file, &scores_file_content);
+    scores_length = 0;
 
-    if (file_length > 0)
+    FILE *scores_file_pointer = fopen(scores_file, "r");
+
+    char score_line[250];
+
+    while (fscanf(scores_file_pointer, "%s\n", score_line) != -1)
     {
+        score_data score_content;
 
-        int size = split(scores_file_content, "\n", &scores_data);
+        score_content.score = atoi(strtok(score_line, ":"));
+        strcpy(score_content.username, strtok(NULL, ":"));
 
-        g_print("%d \n", size);
-
-        scores = (score_data *)malloc(sizeof(score_data) * size);
-
-        for (int i = 0; i < size; i++)
+        if (strstr(score_line, logged_in_user) != NULL) // this score belongs to the logged in user
         {
-            char **scoredata;
-            score_data score_content;
-
-            split(scores_data[i], ":", &scoredata);
-
-            if (strstr(scoredata[1], logged_in_user) != NULL)
-                score = atoi(scoredata[0]);
-
-            strcpy(score_content.username, scoredata[1]);
-            score_content.score = atoi(scoredata[0]);
-
-            scores[i] = score_content;
-
-            scores_length += 1;
+            score = score_content.score;
         }
 
-        if (scores_length > 0)
-            qsort(scores, scores_length, sizeof(score_data), compare_scores_reverse);
+        scores[scores_length] = score_content;
+        scores_length += 1;
     }
+
+    if (scores_length > 0)
+        qsort(scores, scores_length, sizeof(score_data), compare_scores_reverse);
+
+    fclose(scores_file_pointer);
 }
 
 void update_score()

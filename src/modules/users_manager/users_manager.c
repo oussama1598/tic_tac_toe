@@ -22,7 +22,6 @@ void load_users()
 
     while (fscanf(users_file_pointer, "%s\n", account_line) != -1)
     {
-
         account account_data;
 
         strcpy(account_data.username, strtok(account_line, ":"));
