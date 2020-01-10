@@ -48,7 +48,10 @@ void update_first_instance_in_file_of_user(char *filename, char *data, char *use
 
     while (fscanf(file, "%s\n", line) != -1)
     {
-        if (strstr(line, logged_in_user) != NULL) // this save belongs to the logged in user
+        char logged_username[120];
+        sprintf(logged_username, ":%s:", logged_in_user);
+
+        if (strstr(line, logged_username) != NULL) // this save belongs to the logged in user
         {
             fprintf(tmp, "%s", data);
         }
@@ -73,7 +76,10 @@ void remove_first_instance_in_file_of_user(char *filename, char *username)
 
     while (fscanf(file, "%s\n", line) != -1)
     {
-        if (strstr(line, logged_in_user) != NULL && !already_deleted)
+        char logged_username[120];
+        sprintf(logged_username, ":%s:", logged_in_user);
+
+        if (strstr(line, logged_username) != NULL && !already_deleted)
         {
             already_deleted = 1;
         }

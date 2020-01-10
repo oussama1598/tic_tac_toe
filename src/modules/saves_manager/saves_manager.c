@@ -22,7 +22,10 @@ void load_saves()
 
     while (fscanf(saves_file_pointer, "%s\n", save_line) != -1)
     {
-        if (strstr(save_line, logged_in_user) != NULL) // this save belongs to the logged in user
+        char logged_username[120];
+        sprintf(logged_username, ":%s:", logged_in_user);
+
+        if (strstr(save_line, logged_username) != NULL) // this save belongs to the logged in user
         {
             save_data save;
 

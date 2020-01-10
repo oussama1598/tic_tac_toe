@@ -27,10 +27,8 @@ void load_scores()
         score_content.score = atoi(strtok(score_line, ":"));
         strcpy(score_content.username, strtok(NULL, ":"));
 
-        if (strstr(score_line, logged_in_user) != NULL) // this score belongs to the logged in user
-        {
+        if (strcmp(score_content.username, logged_in_user) == 0) // this score belongs to the logged in user
             score = score_content.score;
-        }
 
         scores[scores_length] = score_content;
         scores_length += 1;
@@ -44,6 +42,19 @@ void load_scores()
 
 void update_score()
 {
+    char data_to_save[2000];
+    sprintf(data_to_save, "%d:%s:\n", score, logged_in_user);
+
+    update_first_instance_in_file_of_user(scores_file, data_to_save, logged_in_user);
+
+    for (int i = 0; i < scores_length; i++)
+        if (strcmp(scores[i].username, logged_in_user) == 0)
+        {
+            scores[i].score = score;
+        }
+
+    if (scores_length > 0)
+        qsort(scores, scores_length, sizeof(score_data), compare_scores_reverse);
 }
 
 void add_score(int score, const char *user)

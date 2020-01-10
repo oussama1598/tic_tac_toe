@@ -180,7 +180,7 @@ void game_check_if_win(int isTie)
                 // win
                 game_column_win = j;
 
-                winner_player = game_matrix[0][0] == player_sign ? PLAYER_WON : AI_WON;
+                winner_player = game_matrix[0][j] == player_sign ? PLAYER_WON : AI_WON;
             }
 
         if (game_matrix[0][0] != 0 && game_matrix[0][0] == game_matrix[1][1] && game_matrix[1][1] == game_matrix[2][2])
@@ -209,6 +209,13 @@ void game_check_if_win(int isTie)
             set_message(message);
 
             game_finished = 1;
+
+            if (winner_player == PLAYER_WON)
+            {
+                score += 10;
+
+                update_score();
+            }
         }
     }
     else
