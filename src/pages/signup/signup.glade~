@@ -29,7 +29,7 @@
               <object class="GtkLabel">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">label</property>
+                <property name="label" translatable="yes">TIC TAC TOE</property>
                 <style>
                   <class name="logo"/>
                 </style>

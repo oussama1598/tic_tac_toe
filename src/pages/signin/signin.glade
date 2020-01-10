@@ -126,6 +126,7 @@
                   <object class="GtkEntry" id="signin_password_input">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
+                    <property name="visibility">False</property>
                     <property name="placeholder_text" translatable="yes">Password</property>
                     <style>
                       <class name="input"/>
