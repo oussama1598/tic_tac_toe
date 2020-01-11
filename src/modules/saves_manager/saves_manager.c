@@ -43,19 +43,20 @@ void load_saves()
     fclose(saves_file_pointer);
 }
 
-int add_save(char *game_state, int force)
+int add_save(char *game_state, int ai_type, int player_sign, int force)
 {
     if (saves_length < 3 || force)
     {
         save_data savedata;
-        char user[103];
-        char timestamp[100];
 
         time_t tm = time(NULL);
 
         // add to the local list
         sprintf(savedata.timestamp, "%d", (int)tm);
         strcpy(savedata.board_state, game_state);
+
+        sprintf(savedata.ai_type, "%d", ai_type);
+        sprintf(savedata.player_sign, "%d", player_sign);
 
         if (!force)
         {
@@ -72,16 +73,14 @@ int add_save(char *game_state, int force)
         }
 
         // add to the file
-        sprintf(timestamp, ":%d", (int)tm);
-        sprintf(user, ":%s:\n", logged_in_user);
+        char to_save_data[300];
 
-        strcat(game_state, timestamp);
-        strcat(game_state, user);
+        sprintf(to_save_data, "%d:%d:%s:%d:%s:\n", ai_type, player_sign, game_state, (int)tm, logged_in_user);
 
         if (force)
             remove_first_instance_in_file_of_user(saves_file, logged_in_user);
 
-        append_to_file(saves_file, game_state);
+        append_to_file(saves_file, to_save_data);
 
         return 0;
     }

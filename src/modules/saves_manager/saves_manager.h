@@ -18,6 +18,6 @@ int saves_length;
 
 void set_saves_file(char *file_path);
 void load_saves();
-int add_save(char *game_state, int force);
+int add_save(char *game_state, int ai_type, int player_sign, int force);
 
 #endif

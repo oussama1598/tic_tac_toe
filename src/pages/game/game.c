@@ -117,9 +117,7 @@ void save_game()
         return;
     }
 
-    char game_state[300] = {'\0'};
-
-    sprintf(game_state, "%d:%d:", against_ai_type, player_sign);
+    char game_state[200] = {'\0'};
 
     for (int i = 0; i < 3; i++)
         for (int j = 0; j < 3; j++)
@@ -131,14 +129,14 @@ void save_game()
             strcat(game_state, cell_data);
         }
 
-    if (add_save(game_state, 0) < 0)
+    if (add_save(game_state, against_ai_type, player_sign, 0) < 0)
     {
         if (show_dialog(
                 GTK_MESSAGE_WARNING,
                 GTK_BUTTONS_YES_NO,
                 "The saves limit (3) is exceded. Do you want to replace the oldest save ?") == GTK_RESPONSE_YES)
         {
-            add_save(game_state, 1);
+            add_save(game_state, against_ai_type, player_sign, 1);
 
             show_dialog(GTK_MESSAGE_INFO, GTK_BUTTONS_OK, "Game saved successfly.");
         }
