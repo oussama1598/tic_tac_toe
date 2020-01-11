@@ -2,7 +2,7 @@
 
 void app_init()
 {
-    default_path = "/home/red-scule/Desktop/projects/c_projects/tic_tac_toe/src/";
+    default_path = "../src/";
 
     load_templates();
     load_stylesheet();
