@@ -1,6 +1,10 @@
 #ifndef IMPORTS_H
 #define IMPORTS_H
 
+#if defined(_WIN32)
+#include <direct.h>
+#endif
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>

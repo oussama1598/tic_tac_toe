@@ -7,7 +7,7 @@ void set_users_file(char *file_path)
 
 void load_users()
 {
-    mkdir("./data", 0700);
+    create_dir("./data");
 
     if (!file_exists(users_file))
     {

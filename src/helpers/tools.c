@@ -1,5 +1,14 @@
 #include "tools.h"
 
+void create_dir(const char *dirname)
+{
+#if defined(_WIN32)
+    _mkdir(dirname);
+#else
+    mkdir(dirname, 0700);
+#endif
+}
+
 int load_file(char *filename, char **file_content)
 {
     int file_length = 0;

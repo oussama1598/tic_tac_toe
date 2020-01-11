@@ -7,7 +7,7 @@ void set_saves_file(char *file_path)
 
 void load_saves()
 {
-    mkdir("./data", 0700);
+    create_dir("./data");
 
     if (!file_exists(saves_file))
     {

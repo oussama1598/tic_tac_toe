@@ -7,7 +7,7 @@ void set_scores_file(char *file_path)
 
 void load_scores()
 {
-    mkdir("./data", 0700);
+    create_dir("./data");
 
     if (!file_exists(scores_file))
     {

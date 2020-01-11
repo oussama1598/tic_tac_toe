@@ -6,6 +6,7 @@
 #include <string.h>
 #include "imports.h"
 
+void create_dir(const char *dirname);
 int load_file(char *filename, char **file_content);
 void append_to_file(char *filename, char *data);
 void update_first_instance_in_file_of_user(char *filename, char *data, char *username);
