@@ -1,5 +1,11 @@
+@import url("resource:///org/gtk/libgtk/theme/Adwaita/gtk-contained-dark.css");
+
 * {
   font-family: monospace;
+}
+
+entry:focus {
+  box-shadow: none;
 }
 
 .window {
@@ -23,6 +29,10 @@
   font-size: 1.5em;
   color: white;
   outline: none;
+}
+
+.auth_button:hover {
+  border: 1px solid white;
 }
 
 .auth_button.active {
@@ -59,6 +69,10 @@
   border: 1px solid white;
   color: white;
   font-size: 1.1em;
+}
+
+.btn:hover {
+  border: 1px solid white;
 }
 
 .form.main {
