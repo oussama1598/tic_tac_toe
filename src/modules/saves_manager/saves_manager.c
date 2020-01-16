@@ -1,10 +1,18 @@
 #include "saves_manager.h"
 
+/**
+ * Configures the path to the save file to be used later.
+ * 
+ * @param file_path the saves's file path.
+*/
 void set_saves_file(char *file_path)
 {
     saves_file = join_strings("./data/", file_path);
 }
 
+/**
+ * Loads all the saves from the file.
+*/
 void load_saves()
 {
     create_dir("./data");
@@ -43,6 +51,15 @@ void load_saves()
     fclose(saves_file_pointer);
 }
 
+/**
+ * Adds a save for the current signed in user.
+ * 
+ * @param game_state the current boards values.
+ * @param ai_type the ai type, 1 if you're playing against the minimax algorithm, 2 if you're playing against a random actions.
+ * @param player_sign the current player's sign, 1 for O, 2 for X.
+ * @param force either we should force the save or not, if we exceeded the max of 3 saves per user.
+ * @return 0 if the save was successful, -1 if not. 
+*/
 int add_save(char *game_state, int ai_type, int player_sign, int force)
 {
     if (saves_length < 3 || force)

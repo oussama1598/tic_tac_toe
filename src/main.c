@@ -1,5 +1,15 @@
 #include "imports.h"
 
+/*! \mainpage Tic_Tac_Toe Docs
+*/
+
+/**
+ * This function gets called at the first run of this program.
+ *
+ * @param argc Number of arguments given to this program.
+ * @param argv a list of characters representing the arguments given to this program
+ * @return 0 to safely exit the program when its done without any errors
+ */
 int main(int argc, char **argv)
 {
     gtk_init(&argc, &argv);

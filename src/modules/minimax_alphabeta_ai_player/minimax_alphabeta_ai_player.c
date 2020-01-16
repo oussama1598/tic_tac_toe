@@ -1,5 +1,10 @@
 #include "minimax_alphabeta_ai_player.h"
 
+/**
+ * Checks if any of the players did win
+ * 
+ * @return 1 if the user wins, 2 if the ai wins, 0 if none -1 if it's a tie.
+*/
 int check_win_in_board()
 {
     // check lines
@@ -26,6 +31,12 @@ int check_win_in_board()
     return NO_MOVES_LEFT;
 }
 
+/**
+ * Applies the max function of the minimax algorithm
+ * 
+ * @return the selected cell which of type {@link minimax_data}.
+ * @return the i index of the cell will be -1 if there's a win for each of the players or there is a tie.
+*/
 minimax_data max_alpha_beta(int alpha, int beta)
 {
     int ai_sign = player_sign == X_SIGN ? O_SIGN : X_SIGN;
@@ -74,6 +85,12 @@ minimax_data max_alpha_beta(int alpha, int beta)
     return (minimax_data){maxv, play_i, play_j};
 }
 
+/**
+ * Applies the min function of the minimax algorithm
+ * 
+ * @return the selected cell which of type {@link minimax_data}.
+ * @return the i index of the cell will be -1 if there's a win for each of the players or there is a tie.
+*/
 minimax_data min_alpha_beta(int alpha, int beta)
 {
     int minv = 2;
@@ -119,7 +136,10 @@ minimax_data min_alpha_beta(int alpha, int beta)
     return (minimax_data){minv, play_i, play_j};
 }
 
-int minimax_alphabeta_ai_play_next_move()
+/**
+ * Plays a move with the minimax algorithm.
+*/
+void minimax_alphabeta_ai_play_next_move()
 {
     // copy the game matrix
     for (int i = 0; i < 3; i++)
@@ -133,6 +153,4 @@ int minimax_alphabeta_ai_play_next_move()
         game_matrix[data.i][data.j] = player_sign == X_SIGN ? O_SIGN : X_SIGN;
         game_history[data.i][data.j] = ++turns_played;
     }
-
-    return 0;
 }

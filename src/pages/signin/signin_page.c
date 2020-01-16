@@ -1,5 +1,8 @@
 #include "signin_page.h"
 
+/**
+ * Inits the signin page.
+*/
 void signin_page_init()
 {
     signin_page_window = GTK_WIDGET(gtk_builder_get_object(builder, "signin_page"));
@@ -20,33 +23,53 @@ void signin_page_init()
     g_signal_connect(signup_show_button, "clicked", G_CALLBACK(on_signup_show_button_clicked), NULL);
 }
 
+/**
+ * Shows the about page.
+*/
 void show_signin_page()
 {
     gtk_widget_show(signin_page_window);
 }
 
+/**
+ * Closes the about page.
+*/
 void close_signin_page()
 {
     gtk_widget_hide(signin_page_window);
 }
 
+/**
+ * Hides the error label.
+*/
 void signin_hide_error()
 {
     gtk_widget_hide(GTK_WIDGET(signin_error));
 }
 
+/**
+ * Shows the error label.
+ * 
+ * @param str a message to be set as an error.
+*/
 void signin_show_error(char *str)
 {
     gtk_widget_show(GTK_WIDGET(signin_error));
     gtk_label_set_text(signin_error, str);
 }
 
+/**
+ * Clears all the entries.
+*/
 void signin_clear_entries()
 {
     gtk_entry_set_text(signin_username_input, "");
     gtk_entry_set_text(signin_password_input, "");
 }
 
+/**
+ * A callback function that gets called when the signin button is pressed.
+*/
 int on_signin_button_clicked(GtkButton *button, gpointer user_data)
 {
     const char *username = gtk_entry_get_text(signin_username_input);
@@ -99,6 +122,9 @@ int on_signin_button_clicked(GtkButton *button, gpointer user_data)
     return 0;
 }
 
+/**
+ * A callback function that gets called when the show signup button is pressed.
+*/
 void on_signup_show_button_clicked(GtkButton *button, gpointer user_data)
 {
     close_signin_page();

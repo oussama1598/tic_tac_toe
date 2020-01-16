@@ -1,10 +1,19 @@
 #include "score_manager.h"
 
+/**
+ * Configures the path to the score file to be used later.
+ * 
+ * @param file_path the scores's file path.
+*/
 void set_scores_file(char *file_path)
 {
     scores_file = join_strings("./data/", file_path);
 }
 
+/**
+ * Loads all the scores from the file.
+ * Sets the current user's score locally.
+*/
 void load_scores()
 {
     create_dir("./data");
@@ -40,6 +49,9 @@ void load_scores()
     fclose(scores_file_pointer);
 }
 
+/**
+ * Updates the current user's score locally and within the file.
+*/
 void update_score()
 {
     char data_to_save[2000];
@@ -57,6 +69,12 @@ void update_score()
         qsort(scores, scores_length, sizeof(score_data), compare_scores_reverse);
 }
 
+/**
+ * Adds a score record for a specific user.
+ * 
+ * @param score the user's score.
+ * @param user the user's username.
+*/
 void add_score(int score, const char *user)
 {
     char data_to_save[2000];

@@ -3,8 +3,17 @@
 
 #include "imports.h"
 
+/**
+ * Points to the history page window.
+*/
 GtkWidget *history_page_window;
+/**
+ * Points to the back button.
+*/
 GtkButton *history_back_button;
+/**
+ * Points to the history canvas.
+*/
 GtkWidget *history_canvas;
 
 void history_page_init();

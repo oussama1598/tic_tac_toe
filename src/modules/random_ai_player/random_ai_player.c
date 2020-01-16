@@ -1,6 +1,11 @@
 #include "random_ai_player.h"
 
-void get_empty_random_empty_cell(cell *empty_cell)
+/**
+ * Gets a random empty cell from the board.
+ * 
+ * @return the random cell found or a cell of that contains -1 if no empty cells are found. 
+*/
+cell get_empty_random_empty_cell()
 {
     cell empty_cells[9];
 
@@ -25,25 +30,23 @@ void get_empty_random_empty_cell(cell *empty_cell)
 
         int random_cells_index = rand() % (empty_cells_index + 1);
 
-        empty_cell->i = empty_cells[random_cells_index].i;
-        empty_cell->j = empty_cells[random_cells_index].j;
+        return (cell){empty_cells[random_cells_index].i, empty_cells[random_cells_index].j};
     }
+
+    return (cell){-1, -1};
 }
 
-int random_ai_play_next_move()
+/**
+ * Plays a move from the random ai player.
+*/
+void random_ai_play_next_move()
 {
 
-    cell empty_random_cell = {-1,
-                              -1};
-    get_empty_random_empty_cell(&empty_random_cell);
+    cell empty_random_cell = get_empty_random_empty_cell();
 
-    if (empty_random_cell.i == -1)
+    if (empty_random_cell.i != -1)
     {
-        return NO_MOVES_LEFT;
+        game_matrix[empty_random_cell.i][empty_random_cell.j] = player_sign == 1 ? 2 : 1;
+        game_history[empty_random_cell.i][empty_random_cell.j] = ++turns_played;
     }
-
-    game_matrix[empty_random_cell.i][empty_random_cell.j] = player_sign == 1 ? 2 : 1;
-    game_history[empty_random_cell.i][empty_random_cell.j] = ++turns_played;
-
-    return 0;
 }

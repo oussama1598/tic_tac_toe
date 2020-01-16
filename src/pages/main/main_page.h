@@ -3,11 +3,29 @@
 
 #include "imports.h"
 
+/**
+ * Points to the main page window.
+*/
 GtkWidget *main_page_window;
+/**
+ * Points to the new game button.
+*/
 GtkButton *new_game_button;
+/**
+ * Points to the load game button.
+*/
 GtkButton *load_game_button;
+/**
+ * Points to the score button.
+*/
 GtkButton *score_button;
+/**
+ * Points to the about button
+*/
 GtkButton *about_button;
+/**
+ * Points to the signout button.
+*/
 GtkButton *signout_button;
 
 void main_page_init();

@@ -1,0 +1,11 @@
+var searchData=
+[
+  ['about_5fpage_5finit',['about_page_init',['../about__page_8c.html#a0fef776b7e05d75bb88454bdb03d298b',1,'about_page_init():&#160;about_page.c'],['../about__page_8h.html#a0fef776b7e05d75bb88454bdb03d298b',1,'about_page_init():&#160;about_page.c']]],
+  ['add_5fsave',['add_save',['../saves__manager_8c.html#a173ef5b2f2d9af4b79e93e2d842a0d89',1,'add_save(char *game_state, int ai_type, int player_sign, int force):&#160;saves_manager.c'],['../saves__manager_8h.html#a173ef5b2f2d9af4b79e93e2d842a0d89',1,'add_save(char *game_state, int ai_type, int player_sign, int force):&#160;saves_manager.c']]],
+  ['add_5fscore',['add_score',['../score__manager_8c.html#a75d53e8bedb34a5912d0a162d3be66ee',1,'add_score(int score, const char *user):&#160;score_manager.c'],['../score__manager_8h.html#a75d53e8bedb34a5912d0a162d3be66ee',1,'add_score(int score, const char *user):&#160;score_manager.c']]],
+  ['add_5ftemplate',['add_template',['../builder_8c.html#aa4db6f5e74a0cce534ec81dd7feed5a0',1,'add_template(template template_data):&#160;builder.c'],['../builder_8h.html#aa4db6f5e74a0cce534ec81dd7feed5a0',1,'add_template(template template_data):&#160;builder.c']]],
+  ['add_5fuser',['add_user',['../users__manager_8c.html#a7cb6f6e9f05f33a0691c66f9a7c55245',1,'add_user(const char *username, const char *password):&#160;users_manager.c'],['../users__manager_8h.html#a7cb6f6e9f05f33a0691c66f9a7c55245',1,'add_user(const char *username, const char *password):&#160;users_manager.c']]],
+  ['app_5finit',['app_init',['../builder_8c.html#a8c6e58bb7e2a0dcf8537fc940ebfa385',1,'app_init():&#160;builder.c'],['../builder_8h.html#a8c6e58bb7e2a0dcf8537fc940ebfa385',1,'app_init():&#160;builder.c']]],
+  ['append_5fto_5ffile',['append_to_file',['../tools_8h.html#a9d4bd2d06d414d9685ff54ec994a5ee1',1,'append_to_file(char *filename, char *data):&#160;tools.c'],['../tools_8c.html#a9d4bd2d06d414d9685ff54ec994a5ee1',1,'append_to_file(char *filename, char *data):&#160;tools.c']]],
+  ['authenticate_5fuser',['authenticate_user',['../users__manager_8c.html#acd3e618b5db9f027483adfaf2173bdfa',1,'authenticate_user(const char *username, const char *password):&#160;users_manager.c'],['../users__manager_8h.html#acd3e618b5db9f027483adfaf2173bdfa',1,'authenticate_user(const char *username, const char *password):&#160;users_manager.c']]]
+];

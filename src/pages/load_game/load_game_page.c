@@ -1,5 +1,8 @@
 #include "load_game_page.h"
 
+/**
+ * Inits the load game page.
+*/
 void load_game_page_init()
 {
     load_game_page_window = GTK_WIDGET(gtk_builder_get_object(builder, "load_game_page"));
@@ -20,6 +23,9 @@ void load_game_page_init()
     g_signal_connect(load_game_select_button, "clicked", G_CALLBACK(on_load_game_select_button_clicked), NULL);
 }
 
+/**
+ * Shows the load game page.
+*/
 void show_load_game_page()
 {
     clear_and_disable_all_options();
@@ -29,11 +35,17 @@ void show_load_game_page()
     gtk_widget_show(load_game_page_window);
 }
 
+/**
+ * Closes the load game page.
+*/
 void close_load_game_page()
 {
     gtk_widget_hide(load_game_page_window);
 }
 
+/**
+ * Clears and disables all the saves options.
+*/
 void clear_and_disable_all_options()
 {
     gtk_label_set_text(load_game_option1_label, "Empty Slot");
@@ -45,6 +57,11 @@ void clear_and_disable_all_options()
     gtk_widget_set_sensitive(GTK_WIDGET(load_game_option3), 0);
 }
 
+/**
+ * Renders an options, sets its label text and enables it
+ * 
+ * @param text_to_render a text that gets set to the label.
+*/
 void render_radio_button(int id, char *text_to_render)
 {
     switch (id)
@@ -64,11 +81,17 @@ void render_radio_button(int id, char *text_to_render)
     }
 }
 
+/**
+ * Toggles the load button.
+*/
 void enable_disable_load_button()
 {
     gtk_widget_set_sensitive(GTK_WIDGET(load_game_select_button), saves_length > 0);
 }
 
+/**
+ * Render all the user's saves to the options.
+*/
 void render_saves_selection()
 {
     for (int i = 0; i < saves_length; i++)
@@ -88,12 +111,18 @@ void render_saves_selection()
     }
 }
 
+/**
+ * A callback function that gets called when load game is pressed.
+*/
 void on_load_game_back_button_clicked(GtkButton *button, gpointer user_data)
 {
     close_load_game_page();
     show_main_page();
 }
 
+/**
+ * A callback function that gets called when a save option got selected.
+*/
 void on_load_game_select_button_clicked(GtkButton *button, gpointer user_data)
 {
     int selected_save_id = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(load_game_option1)) * 0 +

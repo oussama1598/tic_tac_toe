@@ -1,0 +1,35 @@
+<map id="src/modules/saves_manager/saves_manager.h" name="src/modules/saves_manager/saves_manager.h">
+<area shape="rect" id="node2" href="$imports_8h.html" title="src/headers/imports.h" alt="" coords="1383,102,1531,129"/>
+<area shape="rect" id="node34" href="$saves__manager_8c.html" title="src/modules/saves_manager\l/saves_manager.c" alt="" coords="1556,95,1745,136"/>
+<area shape="rect" id="node3" href="$tools_8h.html" title="src/headers/tools.h" alt="" coords="5,206,139,233"/>
+<area shape="rect" id="node5" href="$main_8c.html" title="src/main.c" alt="" coords="163,206,245,233"/>
+<area shape="rect" id="node6" href="$builder_8h.html" title="src/modules/builder\l/builder.h" alt="" coords="270,199,405,240"/>
+<area shape="rect" id="node8" href="$minimax__alphabeta__ai__player_8h.html" title="src/modules/minimax\l_alphabeta_ai_player\l/minimax_alphabeta_ai\l_player.h" alt="" coords="429,184,584,255"/>
+<area shape="rect" id="node10" href="$random__ai__player_8h.html" title="src/modules/random\l_ai_player/random_ai\l_player.h" alt="" coords="609,191,754,247"/>
+<area shape="rect" id="node12" href="$score__manager_8h.html" title="src/modules/score_manager\l/score_manager.h" alt="" coords="779,199,965,240"/>
+<area shape="rect" id="node14" href="$users__manager_8h.html" title="src/modules/users_manager\l/users_manager.h" alt="" coords="989,199,1176,240"/>
+<area shape="rect" id="node16" href="$about__page_8h.html" title="src/pages/about/about\l_page.h" alt="" coords="1201,199,1351,240"/>
+<area shape="rect" id="node18" href="$game_8h.html" title="src/pages/game/game.h" alt="" coords="1376,206,1539,233"/>
+<area shape="rect" id="node20" href="$history__page_8h.html" title="src/pages/history/history\l_page.h" alt="" coords="1563,199,1728,240"/>
+<area shape="rect" id="node22" href="$load__game__page_8h.html" title="src/pages/load_game\l/load_game_page.h" alt="" coords="1752,199,1899,240"/>
+<area shape="rect" id="node24" href="$main__page_8h.html" title="src/pages/main/main\l_page.h" alt="" coords="1923,199,2066,240"/>
+<area shape="rect" id="node26" href="$new__game__page_8h.html" title="src/pages/new_game\l/new_game_page.h" alt="" coords="2091,199,2237,240"/>
+<area shape="rect" id="node28" href="$scores__page_8h.html" title="src/pages/scores/scores\l_page.h" alt="" coords="2261,199,2427,240"/>
+<area shape="rect" id="node30" href="$signin__page_8h.html" title="src/pages/signin/signin\l_page.h" alt="" coords="2451,199,2605,240"/>
+<area shape="rect" id="node32" href="$signup__page_8h.html" title="src/pages/signup/signup\l_page.h" alt="" coords="2629,199,2792,240"/>
+<area shape="rect" id="node4" href="$tools_8c.html" title="src/helpers/tools.c" alt="" coords="7,325,137,351"/>
+<area shape="rect" id="node7" href="$builder_8c.html" title="src/modules/builder\l/builder.c" alt="" coords="270,317,405,359"/>
+<area shape="rect" id="node9" href="$minimax__alphabeta__ai__player_8c.html" title="src/modules/minimax\l_alphabeta_ai_player\l/minimax_alphabeta_ai\l_player.c" alt="" coords="429,303,584,373"/>
+<area shape="rect" id="node11" href="$random__ai__player_8c.html" title="src/modules/random\l_ai_player/random_ai\l_player.c" alt="" coords="609,310,754,366"/>
+<area shape="rect" id="node13" href="$score__manager_8c.html" title="src/modules/score_manager\l/score_manager.c" alt="" coords="779,317,965,359"/>
+<area shape="rect" id="node15" href="$users__manager_8c.html" title="src/modules/users_manager\l/users_manager.c" alt="" coords="989,317,1176,359"/>
+<area shape="rect" id="node17" href="$about__page_8c.html" title="src/pages/about/about\l_page.c" alt="" coords="1201,317,1351,359"/>
+<area shape="rect" id="node19" href="$game_8c.html" title="src/pages/game/game.c" alt="" coords="1376,325,1539,351"/>
+<area shape="rect" id="node21" href="$history__page_8c.html" title="src/pages/history/history\l_page.c" alt="" coords="1563,317,1728,359"/>
+<area shape="rect" id="node23" href="$load__game__page_8c.html" title="src/pages/load_game\l/load_game_page.c" alt="" coords="1752,317,1899,359"/>
+<area shape="rect" id="node25" href="$main__page_8c.html" title="src/pages/main/main\l_page.c" alt="" coords="1923,317,2066,359"/>
+<area shape="rect" id="node27" href="$new__game__page_8c.html" title="src/pages/new_game\l/new_game_page.c" alt="" coords="2091,317,2237,359"/>
+<area shape="rect" id="node29" href="$scores__page_8c.html" title="src/pages/scores/scores\l_page.c" alt="" coords="2261,317,2427,359"/>
+<area shape="rect" id="node31" href="$signin__page_8c.html" title="src/pages/signin/signin\l_page.c" alt="" coords="2451,317,2605,359"/>
+<area shape="rect" id="node33" href="$signup__page_8c.html" title="src/pages/signup/signup\l_page.c" alt="" coords="2629,317,2792,359"/>
+</map>

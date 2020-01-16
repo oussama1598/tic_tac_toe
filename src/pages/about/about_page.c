@@ -1,5 +1,8 @@
 #include "about_page.h"
 
+/**
+ * Inits the about page.
+*/
 void about_page_init()
 {
     about_page_window = GTK_WIDGET(gtk_builder_get_object(builder, "about_page"));
@@ -12,6 +15,11 @@ void about_page_init()
     g_signal_connect(about_canvas, "draw", G_CALLBACK(on_about_canvas_draw), NULL);
 }
 
+/**
+ * A callback function that gets called when frame has to be drawn.
+ * 
+ * @return 1 if the animation should be stopped, 0 if not.
+*/
 int on_animate()
 {
     if (animation_direction == ANIMATION_FORWARD)
@@ -29,6 +37,9 @@ int on_animate()
     return !animate;
 }
 
+/**
+ * Shows the about page.
+*/
 void show_about_page()
 {
     animation_direction = ANIMATION_FORWARD;
@@ -40,6 +51,9 @@ void show_about_page()
     g_timeout_add(50, G_SOURCE_FUNC(on_animate), NULL);
 }
 
+/**
+ * Closes the about page.
+*/
 void close_about_page()
 {
     animate = 1;
@@ -47,12 +61,18 @@ void close_about_page()
     gtk_widget_hide(about_page_window);
 }
 
+/**
+ * A callback function that gets called when the about back button is pressed.
+*/
 void on_about_back_button_clicked(GtkButton *button, gpointer user_data)
 {
     close_about_page();
     show_main_page();
 }
 
+/**
+ * A callback function that gets called when canvas want to draw to the screen.
+*/
 void on_about_canvas_draw(GtkWidget *canvas, cairo_t *cr, gpointer user_data)
 {
     guint width, height;

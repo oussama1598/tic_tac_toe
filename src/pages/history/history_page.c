@@ -1,5 +1,8 @@
 #include "history_page.h"
 
+/**
+ * Inits the history page.
+*/
 void history_page_init()
 {
     history_page_window = GTK_WIDGET(gtk_builder_get_object(builder, "history_page"));
@@ -13,22 +16,34 @@ void history_page_init()
     g_signal_connect(history_back_button, "clicked", G_CALLBACK(on_history_back_button_clicked), NULL);
 }
 
+/**
+ * Shows the history page.
+*/
 void show_history_page()
 {
     gtk_widget_show(history_page_window);
 }
 
+/**
+ * Closes the history page.
+*/
 void close_history_page()
 {
     gtk_widget_hide(history_page_window);
 }
 
+/**
+ * A callback function that gets called when the history back button is pressed.
+*/
 void on_history_back_button_clicked(GtkButton *button, gpointer user_data)
 {
     close_history_page();
     show_game_page(0, 1);
 }
 
+/**
+ * A callback function that gets called when canvas want to draw to the screen.
+*/
 void on_history_canvas_draw(GtkWidget *canvas, cairo_t *cr, gpointer user_data)
 {
     guint width, height;

@@ -3,13 +3,22 @@
 
 #include "imports.h"
 
+/**
+ * A structure that represents a single boards cell.
+*/
 typedef struct cell
 {
+    /**
+     * The line's index for the current cell.
+    */
     int i;
+    /**
+     * The column's index for the current cell.
+    */
     int j;
 } cell;
 
-void get_empty_random_empty_cell(cell *empty_cell);
-int random_ai_play_next_move();
+cell get_empty_random_empty_cell();
+void random_ai_play_next_move();
 
 #endif

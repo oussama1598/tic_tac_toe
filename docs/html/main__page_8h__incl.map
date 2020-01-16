@@ -1,0 +1,18 @@
+<map id="src/pages/main/main_page.h" name="src/pages/main/main_page.h">
+<area shape="rect" id="node2" href="$imports_8h.html" title="imports.h" alt="" coords="1274,95,1350,121"/>
+<area shape="rect" id="node8" href="$tools_8h.html" title="tools.h" alt="" coords="96,177,157,203"/>
+<area shape="rect" id="node10" href="$random__ai__player_8h.html" title="random_ai_player.h" alt="" coords="499,177,634,203"/>
+<area shape="rect" id="node11" href="$minimax__alphabeta__ai__player_8h.html" title="minimax_alphabeta_ai\l_player.h" alt="" coords="658,169,809,211"/>
+<area shape="rect" id="node12" href="$users__manager_8h.html" title="users_manager.h" alt="" coords="833,177,956,203"/>
+<area shape="rect" id="node15" href="$score__manager_8h.html" title="score_manager.h" alt="" coords="980,177,1103,203"/>
+<area shape="rect" id="node16" href="$saves__manager_8h.html" title="saves_manager.h" alt="" coords="1127,177,1252,203"/>
+<area shape="rect" id="node17" href="$builder_8h.html" title="builder.h" alt="" coords="1277,177,1347,203"/>
+<area shape="rect" id="node18" href="$signin__page_8h.html" title="signin_page.h" alt="" coords="1371,177,1474,203"/>
+<area shape="rect" id="node19" href="$signup__page_8h.html" title="signup_page.h" alt="" coords="1499,177,1605,203"/>
+<area shape="rect" id="node20" href="$new__game__page_8h.html" title="new_game_page.h" alt="" coords="1629,177,1760,203"/>
+<area shape="rect" id="node21" href="$load__game__page_8h.html" title="load_game_page.h" alt="" coords="1784,177,1915,203"/>
+<area shape="rect" id="node22" href="$about__page_8h.html" title="about_page.h" alt="" coords="1939,177,2039,203"/>
+<area shape="rect" id="node23" href="$scores__page_8h.html" title="scores_page.h" alt="" coords="2064,177,2171,203"/>
+<area shape="rect" id="node24" href="$game_8h.html" title="game.h" alt="" coords="2195,177,2261,203"/>
+<area shape="rect" id="node25" href="$history__page_8h.html" title="history_page.h" alt="" coords="2285,177,2392,203"/>
+</map>

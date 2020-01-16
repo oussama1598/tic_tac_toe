@@ -1,0 +1,18 @@
+<map id="src/modules/minimax_alphabeta_ai_player/minimax_alphabeta_ai_player.h" name="src/modules/minimax_alphabeta_ai_player/minimax_alphabeta_ai_player.h">
+<area shape="rect" id="node2" href="$imports_8h.html" title="imports.h" alt="" coords="1207,124,1283,151"/>
+<area shape="rect" id="node8" href="$tools_8h.html" title="tools.h" alt="" coords="96,199,157,225"/>
+<area shape="rect" id="node10" href="$random__ai__player_8h.html" title="random_ai_player.h" alt="" coords="499,199,634,225"/>
+<area shape="rect" id="node11" href="$users__manager_8h.html" title="users_manager.h" alt="" coords="659,199,781,225"/>
+<area shape="rect" id="node14" href="$score__manager_8h.html" title="score_manager.h" alt="" coords="805,199,928,225"/>
+<area shape="rect" id="node15" href="$saves__manager_8h.html" title="saves_manager.h" alt="" coords="952,199,1077,225"/>
+<area shape="rect" id="node16" href="$builder_8h.html" title="builder.h" alt="" coords="1102,199,1173,225"/>
+<area shape="rect" id="node17" href="$main__page_8h.html" title="main_page.h" alt="" coords="1197,199,1293,225"/>
+<area shape="rect" id="node18" href="$signin__page_8h.html" title="signin_page.h" alt="" coords="1318,199,1421,225"/>
+<area shape="rect" id="node19" href="$signup__page_8h.html" title="signup_page.h" alt="" coords="1445,199,1552,225"/>
+<area shape="rect" id="node20" href="$new__game__page_8h.html" title="new_game_page.h" alt="" coords="1576,199,1707,225"/>
+<area shape="rect" id="node21" href="$load__game__page_8h.html" title="load_game_page.h" alt="" coords="1731,199,1861,225"/>
+<area shape="rect" id="node22" href="$about__page_8h.html" title="about_page.h" alt="" coords="1886,199,1986,225"/>
+<area shape="rect" id="node23" href="$scores__page_8h.html" title="scores_page.h" alt="" coords="2011,199,2117,225"/>
+<area shape="rect" id="node24" href="$game_8h.html" title="game.h" alt="" coords="2142,199,2207,225"/>
+<area shape="rect" id="node25" href="$history__page_8h.html" title="history_page.h" alt="" coords="2232,199,2339,225"/>
+</map>

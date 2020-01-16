@@ -3,9 +3,21 @@
 
 #include "imports.h"
 
+/**
+ * Points to the new game page window.
+*/
 GtkWidget *new_game_page_window;
+/**
+ * Points to the against ai button.
+*/
 GtkButton *new_game_ai_button;
+/**
+ * Points to the against random button.
+*/
 GtkButton *new_game_random_button;
+/**
+ * Points to the new game back button.
+*/
 GtkButton *new_game_back_button;
 
 void new_game_page_init();

@@ -1,5 +1,8 @@
 #include "game.h"
 
+/**
+ * Inits the game page.
+*/
 void game_page_init()
 {
     // seed the random generator
@@ -29,6 +32,11 @@ void game_page_init()
     g_signal_connect(game_history_button, "activate", G_CALLBACK(on_game_history_button_clicked), NULL);
 }
 
+/**
+ * Shows the game page.
+ * 
+ * @param ai_type The ai's type 
+*/
 void show_game_page(int ai_type, int did_back)
 {
     gtk_widget_show(game_page_window);
@@ -40,11 +48,17 @@ void show_game_page(int ai_type, int did_back)
     }
 }
 
+/**
+ * Closes the game page.
+*/
 void close_game_page()
 {
     gtk_widget_hide(game_page_window);
 }
 
+/**
+ * Inits the game board, and the player's sign.
+*/
 void init_game()
 {
     // gets defined a random sign
@@ -53,6 +67,9 @@ void init_game()
     clear_game();
 }
 
+/**
+ * Clears all the game's variables. 
+*/
 void clear_game()
 {
     // reseting all the game variables
@@ -71,13 +88,20 @@ void clear_game()
             game_history[i][j] = 0;
         }
 
-    // reshowing the signe message
+    // reshowing the sign message
     char message[50];
-    sprintf(message, "Your signe is %c", player_sign == X_SIGN ? 'x' : 'o');
+    sprintf(message, "Your sign is %c", player_sign == X_SIGN ? 'x' : 'o');
 
     set_message(message);
 }
 
+/**
+ * Loads a saved game.
+ * 
+ * @param ai_type A string which represents the ai's type.
+ * @param save_player_sign A string which represents the saved player's sign.
+ * @param board_state A string which represents the saved board state.
+*/
 void load_game_save(char *ai_type, char *saved_player_sign, char *board_state)
 {
     // TODO: set player sign
@@ -109,6 +133,9 @@ void load_game_save(char *ai_type, char *saved_player_sign, char *board_state)
         }
 }
 
+/**
+ * Saves the current game. 
+*/
 void save_game()
 {
     if (game_finished)
@@ -147,11 +174,21 @@ void save_game()
     }
 }
 
+/**
+ * Renders a text to the game status label.
+ * 
+ * @param str The string to be rendred.
+*/
 void set_message(const char *str)
 {
     gtk_label_set_text(game_message_box, str);
 }
 
+/**
+ * Checks if the board is full.
+ * 
+ * @return 1 if the board is full, 0 if not. 
+*/
 int is_board_full()
 {
     for (int i = 0; i < 3; i++)
@@ -164,6 +201,12 @@ int is_board_full()
     return 1;
 }
 
+/**
+ * Checks if any of the players did win.
+ * Set on the process the lines which has to be drawn in case of a win.
+ * 
+ * @return 1 if the user wins, 2 if the ai wins, 0 if none -1 if it's a tie.
+*/
 void game_check_if_win()
 {
     int winner_player = -1;
@@ -236,11 +279,17 @@ void game_check_if_win()
     }
 }
 
+/**
+ * Redraws the whole canvas.
+*/
 void redraw_game_canvas()
 {
     gtk_widget_queue_draw_area(game_canvas, 0, 0, canvas_width, canvas_height);
 }
 
+/**
+ * A callback function that gets called when the mouse is pressed within the canvas.
+*/
 void on_game_canvas_mouse_pressed(GtkWidget *widget, GdkEventButton *event, gpointer user_data)
 {
     int x = event->x;
@@ -273,6 +322,9 @@ void on_game_canvas_mouse_pressed(GtkWidget *widget, GdkEventButton *event, gpoi
     }
 }
 
+/**
+ * A callback function that gets called when the restart button is pressed.
+*/
 void on_game_restart_button_clicked(GtkMenuItem *button, gpointer user_data)
 {
     clear_game();
@@ -280,23 +332,35 @@ void on_game_restart_button_clicked(GtkMenuItem *button, gpointer user_data)
     redraw_game_canvas();
 }
 
+/**
+ * A callback function that gets called when the quit button is pressed.
+*/
 void on_game_quit_button_clicked(GtkMenuItem *button, gpointer user_data)
 {
     close_game_page();
     show_main_page();
 }
 
+/**
+ * A callback function that gets called when the save button is pressed.
+*/
 void on_save_button_clicked(GtkMenuItem *button, gpointer user_data)
 {
     save_game();
 }
 
+/**
+ * A callback function that gets called when the history button is pressed.
+*/
 void on_game_history_button_clicked(GtkMenuItem *button, gpointer user_data)
 {
     close_game_page();
     show_history_page();
 }
 
+/**
+ * A callback function that gets called when canvas want to draw to the screen.
+*/
 void on_draw(GtkWidget *canvas, cairo_t *cr, gpointer user_data)
 {
     guint width, height;

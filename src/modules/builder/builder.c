@@ -1,5 +1,9 @@
 #include "builder.h"
 
+/**
+ * Inits the templates and the stylesheet.
+ * Configures the default path parent directory for all the remplates.
+ */
 void app_init()
 {
     default_path = "../src/";
@@ -8,6 +12,13 @@ void app_init()
     load_stylesheet();
 }
 
+/**
+ * Configures the templates loader module.
+ * 
+ * @param size the number of total templates to load
+ * @param style_path the stylesheet path to load from
+ * 
+*/
 void config_templates(int size, char *style_path)
 {
     css_file = style_path;
@@ -17,6 +28,11 @@ void config_templates(int size, char *style_path)
     last_template_index = -1;
 }
 
+/**
+ * Adds a template to the list of total templates to be loaded later.
+ * 
+ * @param template_data template's data that is a type of {@link template}
+*/
 void add_template(template template_data)
 {
     last_template_index += 1;
@@ -24,6 +40,9 @@ void add_template(template template_data)
     templates[last_template_index] = template_data;
 }
 
+/**
+ * Loads all the templates and call their respective init functions.
+*/
 void load_templates()
 {
     builder = gtk_builder_new();
@@ -36,6 +55,10 @@ void load_templates()
     }
 }
 
+/**
+ * Loads the stylesheet and adds it to app.
+*/
+
 void load_stylesheet()
 {
     css_provider = gtk_css_provider_new();
@@ -44,7 +67,13 @@ void load_stylesheet()
     gtk_style_context_add_provider_for_screen(gdk_screen_get_default(), GTK_STYLE_PROVIDER(css_provider), GTK_STYLE_PROVIDER_PRIORITY_USER);
 }
 
-// global methods
+/**
+ * Shows a dialog on top of the current window.
+ * 
+ * @param type the type of dialog to be showed.
+ * @param buttons the type of buttons to be included inside of the dialog.
+ * @param message a string that represents the message to be shown inside of the dialog.
+*/
 gint show_dialog(GtkMessageType type, GtkButtonsType buttons, const char *message)
 {
     GtkWidget *dialog = gtk_message_dialog_new(GTK_WINDOW(game_page_window),
@@ -59,7 +88,10 @@ gint show_dialog(GtkMessageType type, GtkButtonsType buttons, const char *messag
     return clicked_button;
 }
 
-// global signals
+/**
+ * A callback signal that is called whenever the user has clicked the x button (close button) on the current window.
+ * This function exits the whole app.
+*/
 void on_destroy(GtkWidget *widget, gpointer user_data)
 {
     gtk_main_quit();
