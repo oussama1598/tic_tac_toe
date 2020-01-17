@@ -1,7 +1,6 @@
 # TIC_TAC_TOE
 
-This project was given as an assignment in the school i'm currently in.
-What made this projet so hard to finish was the language used to develop it, we had to use C, which had its difficulties, the libraries we had to use made difficult as well.
+This project was given as an assignment in the school I’m in. What made this project so hard to finish was the language used to develop it. We had to use C, which had its difficulties, the libraries we had to use made difficult.
 
 But overall it was a good and entertaining project to build.
 
@@ -9,15 +8,14 @@ But overall it was a good and entertaining project to build.
 
 Installing gtk was one of the hardset processes in this project. Was a long process to accomplish.
 
-# Windows Installtion
+# Windows installation
 
-Well that's why i don't use windows it takes a lot to accomplish so little but i was able to get it to work.
-Following these steps, will get you to be able to include gtk in your project as easy as using the include statement (using magic)
+Well, that’s why i don’t use windows it takes a lot to accomplish so little but i was able to get it to work. Following these steps, will get you to include gtk in your project as easy as using the include statement (using magic).
 
 - Download and install msys2 from [https://www.msys2.org/](https://www.msys2.org/) there's an installation guide there - Note that you have to install the right binary for your machine's architucture either 64bit or 32bit
 - Open the start menu and open the msys2 terminal (called **MSYS2 MinGW 64-bit** for 64bit systems and **MSYS2 MinGW 32-bit** for 32bit systems)
 - Install pkg-config by running this command in the opened terminal 
-	- pacman -S mingw-w64-x86_64-pkg-confg (for 64 bit systems) 
+	- pacman -S mingw-w64-x86_64-pkg-config (for 64 bit systems) 
 	- pacman -S mingw-w64-i686-pkg-config (for 32bit systems)
 - In the same terminal after the previous command has finished run the following command to install gtk 
 	- pacman -S mingw-w64-x86_64-gtk3 (for 64 bit systems) 
@@ -33,7 +31,7 @@ Following these steps, will get you to be able to include gtk in your project as
 
 # Linux Installation
 
-I just love linux that's what i'll say.
+I just love Linux, that’s what I’ll say.
 
 - All you have to do is to open the terminal and run this command **_sudo apt install libgtk-3-dev_**
 - To continue the installation scroll down to how to configure code blocks with gtk
