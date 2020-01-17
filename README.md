@@ -45,6 +45,7 @@ I just love linux that's what i'll say.
 	- Within the Compiler settings tab switch to the Other compiler options sub-tab and add \`pkg-config gtk+-3.0 --cflags\` pay attention to the backticks this symbol \` it has to be copied as well with the command 
 	- Within the Linker settings tab add \`pkg-config gtk+-3.0 --libs\` to Other Linker options pay attention to the backticks this symbol \` it has to be copied as well with the command 
 	- All of the following commands are for windows users 
+- Go to Settings > Compiler ... 
 	- Within the Toolchain executables 
 		- Change the compiler's installation to 
 			- **C:\msys64\mingw64\bin** (for 64 bit systems) 
@@ -52,6 +53,7 @@ I just love linux that's what i'll say.
 		- Change The C compiler to gcc.exe 
 		- Change The C++ compiler to g++.exe 
 		- Change The Linker for dynamic libs to g++.exe 
+		- Change The Make program to make.exe 
 		- Click Ok
 - That's it you're good to go feel free to use gtk now
 
