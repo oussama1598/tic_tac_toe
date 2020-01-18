@@ -32,6 +32,8 @@ void show_signup_page();
 void close_signup_page();
 void signup_hide_error();
 void signup_show_error(char *str);
+void signup_show_success(char *str);
+void signup_clear_entries();
 
 // signals
 int on_signup_button_clicked(GtkButton *button, gpointer user_data);

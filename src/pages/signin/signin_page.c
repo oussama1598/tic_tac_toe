@@ -75,6 +75,13 @@ int on_signin_button_clicked(GtkButton *button, gpointer user_data)
     const char *username = gtk_entry_get_text(signin_username_input);
     const char *password = gtk_entry_get_text(signin_password_input);
 
+    if (strstr(username, ":") > 0 || strstr(password, ":") > 0)
+    {
+        signin_show_error("Caractere not allowed (:).");
+
+        return 0;
+    }
+
     if (strlen(username) < 3 || strlen(username) > 15)
     {
         signin_show_error("Username can't be less than 3 or greater than 15.");
@@ -127,6 +134,8 @@ int on_signin_button_clicked(GtkButton *button, gpointer user_data)
 */
 void on_signup_show_button_clicked(GtkButton *button, gpointer user_data)
 {
+    signin_clear_entries();
+
     close_signin_page();
     show_signup_page();
 }
