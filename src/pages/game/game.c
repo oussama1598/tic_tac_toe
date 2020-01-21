@@ -263,7 +263,7 @@ void game_check_if_win()
 
         if (winner_player == PLAYER_WON)
         {
-            score += AGAINST_AI ? 50 : 10;
+            score += against_ai_type == AGAINST_AI ? 50 : 10;
 
             update_score();
         }
