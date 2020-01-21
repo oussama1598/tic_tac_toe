@@ -22,6 +22,7 @@ var searchData=
   ['scores_5fpage_2eh',['scores_page.h',['../scores__page_8h.html',1,'']]],
   ['scores_5fpage_5finit',['scores_page_init',['../scores__page_8c.html#ab384bd539415dba65a1867f276f03cca',1,'scores_page_init():&#160;scores_page.c'],['../scores__page_8h.html#ab384bd539415dba65a1867f276f03cca',1,'scores_page_init():&#160;scores_page.c']]],
   ['scores_5fpage_5fwindow',['scores_page_window',['../scores__page_8h.html#a1cf8732ddb837bedbaf409a541f78aeb',1,'scores_page.h']]],
+  ['scores_5fuser_5fscore',['scores_user_score',['../scores__page_8h.html#af76b3c1facfb1813f7ab15b575c09dec',1,'scores_page.h']]],
   ['set_5fmessage',['set_message',['../game_8c.html#abc396476ab54e5f3ec536cd6bf077ca5',1,'set_message(const char *str):&#160;game.c'],['../game_8h.html#abc396476ab54e5f3ec536cd6bf077ca5',1,'set_message(const char *str):&#160;game.c']]],
   ['set_5fsaves_5ffile',['set_saves_file',['../saves__manager_8c.html#a23293388601b9db6dde14c7ca4e473a7',1,'set_saves_file(char *file_path):&#160;saves_manager.c'],['../saves__manager_8h.html#a23293388601b9db6dde14c7ca4e473a7',1,'set_saves_file(char *file_path):&#160;saves_manager.c']]],
   ['set_5fscores_5ffile',['set_scores_file',['../score__manager_8c.html#a717cd0caec928423a99bcfbbe0c4c780',1,'set_scores_file(char *file_path):&#160;score_manager.c'],['../score__manager_8h.html#a717cd0caec928423a99bcfbbe0c4c780',1,'set_scores_file(char *file_path):&#160;score_manager.c']]],
@@ -50,6 +51,7 @@ var searchData=
   ['signin_5fusername_5finput',['signin_username_input',['../signin__page_8h.html#af5b2c265ee8bc113db916371dbd8e32b',1,'signin_page.h']]],
   ['signout_5fbutton',['signout_button',['../main__page_8h.html#af1e1609ea00206f62200c74c3719e9a9',1,'main_page.h']]],
   ['signup_5fbutton',['signup_button',['../signup__page_8h.html#a30375b8666ff91aad6db3e396061b700',1,'signup_page.h']]],
+  ['signup_5fclear_5fentries',['signup_clear_entries',['../signup__page_8c.html#aa694215727d5691a7a4c4c4cc5ea8b26',1,'signup_clear_entries():&#160;signup_page.c'],['../signup__page_8h.html#aa694215727d5691a7a4c4c4cc5ea8b26',1,'signup_clear_entries():&#160;signup_page.c']]],
   ['signup_5ferror',['signup_error',['../signup__page_8h.html#aff5da9a77011c7e040b985cda74115ae',1,'signup_page.h']]],
   ['signup_5fhide_5ferror',['signup_hide_error',['../signup__page_8c.html#a09f2101ca5f989e87ca9442248fdbfd0',1,'signup_hide_error():&#160;signup_page.c'],['../signup__page_8h.html#a09f2101ca5f989e87ca9442248fdbfd0',1,'signup_hide_error():&#160;signup_page.c']]],
   ['signup_5fpage_2ec',['signup_page.c',['../signup__page_8c.html',1,'']]],
@@ -59,5 +61,6 @@ var searchData=
   ['signup_5fpassword_5finput',['signup_password_input',['../signup__page_8h.html#aa0bad17e4f5bf17bbebf9165880bd12f',1,'signup_page.h']]],
   ['signup_5fshow_5fbutton',['signup_show_button',['../signin__page_8h.html#a674b5da21d3cab0d21d4adaebcca84d6',1,'signin_page.h']]],
   ['signup_5fshow_5ferror',['signup_show_error',['../signup__page_8c.html#acf80f3a004404f92ffe91b4463574b23',1,'signup_show_error(char *str):&#160;signup_page.c'],['../signup__page_8h.html#acf80f3a004404f92ffe91b4463574b23',1,'signup_show_error(char *str):&#160;signup_page.c']]],
+  ['signup_5fshow_5fsuccess',['signup_show_success',['../signup__page_8c.html#a538b02a219bb705612f5cdad8da36893',1,'signup_show_success(char *str):&#160;signup_page.c'],['../signup__page_8h.html#a538b02a219bb705612f5cdad8da36893',1,'signup_show_success(char *str):&#160;signup_page.c']]],
   ['signup_5fusername_5finput',['signup_username_input',['../signup__page_8h.html#a825b16ae27cad26d4303e3763d78a97f',1,'signup_page.h']]]
 ];

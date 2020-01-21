@@ -7,6 +7,7 @@ void scores_page_init()
 {
     scores_page_window = GTK_WIDGET(gtk_builder_get_object(builder, "scores_page"));
     scores_back_button = GTK_BUTTON(gtk_builder_get_object(builder, "scores_back_button"));
+    scores_user_score = GTK_LABEL(gtk_builder_get_object(builder, "scores_user_score"));
 
     for (int i = 0; i < 10; i++)
     {
@@ -62,6 +63,11 @@ void render_scores()
 
         gtk_label_set_text(score_user_info_labels[i], data_to_render);
     }
+
+    char user_score[4];
+    sprintf(user_score, "%d", score);
+
+    gtk_label_set_text(scores_user_score, user_score);
 }
 
 /**

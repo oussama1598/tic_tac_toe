@@ -12,6 +12,7 @@ var searchData=
   ['scores_5ffile',['scores_file',['../score__manager_8h.html#a5068447f57392232f3a570ff634a1736',1,'score_manager.h']]],
   ['scores_5flength',['scores_length',['../score__manager_8h.html#a2464417ec8ec6c7dce977b2f0f12859c',1,'score_manager.h']]],
   ['scores_5fpage_5fwindow',['scores_page_window',['../scores__page_8h.html#a1cf8732ddb837bedbaf409a541f78aeb',1,'scores_page.h']]],
+  ['scores_5fuser_5fscore',['scores_user_score',['../scores__page_8h.html#af76b3c1facfb1813f7ab15b575c09dec',1,'scores_page.h']]],
   ['signin_5fbutton',['signin_button',['../signin__page_8h.html#aa8dfd23a9952f8d7d9542929915e2f9d',1,'signin_page.h']]],
   ['signin_5ferror',['signin_error',['../signin__page_8h.html#ae089e25dc6615447de129445b3e86aae',1,'signin_page.h']]],
   ['signin_5fpage_5fwindow',['signin_page_window',['../signin__page_8h.html#af8df3355f8a1ebb814a6f1268d7be951',1,'signin_page.h']]],

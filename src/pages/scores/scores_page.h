@@ -12,6 +12,10 @@ GtkWidget *scores_page_window;
 */
 GtkButton *scores_back_button;
 /**
+ * Points to the user's score label.
+*/
+GtkLabel *scores_user_score;
+/**
  * Points to the all the 10 labels.
 */
 GtkLabel *score_user_info_labels[10];
