@@ -1,0 +1,300 @@
+\documentclass[12pt, a4paper, final, twoside]{report}
+
+\newcommand{\isPrintVersion}{false}						% false -> show colored links, true -> all links in black
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{url}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Data  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\thesisTitle}{Tic Tac Toe}
+\newcommand{\authorName}{Barkouki Oussama et Hayaoui Abdelhakim}
+
+\newcommand{\signatureDate}{29 Janvier 2020}
+\newcommand{\city}{Rabat}
+
+%%%%% Title page
+\newcommand{\reportType}{Rapport Projet C}
+\newcommand{\university}{École nationale supérieure d'informatique et d'analyse des systèmes}
+
+
+\newcommand{\course}{2019/2020}
+\newcommand{\supervisorName}{Mr. M. EL HAMLAOUI}
+
+
+\newcommand{\byTitle}{par}
+\newcommand{\courseOfStudiesTitle}{Année universitaire}
+\newcommand{\courseTitle}{Course}
+\newcommand{\supervisorTitle}{Professeur encadrant : }
+
+\newcommand{\universityLogo}{ensias.PNG}
+\newcommand{\companyLogo}{UMF5.PNG}
+
+%%%%% Quote
+
+%%%%% Declaration
+\newcommand{\declaration}{C’est parce que nous avons beaucoup estimé tous ceux qui nous ont écoutés, conseillés, critiqués et encadrés que nous tenons à leur faire part de toutes nos gratitudes, et plus particulièrement, nous tenons à remercier à travers ces courtes lignes : \\
+Monsieur Mahmoud EL HAMLAOUI professeur à l’ENSIAS, qui a accepté d’examiner et d’encadrer ce travail pour le valoriser malgré ses nombreuses occupations.  Nos remerciements vont également à nos professeurs des modules de « Structures de données » : Monsieur Abdellatif EL FAKER pour son entière disponibilité, « Algorithmique » : Monsieur Ahmed ETTALBI pour le savoir qu’il nous a transmis et de « Techniques de programmation » : Monsieur Hatim Guermah.  Enfin, nos remerciements s’adressent aux professeurs et au corps administratif de l’Ecole Nationale Supérieure de l’Informatique et de l’Analyse des Systèmes.
+}
+
+\newcommand{\declarationTitle}{Remerciements}
+\newcommand{\ListOfFiguresTitle}{List of Figures}
+\newcommand{\ListOfTablesTitle}{List of Tables}
+
+%%%%% Document
+\title{\thesisTitle}
+\author{\authorName}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Abstract  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{abstract}
+\renewcommand{\abstractnamefont}{\large\bfseries}
+
+\newcommand{\abstractText}{Tic-tac-toe is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner.
+
+This document is a summary of our programming project. This project aims to create the game of Tic-tac-toe in C language.
+
+To do so, we started, first of all by understanding the game and the objectives to be achieved. Then studies of the specifications that will be conducted to extract the different tasks requested and deduce the features that will be implemented in the game.
+
+Then we tried to get a clear idea about the design by creating a wireframe which allowed us to get also a visual guide that represents the skeletal framework of the project.
+
+Finally, we focused on the game development phase. As part of this phase, we started with the administration, authentication and data backup functions, and then moved on to the implementation of the play algorithms, and then we ran some test to ensure the proper functioning of the game.
+
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Packages  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[left=3.5cm,right=2.5cm,top=3cm,bottom=2.5cm]{geometry}
+\usepackage[ngerman,english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage[bottom]{footmisc}
+\usepackage[printonlyused]{acronym}
+\usepackage{appendix}
+\usepackage{pdfpages}
+\usepackage{ifthen}
+\usepackage{csquotes}
+\usepackage{emptypage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{darkBlue}{cmyk}{0.9592, 0.4592, 0, 0.6157} % {HTML}{043562}
+\definecolor{lightBlue}{cmyk}{0.5, 0.25, 0, 0.2} 		% {HTML}{6699cc}
+\definecolor{darkGrey}{cmyk}{0, 0, 0, 0.9333} 			% {HTML}{111111}
+\definecolor{lightGrey}{cmyk}{0.0164, 0.0082, 0, 0.0431}% {HTML}{F0F2F4}
+\definecolor{magenta}{cmyk}{0, 1, 0.4972, 0.3059}		% {HTML}{B10059}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+%%%%% Caption with sources
+\usepackage{caption}
+\captionsetup{justification=centering}
+\newcommand{\captionsource}[2][]{
+	\ifthenelse{\equal{#1}{}}
+		{\small\textit{Source: #2}} % if empty
+		{\small\textit{Source: #2, \href{#1}{#1}} % else
+	}
+}
+
+%%%%% Theorems / Definitions
+\usepackage{amsthm} 					
+\newtheorem{define}{Definition}
+
+%%%%% Code in text
+\newcommand{\code}[1]{{\ttfamily#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Bibliography  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[backend=bibtex,style=numeric,citestyle=numeric]{biblatex}
+\bibliography{bibliography} 
+
+% linebreaks in bibliography urls
+\usepackage{url}
+\usepackage{breakurl}
+\def\UrlBreaks{\do\/\do-}							% add a breakpoint at - and /
+
+\setcounter{biburlnumpenalty}{1000}  				% add a breakpoint after all numbers
+\setcounter{biburlucpenalty}{1000}					% add a breakpoint after all uppercase letters
+\setcounter{biburllcpenalty}{1000}   				% add a breakpoint after all lowercase letters
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PDF settings  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[pdftitle={\thesisTitle}, pdfauthor={\authorName},pdfsubject={\thesisTitle}, pdfcreator={pdflatex}, pdfpagemode=UseOutlines, pdfdisplaydoctitle=true, pdflang={en}, breaklinks]{hyperref}
+
+% color settings for links in pdf
+\ifthenelse{\equal{\isPrintVersion}{true}}
+{ % print version
+	\hypersetup{
+		hidelinks=true,
+		colorlinks=false, 
+		linktocpage=true, 							% page numbers are clickable
+		bookmarksnumbered=true 						% show heading numbering in pdf table of contents
+	}
+}{ % screen version
+	\hypersetup{
+		colorlinks=true, 
+		linkcolor=darkBlue,
+		citecolor=darkBlue,
+		filecolor=darkBlue,
+		menucolor=darkBlue,
+		urlcolor=darkBlue,
+		linktocpage=true, 							% page numbers are clickable
+		bookmarksnumbered=true 						% show heading numbering in pdf table of contents
+	}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Typography  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{lmodern}
+\usepackage{mathpazo}
+\fontfamily{ppl}\selectfont
+
+\setlength{\parskip}{8pt}							% after paragraph
+\setlength{\parindent}{0pt}							% new paragraph indent
+\renewcommand{\baselinestretch}{1.2}\normalsize		% line height (line height for content is defined in line 281)
+
+% Prevent widows and orphans
+\clubpenalty = 10000								% prevent orphans
+\widowpenalty = 10000 								% prevent widows
+\displaywidowpenalty=10000
+
+% Headings
+\usepackage{titlesec}
+\newcommand{\hsp}{\hspace{20pt}}
+
+\titleformat{\chapter}[block]{\Huge\bfseries}{\thechapter \hsp {|}\hsp}{0pt}{\Huge\bfseries}
+\titleformat{\section}[block]{\Large\bfseries}{\thesection \ }{0pt}{\Large \bfseries}
+\titleformat{\subsection}[block]{\large\bfseries}{\thesubsection \ }{0pt}{\large \bfseries}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Listings  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{listings}
+
+\lstset{
+	language=Java,								% default language
+	numbers=left,								% line number position, alternative: none
+	stepnumber=1,								 
+	numbersep=6pt,								% distance between line number and code
+	numberstyle=\fontsize{9pt}{9pt}\ttfamily,	% line number style
+	breaklines=true,							% break lines if necessary
+	breakautoindent=true,						% indent after line break
+	postbreak=\space,							% break at space
+	tabsize=4,									% tab size
+	showspaces=false,							% do not show spaces in code
+	showstringspaces=false,						% do not show spaces in strings
+	extendedchars=true,							% use Latin1
+	captionpos=b,								% caption position
+	backgroundcolor=\color{lightGrey}, 			% background color
+	xleftmargin=0pt,								
+	xrightmargin=0pt,							
+	frame=leftline,								% draw frame ar left side only
+	framerule=1.1pt,							% frame width
+	frameround=ffff,							% round corners: f = not rounded | t = rounded
+	rulecolor=\color{lightBlue},				% frame color
+	framesep=1.5pt,								% distance between line number and border 
+	fillcolor=\color{lightGrey},
+	basicstyle=\ttfamily\footnotesize\color{darkGrey},	
+	keywordstyle=\color{magenta}\bfseries,
+	identifierstyle=,
+	commentstyle=\color{lightBlue},
+	stringstyle=\color{darkBlue}
+}
+
+\lstloadlanguages{bash, C, C++, HTML, Java, PHP, Python, SQL}
+
+% change heading above listings to \ListOfListingsTitle
+\renewcommand{\lstlistlistingname}{\ListOfListingsTitle}
+
+% Group list of listings by chapter
+\let\Chapter\chapter
+\def\chapter{\addtocontents{lol}{\protect\addvspace{10pt}}\Chapter}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Diagrams  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,shadows}
+% flow diagrams
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=0.9cm,text centered, draw=lightBlue, fill=lightGrey]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=0.9cm, text centered, draw=lightBlue, fill=lightGrey]
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=0.9cm, text centered, text width=3cm, draw=lightBlue, fill=lightGrey]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=0.9cm, text centered, draw=lightBlue, fill=lightGrey]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\tikzstyle{comment} = [rectangle, minimum width=1cm, minimum height=0.9cm, text centered, text width=3cm, draw=none, fill=none]
+\tikzstyle{subprocess} = [rectangle split, rectangle split horizontal, rectangle split parts=3, minimum height=0.9cm, minimum width=3cm, draw=lightBlue, fill=lightGrey]
+
+% sequence diagrams
+\usepackage[underline=false]{pgf-umlsd}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Todo Comments  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[colorinlistoftodos]{todonotes}
+\reversemarginpar
+\setlength{\marginparwidth}{3cm}
+
+\newcommand{\todoQuestion}[1]{\todo[color=green!40]{#1}}
+\newcommand{\todoImportant}[1]{\todo[color=red!60]{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Structure  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+	\setlength{\headheight}{24.7pt}					% minimum height required by Latexmk
+	\pagenumbering{Roman}
+
+%%%%% Title page, quote, declaration, abstract 
+	\fancypagestyle{plain}{ 						% no header, no footer
+		\fancyhf{} 
+		\fancyfoot{}
+		\renewcommand{\headrulewidth}{0pt}
+		\renewcommand{\footrulewidth}{0pt}
+	}	
+	\input{addons}
+
+%%%%% Table of Contents
+	\setlength{\parskip}{0pt}						% after paragraph
+	\setcounter{tocdepth}{2}						% depth of table of contents
+	\tableofcontents
+	\thispagestyle{empty}
+		
+%%%%% Figures, Tables, Listings	
+	\fancypagestyle{plain}{ 
+		\fancyhf{} 
+		\fancyfoot[LE,RO]{\thepage}
+		\renewcommand{\headrulewidth}{0pt}
+		\renewcommand{\footrulewidth}{0pt}
+	}	
+	\addtocounter{page}{6}							% increase page number: +6
+
+	\listoffigures
+
+	%\cleardoublepage
+
+
+
+%%%%% Content
+	\pagenumbering{arabic}
+	\setlength{\parskip}{8pt}						% after paragraph
+	\renewcommand{\baselinestretch}{1.4}\normalsize	% line height 
+	
+	\pagestyle{fancy}
+	\fancyhf{}
+	\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+	\fancyhead[LE,RO]{\thechapter  \ -- \ \nouppercase\leftmark}
+	\fancyfoot[LE,RO]{\thepage}
+	\input{content}
+	\clearpage
+
+%%%%% Bibliography
+	\fancyhead[LE,RO]{\nouppercase\leftmark}
+	\printbibliography[heading=bibintoc]
+	\cleardoublepage
+%%%%% Appendix
+	\fancyhead[LE,RO]{A  \ -- \ \nouppercase\leftmark}
+	\input{appendix}
+\end{document}

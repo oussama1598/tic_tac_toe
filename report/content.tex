@@ -1,0 +1,275 @@
+% ----------------------------------------------
+\chapter{Problématique et cadre général du projet}\label{ch:structure}
+La présente partie nous permet de présenter la problématique, identifier toutes les fonctionnalités de notre application, et ceci en recensant les besoins fonctionnels et d’appréhender la liste des exigences traduites par les besoins non fonctionnels, et donner les étapes de la résolution.
+
+% ############################################
+\section{Problématique}\label{sec:section1}
+
+Dernièrement, la majorité des enfants spécialement ceux de la génération alpha (nés après 2013)  découvrent la manipulation et les plaisirs de l'ordinateur vers l’âge de  3 ans. Plusieurs familles disposent d'ailleurs des équipements informatiques. Alors que la majorité de ces enfants, utilisent ces équipements dans des jeux ou des plateformes qui influencent négativement leur performances mentales et sociaux. Puisque leurs âge est l’idéal pour l’apprentissage,  c’est préférable d’utiliser l’outil informatique en tous ce qui est éducatif notamment le développent de tout ce qui est logique et stratégie.
+
+Le besoin exprimé se formule comme suit :
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{bete a corne.PNG}
+	  \caption{Diagramme bête à corne du jeu }
+	\label{fig: Diagramme bête à corne du jeu }
+\end{figure}
+\section{Cahier des charges}\label{sec:section2}
+\subsection{Contexte et objectifs :}
+
+De nos jour , les gens utilisent les outils informatiques pour jouer même des jeux traditionnels comme tic tac toe, pour cela , on est obligé de finaliser ce jeu qui consiste à assurer une source de défis et de développent de logique.\\
+Notre objectif à travers ce travail est de construire ce fameux jeu  qui répond aux besoins de l’utilisateur par la réalisation d’une application nommée « Tic Tac Toe» en développant une application comportant l’ensemble des exigences demandées.
+
+\subsection{Les besoins fonctionnels :}
+Après une étude détaillée du système, cette partie est réservée à la description des exigences fonctionnelles des différents acteurs de l’application.
+Ces exigences sont :\\
+Un joueur peut sans l’existence de l’internet :
+\begin{itemize}
+\item	 Créer un compte ;
+\item	 S’identifier
+\item	 Créer une partie et choisir entre jouer contre :
+\begin{enumerate}
+\item	 Mouvement aléatoires
+\item	 Un algorithme (Mini Max Élagage alpha-bêta )
+\end{enumerate}
+
+
+\item	 Voir l’historique des mouvements. 
+\item	 Charger une partie déjà enregistrée.
+\item	 Voir les dix meilleurs scores.
+\item  Consulter la page ‘’ à propos ‘’ 
+\end{itemize}
+
+\subsection{Les besoins non fonctionnels :}
+Les besoins non fonctionnels décrivent toutes les contraintes techniques, ergonomiques et esthétiques auxquelles est soumis le système pour sa réalisation et pour son bon fonctionnement. Et en ce qui concerne notre application, nous avons dégagé les besoins suivants :
+\begin{itemize}
+\item  La disponibilité : 
+\end{itemize}
+ L’application doit être disponible pour être utilisé par n’importe quel utilisateur.
+\begin{itemize}
+\item  La convivialité de l’interface graphique : 
+\end{itemize}
+ L’application doit fournir une interface conviviale et simple pour tout type d’utilisateur.
+\begin{itemize}
+\item  La fiabilité : 
+\end{itemize}
+Les données fournies par l’application doivent être fiables. La possibilité de retourner au menu principal de l’application à partir de n’importe quelle fenêtre de celle-ci.
+\begin{itemize}
+\item  La performance  : 
+\end{itemize}
+Le système doit réagir dans un délai précis, quel que soit l’action de l’utilisateur.
+\subsection{Caractéristiques de l’application }
+\begin{itemize}
+\item  Design simple et conviviale ;
+\item Interfaces graphiques ergonomiques ;    
+\item  Langue utilisée: anglaise.
+\end{itemize}
+\section{Les étapes de la résolution du problème}\label{sec:section3}
+Pour la résolution du problème on commencer d’abord par une lire bien le cahier de charge et voir une vision sur le concept et le design du jeu, pour cela on a opté à utiliser ce qu’on appelle « frameware » qui est un guide qui représente le cadre squelettique du projet comme on le voit dans la figure suivante :
+\clearpage
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{wireframe.PNG}
+	  \caption{Schématisation du jeu ''wireframe''}
+	\label{fig: Schématisation du jeu ''wireframe''}
+\end{figure}
+\section{Conclusion :}\label{sec:section4}
+Après avoir dégagé les besoins fonctionnels et opérationnels et tous les critères qu’on doit prendre en considération, et afin de modéliser les besoin attendus de notre application et que les objectifs soient atteinte, on va suivre la démarche du processus unifié qu’on va le détailler dans la prochaine partie.
+% ----------------------------------------------
+\cleardoublepage
+\chapter{MISE EN ŒUVRE ET RESALISATION }
+Dans ce chapitre, nous présentons la partie réalisation et mise en œuvre de notre travail. 
+Pour cela, nous présentons, en premier lieu, l’environnement de travail et les outils de développement utilisés. En second lieu, nous élaborons une présentation des différentes interfaces 
+\section{Les outils et techniques de développement créées.}\label{sec:section1}
+\begin{itemize}
+\item  Visual Studio Code ;
+\end{itemize}
+Visual Studio Code est un éditeur de code source développé par Microsoft pour Windows, Linux et MacOs, il inclut la prise en charge du débogage, du contrôle Git intégré et de GitHub, gratuit, supportant une dizaine de langages dont langage C qu'on a utilisé dans ce projet. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{VSC.PNG}
+	  \caption{Visual Studio Code}
+	\label{fig:Visual Studio Code}
+\end{figure}
+En plus, et pour l’interface graphique on a utilisé GTK3+ qu’est, un ensemble de bibliothèques logicielles, c'est-à-dire un ensemble de fonctions permettant de réaliser des interfaces graphiques.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{GTK.PNG}
+	  \caption{GTK}
+	\label{fig:GTK}
+\end{figure}
+\section{Les interfaces graphiques}\label{sec:section2}
+\subsection{Authentification}
+	En premier lieu, l’utilisateur est censé d’accéder à son propre compte.
+S’il est la première fois qu’il utilise l’application, l’utilisateur est censé de créer son propre compte.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{sign up.PNG}
+	  \caption{créer son propre compte}
+	\label{fig:créer son propre compte}
+\end{figure}
+Sinon il va accéder directement à son compte, à travers l’interface d’authentification.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{sign in page .PNG}
+	  \caption{page d'Authentification}
+	\label{fig:page d'Authentification}
+\end{figure}
+\subsection{Accueil}
+Après que le joueur accède à son compte, une interface d’accueil sera affichée en indiquant, les options disponibles :
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{main window.PNG}
+	  \caption{La page pricipale}
+	\label{fig:La page pricipale}
+\end{figure}
+
+\subsection{Nouvelle partie}
+Si le joueur choisie de crée une nouvelle partie, il au choix entre jouer contre des mouvements aléatoires ou un algorithme (MiniMax Élagage alpha-bêta) .
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{new game button.PNG}
+	  \caption{Nouvelle partie}
+	\label{fig:Nouvelle Partie}
+\end{figure}
+
+Le signe du joueur (X) ou (O) est choisi arbitrairement,  à la fin de chaque partie un message montre le résultat : victoire, perte ou match nul 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{win.PNG}
+	  \caption{Le joueur gagne}
+	\label{fig:Le joueur gagne}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{tie .PNG}
+	  \caption{Match nul}
+	\label{fig:match nul}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{loss against ai .PNG}
+	  \caption{Le joueur perd}
+	\label{fig:Le joueur perd}
+\end{figure}
+\clearpage
+\subsubsection{Le menu de contrôle}
+Aussi, durant la partie le joueur possède d’un menu de control, ce menu lui permet de Recommencer la partie, la Sauvegarder et pouvoir la continuer après ou quitter la partie et retourner vers le menu principal 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{control menu.PNG}
+	  \caption{Le menu de contrôle}
+	\label{fig:Le menu de contrôle}
+\end{figure}
+\subsubsection{L'historique}
+Le menu (view) lui permet de voir l’historique des mouvements de chaque joueur 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{history page.PNG}
+	  \caption{L'historique}
+	\label{fig:L'historique}
+\end{figure}
+
+\subsection{Charger une partie}
+Le joueur est capable de continuer une partie déjà enregistrée par la sélectionner et cliquer sur le bouton (LOAD).
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{select game to load.PNG}
+	  \caption{Charger une partie}
+	\label{fig:Charger une partie}
+\end{figure}
+\clearpage
+\subsection{Afficher les scores}
+A partir du menu principal, le joueur peut consulter les dix meilleurs scores de tous les joueurs :
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{scores page.PNG}
+	  \caption{Afficher les scores}
+	\label{fig:Afficher les scores}
+\end{figure}
+\clearpage
+\subsection{A propos (about)}
+Cette page contient le nom des contributeurs au projet 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{about page .PNG}
+	  \caption{A propos (about)}
+	\label{fig:A propos (about)}
+\end{figure}
+
+ \textbf{\emph{A mentionner que le joueur peut toujours se déconnecter et retourner vers la page d’Authentification}}
+\clearpage
+\section{Les Limitations }\label{sec:section3}
+
+\subsection{Nombre de parties enregistres }
+Chaque joueur a le droit d’enregistrer jusqu’à  3 parties, au-delà il doit écraser la plus ancienne pour pouvoir enregistrer une nouvelle. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{exceded lmit saves finale.PNG}
+	  \caption{Nombre de parties enregistres}
+	\label{fig:Nombre de parties enregistres}
+\end{figure}
+
+\subsection{Une partie terminée }
+Une partie terminée ne peut pas être enregistrée .
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{cannot save if game ended.PNG}
+	  \caption{Fin de la partie}
+	\label{fig:Fin de la partie}
+\end{figure}
+\clearpage
+\subsection{Utilisateur déjà existe  }
+Si le nom d’utilisateur déjà existe un message va s’afficher
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{user already exist.PNG}
+	  \caption{Utilisateur déjà existe}
+	\label{fig:Utilisateur déjà existe}
+\end{figure}
+
+\subsection{Spécifications du nom d’utilisateur }
+Le nom d’utilisateur  ne peut pas être inférieur à 3 ou supérieur à 15 caractère.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{username limitation.PNG}
+	  \caption{Spécifications du nom d’utilisateur}
+	\label{fig:Spécifications du nom d’utilisateur}
+\end{figure}
+\clearpage
+\chapter{ Conclusion générale et perspectives  } \label{ch:structure}
+Notre projet a consisté à la réalisation d’un jeu très populaire ‘’tic-tac-toe ‘’ 
+Ce projet nous a permis d’approfondir nos connaissances théoriques, acquises tous le long de notre formation, par la pratique des nouvelles technologies. Cette expérience nous a permis de maîtriser le langage C ainsi que la bibliothèque utilisé qu’est GTK3+
+Ce rapport explicite une première version du projet. L’ensemble des fonctionnalités demandées dans le cahier de charges ont été réalisées et implémentées dans le temps et fonctionnent correctement.
+L’amélioration qu’on peut voir dans ce projet et le faite qu’il soit sous forme d’application mobile, puisque la base de ses utilisateurs est toujours en augmentation 
+
+\chapter{ WEBOGRAPHIE} \label{ch:structure}
+\url{https://github.com/oussama1598/tic_tac_toe} : lien du projet sur GitHub (sera publique après la soutenance)
+% ############################################
+
+% ############################################
+% ############################################
+
+
+
+
+
+% ----------------------------------------------
+
+
+% ############################################
+
+
+% ############################################
+
+
+% ----------------------------------------------
+
+
+% ############################################
+
+% ############################################
